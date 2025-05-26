@@ -1,0 +1,58 @@
+
+import React from "react";
+import ReusableTable from "../table/Table";
+
+const headers = [
+  { header: "Open Date", accessor: "openDate" },
+
+  {
+    header: "Title",
+    accessor: "title",
+    render: (row: any) => (
+      <div className="text-blue-600 hover:underline cursor-pointer">
+        {row.title}
+        <p className="text-gray-500 text-sm">{row.subTitle}</p>
+      </div>
+    ),
+  },
+  { header: "Close Date", accessor: "closeDate" },
+  {
+    header: "Actions",
+    accessor: "actions",
+    render: () => (
+      <div className="flex space-x-2">
+        <button className="text-blue-600 hover:underline">View</button>
+      </div>
+    ),
+  },
+];
+
+const sampleData = [
+  {
+    title: "CORRIGENDUM RfP for Selection of Agency/Firm",
+    openDate: "2023-10-01",
+    closeDate: "2023-10-15",
+    subTitle:
+      "Rescheduling of different events related to RfP for Selection of Agency for Third Party Evaluation of MKUY",
+  },
+  // Add more rows to test pagination
+];
+
+const Recruitment: React.FC = () => {
+  return (
+    <div className="p-6">
+      <div className="flex justify-end">
+        <input
+          type="text"
+          placeholder="Search..."
+          //   value={searchTerm}
+          //   onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-90 bg-white placeholder:text-black text-black border-none outline-none px-4 py-2 border rounded-lg"
+        />
+      </div>
+      <ReusableTable columns={headers} data={sampleData} />
+    </div>
+  );
+};
+
+export default Recruitment;

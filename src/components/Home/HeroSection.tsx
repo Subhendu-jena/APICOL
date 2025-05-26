@@ -49,10 +49,10 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="col-span-2">
         {heads.map((head, index) => (
-          <div key={index} className="grid grid-cols-5 items-center justify-center my-10  ">
+          <div key={index} className="grid grid-cols-5 items-center flex justify-center my-10  ">
             {index % 2 === 0 ? (
               <>
-                <div className="col-span-2 mx-4 my-4">
+                <div className="col-span-2 ">
                   <img src={head.img} alt="" className="rounded-xl h-30 w-30" />
                 </div>
                 <div className="col-span-3">
@@ -66,7 +66,7 @@ const HeroSection: React.FC = () => {
                   <h2 className="text-[14px] font-bold text-orange-500">{head.name}</h2>
                   <p className="text-[12px]">{head.designation}</p>
                 </div>
-                <div className="col-span-2">
+                <div className="col-span-2 justify-end items-center flex">
                   <img src={head.img} alt="" className="rounded-xl h-30 w-30" />
                 </div>
               </>
