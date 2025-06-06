@@ -2,7 +2,7 @@ import React from 'react';
 
 const LatestNews: React.FC = () => {
   return (
-    <div className="w-full bg-orange-500 flex items-center overflow-hidden">
+    <div className="w-full bg-orange-600 flex items-center overflow-hidden">
       {/* Fixed box for "Latest News" */}
       <div className="bg-black text-white text-center px-4 py-2 w-40 flex-shrink-0 text-sm z-5 font-semibold">
         Latest News

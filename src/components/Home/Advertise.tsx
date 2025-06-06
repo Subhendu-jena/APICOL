@@ -4,56 +4,60 @@ import Events from "../events/Events";
 import Recruitment from "../recruitment/Recruitment";
 import Notification from "../notification/Notification";
 
-
 const Advertise: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("tenders");
+  const [activeTab, setActiveTab] = useState("");
 
-   const tabClasses = (tab: string) =>
-    `px-10 py-4 rounded text-white font-semibold transition-all duration-200 ${
+  // const gradientBackground = "bg-gradient-to-r from-orange-600 to-yellow-400";
+  // const gradientBackgroundHover = "hover:from-orange-500 hover:to-yellow-300";
+
+  const tabClasses = (tab: string) =>
+    `w-full py-4 px-24 font-medium rounded-4xl transition-all duration-300 ${
       activeTab === tab
-        ? `shadow-md scale-120 ${gradientBackgroundHover} hover:scale-100`
-        : "opacity-80 hover:opacity-100"
+        ? `bg-orange-800 text-white shadow-lg transform scale-105`
+        : `bg-orange-600 text-white hover:bg-orange-700`
     }`;
 
-  const gradientBackground =
-    "bg-gradient-to-r from-orange-600 to-yellow-400";
-    const gradientBackgroundHover =
-    "hover:bg-gradient-to-r hover:from-orange-500 hover:to-yellow-300";
-const tabs = ["tenders", "events", "recruitment", "notification"];
-  return (
-    <div className="p-6 flex flex-col justify-center items-center">
-      {/* Tabs */}
-      <div className="flex space-x-10 mb-6 max-w-7xl">
-        {tabs.map((tab) => (
-          <button
-            key={tab}
-            className={`${tabClasses(tab)} ${gradientBackground}`}
-            onClick={() => setActiveTab(tab)}
-          >
-            {tab.charAt(0).toUpperCase() + tab.slice(1)}
-          </button>
-        ))}
-        {/* <button className={`${tabClasses("tenders")} ${gradientBackground}`}
-          onClick={() => setActiveTab("tenders")}>
-          Tenders
-        </button>
-        <button className={tabClasses("events")} onClick={() => setActiveTab("events")}>
-          Events
-        </button>
-        <button className={tabClasses("recruitment")} onClick={() => setActiveTab("recruitment")}>
-          Recruitment
-        </button>
-        <button className={tabClasses("notification")} onClick={() => setActiveTab("notification")}>
-          Notification
-        </button> */}
-      </div>
+  // className={`w-full py-4 px-4 font-medium rounded-xl transition-all duration-300 ${
+  //                 activeTab === tab.key ? "bg-orange-800 text-white shadow-lg transform scale-105" : "bg-orange-600 text-white hover:bg-orange-700"
+  //               }`}
 
-      {/* Tab Content */}
-      <div className="w-full max-w-7xl">
-        {activeTab === "tenders" && <Tender />}
-        {activeTab === "events" && <Events />}
-        {activeTab === "recruitment" && <Recruitment />}
-        {activeTab === "notification" && <Notification />}
+  const tabs = [
+    { key: "tenders", label: "Tenders" },
+    { key: "events", label: "Events" },
+    { key: "recruitment", label: "Recruitment" },
+    { key: "notification", label: "Notification" },
+  ];
+
+  return (
+    <div className="py-10  bg-white">
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-4">
+          {tabs.map(({ key, label }) => (
+            <div className="justify-center">
+              <button
+                key={key}
+                className={tabClasses(key)}
+                onClick={() => setActiveTab(key)}
+              >
+                {label}
+              </button>
+              {activeTab === key && (
+                <div className="">
+                  <div className="w-0 h-0  border-l-20 border-r-20 border-t-20 border-l-transparent border-r-transparent border-t-orange-800 mx-auto"></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Tab Content */}
+        <div className="w-full mt-8">
+          {activeTab === "tenders" && <Tender />}
+          {activeTab === "events" && <Events />}
+          {activeTab === "recruitment" && <Recruitment />}
+          {activeTab === "notification" && <Notification />}
+        </div>
       </div>
     </div>
   );

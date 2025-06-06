@@ -19,7 +19,7 @@ const QuickLinks: FooterLink[] = [
 
 const Footer = () => {
   return (
-    <footer className="w-full relative bg-gray-700 text-gray-200">
+    <footer className="w-full relative  bg-gray-700 text-gray-200">
       {/* Contact Info Bar */}
       {/* <div className="w-full z-10 absolute -top-14 overflow-hidden px-4">
         <div className="w-full rounded-2xl mx-auto px-4 py-8 grid grid-cols-1 text-white md:grid-cols-3   overflow-hidden pl-8  gap-10 bg-gray-800">
@@ -71,7 +71,7 @@ const Footer = () => {
         alt=""
         className="absolute opacity-60  w-full h-110 object-fill"
       /> */}
-      <div className="w-full mx-auto pt-12  px-12 relative ">
+      <div className="w-full mx-auto pt-12   px-12 relative ">
         <div className="grid grid-cols-1 md:grid-cols-3  gap-12  ">
           {/* Company Info */}
           <div className=" space-y-6">
