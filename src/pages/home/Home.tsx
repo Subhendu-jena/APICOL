@@ -7,14 +7,10 @@ import CmMessage from "../../components/Home/CmMessage";
 import Advertise from "../../components/Home/Advertise";
 import Testimonial from "../../components/Home/Testimonial";
 import Footer from "../../components/footer/Footer";
-import bg from "../../assets/all/bgb1.png";
 import Gallery from "../../components/Home/Gallery";
 const Home: React.FC = () => {
   return (
-    <div
-      className="bg-center bg-repeat-y h-screen w-full"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
+    <>
       <Navbar />
       <HeroSection />
       <LatestNews />
@@ -25,7 +21,7 @@ const Home: React.FC = () => {
       <Testimonial />
       <Footer />
       {/* <Welcome/> */}
-    </div>
+    </>
   );
 };
 

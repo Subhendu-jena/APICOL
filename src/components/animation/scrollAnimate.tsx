@@ -12,7 +12,7 @@ export default function ScrollAnimate({ children, className = '' }: any) {
           setIsVisible(true);
           window.removeEventListener('scroll', observer);
         }
-      }
+      } 
     };
 
     observer(); // trigger once on mount

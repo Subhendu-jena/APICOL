@@ -2,7 +2,6 @@
 // import bg from "../../assets/images/360_F_198051606_qB9GmDGg79tCtoiHkuTtYAQlqpN6feyL.jpg";
 // import cm from "../../assets/images/shrimohanchaaranmajhi.png";
 
-import ScrollAnimate from "../animation/scrollAnimate";
 
 // const CmMessage: React.FC = () => {
 //   return (
@@ -52,33 +51,39 @@ import ScrollAnimate from "../animation/scrollAnimate";
 // export default CmMessage;
 
 import cm from "../../assets/all/cm.jpeg";
-import bgCM from "../../assets/all/bgf.png"
+import bgCM from "../../assets/all/bgf.png";
+import SlideInFromBottom from "../animation/SlideInFromBottom";
+import SlideInFromLeft from "../animation/SlideInFromLeft";
+import SlideInFromRight from "../animation/SlideInFromRight";
 export default function MessageSection() {
   return (
-    < >
+    <>
       <div className="h-1 bg-orange-500"></div>
       <section
-       className="bg-cover bg-center bg-black py-8"  style={{ backgroundImage: `url(${bgCM})` }}
+        className="bg-cover bg-center bg-black py-8"
+        style={{ backgroundImage: `url(${bgCM})` }}
       >
         <div className="container bg-transparent mx-auto px-4">
-          <ScrollAnimate className="text-3xl md:text-4xl font-bold text-center mb-6 animate-fade-in">
+          <SlideInFromBottom className="text-3xl md:text-4xl font-bold text-center mb-6 animate-fade-in">
             Message From Hon'ble Chief Minister of Odisha
-          </ScrollAnimate>
+          </SlideInFromBottom>
 
           <div className="mx-auto max-w-6xl px-2">
-            <ScrollAnimate className="p-8 md:p-8 animate-slide-in-left">
+            <div className="p-8 md:p-8 animate-slide-in-left">
               <div className="flex flex-col md:flex-row items-center gap-8">
                 <div className="w-full md:w-1/3">
                   <div className="relative group">
-                    <img
-                      src={cm}
-                      alt="Shri Mohan Charan Majhi"
-                      className="rounded-full shadow-lg w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
+                    <SlideInFromLeft className="w-full md:w-full">
+                      <img
+                        src={cm}
+                        alt="Shri Mohan Charan Majhi"
+                        className="rounded-full shadow-lg w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </SlideInFromLeft>
                   </div>
                 </div>
-
                 <div className="w-full md:w-2/3">
+                <SlideInFromRight className="w-full ">
                   <div className="mb-6">
                     <i className="fas fa-quote-left text-3xl text-orange-600 mb-4"></i>
                   </div>
@@ -98,9 +103,10 @@ export default function MessageSection() {
                       Hon'ble Chief Minister of Odisha
                     </h3>
                   </div>
+                </SlideInFromRight>
                 </div>
               </div>
-            </ScrollAnimate>
+            </div>
           </div>
         </div>
       </section>

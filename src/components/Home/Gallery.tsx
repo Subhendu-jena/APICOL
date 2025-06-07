@@ -1,6 +1,9 @@
 import React from "react";
 import ImageGallery from "./ImageGallery";
 import VideoGallery from "./VideoGallery";
+import SlideInFromLeft from "../animation/SlideInFromLeft";
+import SlideInFromRight from "../animation/SlideInFromRight";
+import SlideInFromBottom from "../animation/SlideInFromBottom";
 
 const Gallery: React.FC = () => {
   return (
@@ -8,26 +11,37 @@ const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* Photo Gallery Section */}
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Photo Gallery</h2>
-              <button className="text-sm font-medium text-orange-600 hover:underline">
-                View All
-              </button>
+          <SlideInFromLeft>
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <SlideInFromBottom>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    Photo Gallery
+                  </h2>
+                  <button className="text-sm font-medium text-orange-600 hover:underline">
+                    View All
+                  </button>
+                </div>
+              </SlideInFromBottom>
+              <ImageGallery />
             </div>
-            <ImageGallery />
-          </div>
-
-          {/* Video Gallery Section */}
-          <div className="bg-white p-6 rounded-xl shadow-md">
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Video Gallery</h2>
-              <button className="text-sm font-medium text-orange-600 hover:underline">
-                View All
-              </button>
+          </SlideInFromLeft>
+          <SlideInFromRight>
+            {/* Video Gallery Section */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <SlideInFromBottom>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800">
+                    Video Gallery
+                  </h2>
+                  <button className="text-sm font-medium text-orange-600 hover:underline">
+                    View All
+                  </button>
+                </div>
+              </SlideInFromBottom>
+              <VideoGallery />
             </div>
-            <VideoGallery />
-          </div>
+          </SlideInFromRight>
         </div>
       </div>
     </div>

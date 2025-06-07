@@ -12,7 +12,7 @@ interface SlideInFromLeftProps {
 const SlideInFromLeft: React.FC<SlideInFromLeftProps> = ({ children, delay = 0, className = '' }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   return (

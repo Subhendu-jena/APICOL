@@ -15,13 +15,13 @@ const SlideInFromRight: React.FC<SlideInFromRightProps> = ({
 }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   return (
     <motion.div
       ref={ref}
-      initial={{ x: "20vw", y: 0, opacity: 0 }} // slide from right
+    initial={{ x: 200, opacity: 0 }}
       animate={inView ? { x: 0, y: 0, opacity: 1 } : {}}
       transition={{ type: "tween", duration: 1, delay }}
       className={className}

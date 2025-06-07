@@ -1,8 +1,9 @@
-import { Twitter, Facebook, Instagram } from "lucide-react";
+import { Twitter, Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react";
 // import MapComponent from './Map';
 import { CircleArrowOutDownRight } from "lucide-react";
 import { Youtube } from "lucide-react";
 import logo from "../../assets/logos/APICOL-Logo.png"
+import foot from "../../assets/all/bg.png"
 export interface FooterLink {
   text: string;
   href: string;
@@ -21,15 +22,15 @@ const Footer = () => {
   return (
     <footer className="w-full relative  bg-gray-700 text-gray-200">
       {/* Contact Info Bar */}
-      {/* <div className="w-full z-10 absolute -top-14 overflow-hidden px-4">
-        <div className="w-full rounded-2xl mx-auto px-4 py-8 grid grid-cols-1 text-white md:grid-cols-3   overflow-hidden pl-8  gap-10 bg-gray-800">
+      <div className="w-full z-10 absolute -top-14 overflow-hidden px-4">
+        <div className="w-full rounded-2xl mx-auto px-4 py-8 grid grid-cols-1 text-white md:grid-cols-4   overflow-hidden pl-8  gap-10 bg-gray-800">
           <div className="flex items-center  space-x-4 group transition-all duration-300">
             <div className="p-2 border-4 border-orange-400 rounded-full bg-gray-800">
               <MapPin className="w-6 h-6" />
             </div>
             <div>
               <h3 className="font-semibold underline">Office Address</h3>
-              <p className="">{data.address}</p>
+              <p className="text-sm">Plot No. 326, OUAT Agriculture Farm Road, Baramunda, Bhubaneswar, Odisha, PIN-751003</p>
             </div>
           </div>
 
@@ -39,7 +40,7 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="font-semibold underline">Email</h3>
-              <p className="">{data.officeEmail}</p>
+              <p className=" text-sm">apicol96@yahoo.com</p>
             </div>
           </div>
 
@@ -49,7 +50,7 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="font-semibold underline">Toll-Free</h3>
-              <p className="">+91 {data.tollFree}</p>
+              <p className="text-sm">674-2354125</p>
             </div>
           </div>
 
@@ -59,23 +60,23 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="font-semibold underline">Mobile Number</h3>
-              <p className="">+91 {data.mobileNumber}</p>
+              <p className="text-sm">+91 9437207150</p>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Main Footer Content */}
-      {/* <img
-        src="/foot.jpg"
+      <img
+        src={foot}
         alt=""
-        className="absolute opacity-60  w-full h-110 object-fill"
-      /> */}
-      <div className="w-full mx-auto pt-12   px-12 relative ">
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-12  ">
+        className="absolute opacity-60 h-full  w-full  object-cover"
+      />
+      <div className="w-full mx-auto pt-25   px-12 relative ">
+        <div className="grid grid-cols-1 md:grid-cols-3  gap-8  ">
           {/* Company Info */}
           <div className=" space-y-6">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
               <img
                 src={logo}
                 alt="OFDC Logo"
@@ -85,14 +86,14 @@ const Footer = () => {
                Agricultural Promotion and Investment Corporation of Odisha Limited
               </h3>
             </div>
-            <p className="text-gray-100 text-10px">
+            <p className="text-gray-100 text-[14px]">
               Website content is managed by APICOL (The Agricultural Promotion &
               Investment Corporation of Odisha Limited) Department of
               Agriculture & farmers’ Empowerment
             </p>
             <div>
               <h3 className="font-semibold underline">Office Address</h3>
-              <p className="">
+              <p className="text-[14px]">
                 Plot No. 326, OUAT Agriculture Farm Road, Baramunda,
                 Bhubaneswar, Odisha, PIN-751003
               </p>
@@ -100,8 +101,8 @@ const Footer = () => {
             <div>
               {" "}
               <h3 className="font-semibold underline">Contact</h3>
-              <div className=" flex space-x-4">
-                <p>+91 000 0000 000</p>
+              <div className=" flex space-x-4 text-[14px]">
+                <p>674-2354125</p>
                 <p className="">apicol96@yahoo.com</p>
               </div>
             </div>
@@ -116,7 +117,7 @@ const Footer = () => {
                   <a
                     href={link.href}
                     target={link.target ? link.target : "_self"}
-                    className="text-gray-100 hover:text-white transition-colors  text-sm duration-300 flex flex-row gap-2 items-center"
+                    className="text-gray-100 hover:text-white underline transition-colors  text-sm duration-300 flex flex-row gap-2 items-center"
                   >
                     <div>
                       <CircleArrowOutDownRight size={16} />{" "}

@@ -254,7 +254,6 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import ScrollAnimate from "../animation/scrollAnimate";
 import apicol from "../../assets/logos/APICOL-Logo.png"
 import odishaGov from "../../assets/logos/Seal_of_Odisha.svg"
 import SlideInFromLeft from "../animation/SlideInFromLeft";
@@ -345,8 +344,6 @@ export default function Header() {
 
   return (
     <header className=" top-0 z-50">
-      {/* Top Banner */}
-       <ScrollAnimate animationClass="animate-fade-in">
       <div className="bg-orange-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div>
@@ -428,13 +425,13 @@ export default function Header() {
           </div>
         </div>
       </div>
-      </ScrollAnimate>
+      {/* </ScrollAnimate> */}
 
       {/* Logos */}
       <div className="bg-white py-4 shadow-md">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
           <SlideInFromLeft>
-          <div className="flex items-center mb-4 md:mb-0 slide-in-left">
+          <div className="flex items-center mb-4 md:mb-0">
             <img
               src={apicol}
               alt="APICOL Logo"
@@ -450,7 +447,7 @@ export default function Header() {
           </div>
           </SlideInFromLeft>
           <SlideInFromRight>
-          <div className="flex items-center slide-in-right">
+          <div className="flex items-center ">
             <img
               src={odishaGov}
               alt="Odisha Government Logo"

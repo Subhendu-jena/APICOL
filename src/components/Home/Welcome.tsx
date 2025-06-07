@@ -35,9 +35,10 @@
 
 // export default Welcome;
 
-import ScrollAnimate from "../animation/scrollAnimate";
 import welcomeImg from "../../assets/images/welcome-apicol-819x1024.png";
 import bg1 from "../../assets/images/bg1.jpg";
+import SlideInFromLeft from "../animation/SlideInFromLeft";
+import SlideInFromRight from "../animation/SlideInFromRight";
 
 export default function Welcome() {
   return (
@@ -47,7 +48,7 @@ export default function Welcome() {
     >
       <div className="max-w-7xl items-center justify-center  mx-auto ">
         <div className="grid grid-cols-1 md:grid-cols-2 ">
-          <ScrollAnimate className=" animate-slide-in-left p-5   ">
+          <SlideInFromLeft className=" animate-slide-in-left p-5   ">
               <h6 className="text-orange-700 font-semibold mb-2 text-sm uppercase tracking-wide">
                 Welcome to
               </h6>
@@ -78,19 +79,19 @@ export default function Welcome() {
                   </button>
                 </div>
               </div>
-          </ScrollAnimate>
+          </SlideInFromLeft>
 
-          <ScrollAnimate className="w-full p-5  animate-slide-in-right">
+          <SlideInFromRight className="w-full p-5  animate-slide-in-right">
             {/* IMAGE */}
             <div className="relative group">
               <img
                 src={welcomeImg}
                 alt="Welcome to APICOL"
-                className="rounded-lg shadow-xl w-full   object-fit  h-[40rem] transform group-hover:scale-105 transition-transform duration-500"
+                className="rounded-lg shadow-xl w-full   object-fit  h-[30rem] transform group-hover:scale-105 transition-transform duration-500"
               />
               {/* <div className="absolute inset-0 bg-gradient-to-t from-orange-600/20 to-transparent rounded-lg"></div> */}
             </div>
-          </ScrollAnimate>
+          </SlideInFromRight>
         </div>
       </div>
     </section>

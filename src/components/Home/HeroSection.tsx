@@ -202,7 +202,7 @@ const HeroSection: React.FC = () => {
           </div>
         </SlideInFromBottom>
         {/* Card 2 */}
-        <SlideInFromBottom>
+        <SlideInFromBottom delay={1}>
           <div className="flex items-center bg-white/20 backdrop-blur-md rounded-full shadow-lg p-5 pr-8 w-fit slide-in-right">
             <img
               src={prem}
