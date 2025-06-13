@@ -1,13 +1,10 @@
-import './App.css'
-import Home from './pages/home/Home'
+import "./App.css";
+import AppRoutes from "./route/Routes";
 
 function App() {
-
   return (
-    <>
-     <Home/>
-    </>
-  )
+      <AppRoutes />
+  );
 }
 
-export default App
+export default App;

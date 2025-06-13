@@ -1,28 +1,3 @@
-// import React from "react";
-// import ReusableTable from "../table/Table";
-
-// const sampleHeaders = ["Name", "Age", "City"];
-// const sampleData = [
-//   { Name: "Alice", Age: 25, City: "Bhubaneswar" },
-//   { Name: "Bob", Age: 30, City: "Cuttack" },
-//   { Name: "Charlie", Age: 22, City: "Puri" },
-//   { Name: "David", Age: 28, City: "Sambalpur" },
-//   { Name: "Eve", Age: 35, City: "Balasore" },
-//   // Add more rows for testing
-// ];
-
-// const Tender :React.FC= () => {
-//   return (
-//     <div className="p-6">
-//       <ReusableTable columns={sampleHeaders} data={sampleData} />
-//     </div>
-//   );
-// };
-
-// export default Tender;
-
-
-
 import React from "react";
 import ReusableTable from "../table/Table";
 
@@ -33,9 +8,9 @@ const headers = [
     header: "Title",
     accessor: "title",
     render: (row: any) => (
-      <div className="text-blue-600 hover:underline cursor-pointer">
+      <div className="text-black font-semibold hover:underline cursor-pointer ">
         {row.title}
-        <p className="text-gray-500 text-sm">{row.subTitle}</p>
+        <p className="text-gray-500 font-normal text-xs">{row.subTitle}</p>
       </div>
     ),
   },
@@ -45,7 +20,7 @@ const headers = [
     accessor: "actions",
     render: () => (
       <div className="flex space-x-2">
-        <button className="text-blue-600 hover:underline">View</button>
+        <button className="text-orange-600 hover:underline">View</button>
       </div>
     ),
   },
@@ -66,13 +41,13 @@ const Tender: React.FC = () => {
   return (
     <div className="p-6">
       <div className="flex justify-end">
-        <input
+        {/* <input
           type="text"
           placeholder="Search..."
           //   value={searchTerm}
           //   onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-90 bg-white placeholder:text-black text-black border-none outline-none px-4 py-2 border rounded-lg"
-        />
+          className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
+        /> */}
       </div>
       <ReusableTable columns={headers} data={sampleData} />
     </div>

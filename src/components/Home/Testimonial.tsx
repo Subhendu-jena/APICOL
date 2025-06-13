@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import TestimonialCard from "../testimonialCard/TestimonialCard";
-import bgCM from "../../assets/images/bg-testi.jpg";
+// import bgCM from "../../assets/images/bg-testi.jpg";
 
 const testimonials = [
   {
@@ -34,6 +34,7 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
+  arrow:true,
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
@@ -42,8 +43,9 @@ const settings = {
 
 const Testimonial: React.FC = () => {
   return (
-    <div className="py-10  gap-3 bg-white text-white text-center  bg-cover bg-center"
-        style={{ backgroundImage: `url(${bgCM})` }}>
+    <div className="py-4  gap-3 bg-white text-black text-center  bg-cover bg-center"
+        // style={{ backgroundImage: `url(${bgCM})` }}
+        >
           <div className="max-w-7xl mx-auto">
 
       <h2 className="text-sm uppercase tracking-widest text-gray-400">

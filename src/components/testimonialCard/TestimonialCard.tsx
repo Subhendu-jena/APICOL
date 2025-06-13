@@ -66,7 +66,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   quote,
 }) => {
   return (
-    <div className="max-w-md mx-auto bg-gray-300 rounded-lg shadow-lg text-center p-6 relative">
+    <div className="max-w-md mx-auto bg-gray-200 rounded-lg shadow-lg text-center p-6 relative">
       
       {/* Profile Image */}
       <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white absolute -top-12 left-1/2 transform -translate-x-1/2">

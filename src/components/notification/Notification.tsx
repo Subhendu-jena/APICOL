@@ -8,9 +8,9 @@ const headers = [
     header: "Title",
     accessor: "title",
     render: (row: any) => (
-      <div className="text-blue-600 hover:underline cursor-pointer">
+      <div className="text-black font-semibold hover:underline cursor-pointer">
         {row.title}
-        <p className="text-gray-500 text-sm">{row.subTitle}</p>
+        <p className="text-gray-500 font-normal text-xs">{row.subTitle}</p>
       </div>
     ),
   },
@@ -19,7 +19,7 @@ const headers = [
     accessor: "actions",
     render: () => (
       <div className="flex space-x-2">
-        <button className="text-blue-600 hover:underline">View</button>
+        <button className="text-orange-600 hover:underline">View</button>
       </div>
     ),
   },

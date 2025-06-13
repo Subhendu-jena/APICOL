@@ -3,7 +3,7 @@ import { Twitter, Facebook, Instagram, MapPin, Mail, Phone } from "lucide-react"
 import { CircleArrowOutDownRight } from "lucide-react";
 import { Youtube } from "lucide-react";
 import logo from "../../assets/logos/APICOL-Logo.png"
-import foot from "../../assets/all/bg.png"
+// import foot from "../../assets/all/bg.png"
 export interface FooterLink {
   text: string;
   href: string;
@@ -23,7 +23,7 @@ const Footer = () => {
     <footer className="w-full relative  bg-gray-700 text-gray-200">
       {/* Contact Info Bar */}
       <div className="w-full z-10 absolute -top-14 overflow-hidden px-4">
-        <div className="w-full rounded-2xl mx-auto px-4 py-8 grid grid-cols-1 text-white md:grid-cols-4   overflow-hidden pl-8  gap-10 bg-gray-800">
+        <div className="w-full rounded-2xl mx-auto px-4 py-8 grid grid-cols-1 text-white md:grid-cols-3 justify-center   overflow-hidden pl-8  gap-10 bg-gray-800">
           <div className="flex items-center  space-x-4 group transition-all duration-300">
             <div className="p-2 border-4 border-orange-400 rounded-full bg-gray-800">
               <MapPin className="w-6 h-6" />
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 group transition-all duration-300 hover:translate-y-1">
+          {/* <div className="flex items-center space-x-4 group transition-all duration-300 hover:translate-y-1">
             <div className="p-2 border-4 border-orange-400 rounded-full bg-gray-800">
               <Phone className="w-6 h-6" />
             </div>
@@ -52,7 +52,7 @@ const Footer = () => {
               <h3 className="font-semibold underline">Toll-Free</h3>
               <p className="text-sm">674-2354125</p>
             </div>
-          </div>
+          </div> */}
 
           <div className="flex items-center space-x-4 group transition-all duration-300 hover:translate-y-1">
             <div className="p-2 border-4 border-orange-400 rounded-full bg-gray-800">
@@ -67,12 +67,12 @@ const Footer = () => {
       </div>
 
       {/* Main Footer Content */}
-      <img
+      {/* <img
         src={foot}
         alt=""
         className="absolute opacity-60 h-full  w-full  object-cover"
-      />
-      <div className="w-full mx-auto pt-25   px-12 relative ">
+      /> */}
+      <div className="w-full mx-auto pt-25 bg-[#101927]  px-12 relative ">
         <div className="grid grid-cols-1 md:grid-cols-3  gap-8  ">
           {/* Company Info */}
           <div className=" space-y-6">
@@ -98,18 +98,18 @@ const Footer = () => {
                 Bhubaneswar, Odisha, PIN-751003
               </p>
             </div>
-            <div>
+            {/* <div>
               {" "}
               <h3 className="font-semibold underline">Contact</h3>
               <div className=" flex space-x-4 text-[14px]">
                 <p>674-2354125</p>
                 <p className="">apicol96@yahoo.com</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col mx-auto">
             <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-4">
               {QuickLinks.map((link, index) => (

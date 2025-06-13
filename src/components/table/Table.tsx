@@ -49,14 +49,14 @@ const [prevIndex,setPrevIndex] = useState(0);
   return (
     <>
       {' '}
-      <div className="w-full text-[16px] overflow-x-auto max-h-[900px] min-h-[600px] relative overflow-y-auto text-[#0E1E2B]">
+      <div className="w-full text-[16px] overflow-x-auto max-h-[900px]  relative overflow-y-auto text-[#0E1E2B]">
         <table className="w-full border-collapse relative">
           <thead className="sticky top-0 z-10">
             <tr>
               {columns.map((column, index) => (
                 <th
                   key={index}
-                  className="py-6 px-6 font-semibold text-[#0E1E2B] bg-[#F8FAFF] border-y border-[#AAAAAA] text-left"
+                  className="py-2 px-6 font-semibold text-[#0E1E2B] bg-[#a4c1da] border-y border-[#AAAAAA] text-left"
                   style={{ width: column.size ? `${column.size}px` : '100px' }}
                 >
                   <div
@@ -75,7 +75,7 @@ const [prevIndex,setPrevIndex] = useState(0);
               paginatedData.map((row, rowIndex) => (
                 <tr
                   key={rowIndex}
-                  className="bg-white  hover:bg-gray-100"
+                  className="bg-white border-b-1  hover:bg-gray-100"
                   onClick={() => onRowClick?.(row)}
                 >
                   {columns.map((column, colIndex) => (
@@ -102,6 +102,7 @@ const [prevIndex,setPrevIndex] = useState(0);
           </tbody>
         </table>
       </div>
+      {/* Showing 1 to 4 of 7 entries */}
       {showPagination && (
         <div className="flex items-center justify-end pb-4 mt-4 space-x-2">
           <div>Rows per page</div>
