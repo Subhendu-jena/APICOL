@@ -11,6 +11,8 @@ import PrimeLayout from "../components/layout/PrimeLayout";
 import { paths } from "./path";
 import Agriculture from "../pages/successStories/Agriculture";
 import { ContactUs } from "../pages/contactUs/ContactUs";
+import ImageGallery from "../components/Home/ImageGallery";
+import VideoGallery from "../components/Home/VideoGallery";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -191,8 +193,8 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.notice} element={<ComingSoon />} />
           <Route path={paths.entrepreneurs} element={<ComingSoon />} />
           <Route path={paths.gallery} element={<ComingSoon />} />
-          <Route path={paths.galleryPhotos} element={<ComingSoon />} />
-          <Route path={paths.galleryVideos} element={<ComingSoon />} />
+          <Route path={paths.galleryPhotos} element={<ImageGallery />} />
+          <Route path={paths.galleryVideos} element={<VideoGallery />} />
           <Route path={paths.contactUs} element={<ContactUs />} />
           {/* ... other schemes ... */}
         </Route>

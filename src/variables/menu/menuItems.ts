@@ -132,7 +132,7 @@ export const menuItems = [
     ],
   },
 
-  { name: "Entrepreneur's Corner", href: paths.entrepreneurs },
+  { name: "Entrepreneur's Corner", href: "https://entrepreneur-s-corner-frontend.onrender.com" , target: true},
 
   {
     name: "Gallery",

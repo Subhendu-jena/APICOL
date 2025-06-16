@@ -1,7 +1,6 @@
 import React from "react";
 import SuccessStoriesCard from "../../components/successStoriesCard/SuccessStoriesCard";
 import bg from "../../assets/images/4.png";
-import { desc } from "framer-motion/client";
 const Agriculture : React.FC = () => {
   // const data = [
   //   {

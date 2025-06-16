@@ -6,8 +6,6 @@ import SlideInFromRight from "../animation/SlideInFromRight";
 import { paths } from "../../route/path";
 
 export default function Header() {
-
-
   return (
     <header className=" top-0 z-50">
       <div className="bg-orange-800 text-white py-2">
@@ -33,8 +31,8 @@ export default function Header() {
                 Activities
               </Link>
               <span>|</span>
-              <Link to="#" className="text-sm hover:text-gray-300">
-                Entrepreneurs' Corner
+              <Link to="https://grievance-ms-frontend.onrender.com" target="_blank" className="text-sm hover:text-gray-300">
+                Grievance Portal
               </Link>
               <span>|</span>
               <Link
@@ -134,7 +132,6 @@ export default function Header() {
       </div>
 
       {/* Navigation Menu */}
-     
     </header>
   );
 }

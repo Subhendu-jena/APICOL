@@ -36,6 +36,7 @@ const PrimeLayout: React.FC = () => {
                   {item.href ? (
                     <Link
                       to={item.href}
+                      target={item.target ? "_blank" : "_self"}
                       className="flex items-center px-3 py-3 hover:bg-orange-800 text-sm lg:text-base text-white cursor-pointer gap-1"
                     >
                       {item.name}
