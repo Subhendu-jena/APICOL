@@ -61,6 +61,7 @@ const sampleData = [
 const Notification: React.FC = () => {
   return (
     <div className="p-6">
+       <div className="text-2xl font-bold">Notification</div>
       <div className="flex justify-end">
         <input
           type="text"

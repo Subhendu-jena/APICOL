@@ -41,14 +41,15 @@ const sampleData = [
 const Recruitment: React.FC = () => {
   return (
     <div className="p-6">
+       <div className="text-2xl font-bold">Recruitment</div>
       <div className="flex justify-end">
-        {/* <input
+        <input
           type="text"
           placeholder="Search..."
           //   value={searchTerm}
           //   onChange={(e) => setSearchTerm(e.target.value)}
           className="w-90 bg-white placeholder:text-black text-black border-none outline-none px-4 py-2 border rounded-lg"
-        /> */}
+        />
       </div>
       <ReusableTable columns={headers} data={sampleData} />
     </div>

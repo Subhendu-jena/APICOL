@@ -65,6 +65,7 @@ const sampleData = [
 const Events: React.FC = () => {
   return (
     <div className="p-6">
+       <div className="text-2xl font-bold">Events</div>
       <div className="flex justify-end">
         <input
           type="text"

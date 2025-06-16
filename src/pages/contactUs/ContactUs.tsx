@@ -1,5 +1,6 @@
-import { LocateIcon, Mail, Phone } from "lucide-react";
+import { Globe, LocateIcon, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
+import ContactCard from "../../components/contactUsCard/ContactCard";
 
 type ContactForm = {
   name: string;
@@ -226,6 +227,35 @@ export const ContactUs: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="container mx-auto  grid grid-cols-1 md:grid-cols-4 gap-4 mb-30">
+{["Apicol","APTT","District Manager",'Chief District Agricultural Officer','Chief District Vertinary Officer','Deputy Director Horticulture','District Fishery Officer  '].map((item:any, index) => ( 
+
+  <ContactCard title={item} key={index} />
+))}
+      </div>
+      <div className="flex flex-wrap justify-center items-center min-h-screen bg-gray-100 px-4 py-8">
+      <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
+        <a href="#" className="block bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+          <div className="relative p-6">
+            {/* Icon Section */}
+            <div className="flex justify-center items-center w-16 h-16 rounded-full bg-orange-500 mx-auto mb-4">
+              <Globe className="text-white text-2xl" />
+            </div>
+
+            {/* Title */}
+            <div className="text-center">
+              <h3 className="text-xl font-semibold text-green-700 mb-2">APICOL</h3>
+              <p className="text-gray-500 text-sm">
+                {/* Optional description goes here */}
+              </p>
+            </div>
+
+            {/* Decorative footer part, optional */}
+            <div className="absolute bottom-0 left-0 right-0 h-2 bg-orange-100 rounded-b-xl" />
+          </div>
+        </a>
+      </div>
+    </div>
     </>
   );
 };

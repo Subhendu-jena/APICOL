@@ -41,7 +41,10 @@ export const paths = {
   reportsStudyReports: "/reports/study-reports",
 
   notice: "/notice",
-  
+  events: "/notice/events",
+  notification: "/notice/notification",
+  tenders: "/notice/tenders",
+  recruitment: "/notice/recruitment",
   downloads: "/downloads",
   downloadsModelDpr: "/downloads/model-dpr",
   downloadsBriefProjectProfile: "/downloads/brief-project-profile",

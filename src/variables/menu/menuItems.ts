@@ -12,14 +12,14 @@ export const menuItems = [
       { name: "Board of Directors", href: paths.aboutUsBoardOfDirectors },
       { name: "Organogram", href: paths.aboutUsOrganogram },
       {
-        name: "Managing Director's message",
+        name: "Chairman's message",
         href: paths.aboutUsManagingDirectorsMessage,
         target: false,
       },
       {
-        name: "RTI",
-        href: "https://rtiodisha.gov.in/pa/T1RILzIzLzgzLzE5",
-        target: true,
+        name: "Managing Director's message",
+        href: paths.aboutUsManagingDirectorsMessage,
+        target: false,
       },
     ],
   },
@@ -42,45 +42,36 @@ export const menuItems = [
         name: "Agriculture Entrepreneurship Promotion Scheme (AEPS)",
         href: paths.schemesAgricultureEntrepreneurshipPromotionSchemeAeps,
       },
-      {
-        name: "Prime Minister Formalization of Micro Food Processing Enterprises (PMFME)",
-        href: paths.schemesPrimeMinisterFormalizationOfMicroFoodProcessingEnterprisesPmfme,
-      },
-      {
-        name: "Agriculture Export Policy (AEP)",
-        href: paths.schemesAgricultureExportPolicyAep,
-      },
     ],
   },
-
-  {
-    name: "Apply Online",
-    href: paths.applyOnline,
+ {
+    name: "Notices",
+    href: paths.notice,
     dropdown: [
       {
-        name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-        href: paths.applyOnlineMukhyamantriKrushiUdyogYojanaMkuy,
+        name: "Events",
+        href: paths.events,
       },
       {
-        name: "Financial assistance to Cold storages",
-        href: paths.applyOnlineColdStorages,
+        name: "Notification",
+        href: paths.notification,
       },
       {
-        name: "Agriculture Entrepreneurship Promotion Scheme (AEPS)",
-        href: paths.applyOnlineAeps,
+        name: "Tenders",
+        href: paths.tenders,
       },
       {
-        name: "Prime Minister Formalization of Micro Food Processing Enterprises (PMFME)",
-        href: paths.applyOnlinePmfme,
+        name: "Recruitment",
+        href: paths.recruitment,
       },
-      { name: "Agriculture Export Policy (AEP)", href: paths.applyOnlineAep },
     ],
   },
-
   {
     name: "Success Stories",
     href: paths.successStories,
     dropdown: [
+      { name: "Coffee Table Book", href: "#" },
+      { name: "Success Story Compendium", href: "#" },
       { name: "Agriculture", href: paths.successStoriesAgriculture },
       { name: "Horticulture", href: paths.successStoriesHorticulture },
       {
@@ -101,10 +92,11 @@ export const menuItems = [
     dropdown: [
       { name: "Annual Reports", href: paths.reportsAnnualReports },
       { name: "Study Reports", href: paths.reportsStudyReports },
+      { name: "Enterprise Guidebook", href: "#" },
     ],
   },
 
-  { name: "Notices", href: paths.notice },
+  { name: "Analytics (Dashboard of MKUY)", href: "#" },
 
   {
     name: "Downloads",
@@ -132,7 +124,12 @@ export const menuItems = [
     ],
   },
 
-  { name: "Entrepreneur's Corner", href: "https://entrepreneur-s-corner-frontend.onrender.com" , target: true},
+  {
+    name: "Entrepreneur's Corner",
+    href: "https://entrepreneur-s-corner-frontend.onrender.com",
+    target: true,
+  },
+ 
 
   {
     name: "Gallery",

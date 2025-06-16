@@ -13,121 +13,20 @@ import Agriculture from "../pages/successStories/Agriculture";
 import { ContactUs } from "../pages/contactUs/ContactUs";
 import ImageGallery from "../components/Home/ImageGallery";
 import VideoGallery from "../components/Home/VideoGallery";
+import DDH from "../pages/contactUs/DFO";
+import Tender from "../components/Tender/Tender";
+import Notification from "../components/notification/Notification";
+import Events from "../components/events/Events";
+import Recruitment from "../components/recruitment/Recruitment";
 
 const AppRoutes: React.FC = () => {
   return (
     <>
-      {/* <Routes>
-        <Route element={<PrimeLayout/>}>
-        <Route path={paths.home} element={<Home />} />
-
-        <Route path={paths.aboutUs} element={<CustomLayout />}>
-          <Route index element={<AboutsUs />} />
-          <Route path={paths.aboutUsAboutApicol} element={<AboutsUs />} />
-          <Route
-            path={paths.aboutUsBoardOfDirectors}
-            element={<BoardOfDirectors />}
-          />
-          <Route path={paths.aboutUsOrganogram} element={<Organogram />} />
-          <Route
-            path={paths.aboutUsManagingDirectorsMessage}
-            element={<ManagingDirectorsMessage />}
-          />
-        </Route>
-
-        <Route path={paths.schemes} element={<CustomLayout />}>
-          <Route
-            path={paths.schemesMukhyamantriKrushiUdyogYojanaMkuy}
-            element={<ComingSoon />}
-          />
-          <Route
-            path={paths.schemesFinancialAssistanceToColdStorages}
-            element={<ComingSoon />}
-          />
-          <Route
-            path={paths.schemesAgricultureEntrepreneurshipPromotionSchemeAeps}
-            element={<ComingSoon />}
-          />
-          <Route
-            path={
-              paths.schemesPrimeMinisterFormalizationOfMicroFoodProcessingEnterprisesPmfme
-            }
-            element={<ComingSoon />}
-          />
-          <Route
-            path={paths.schemesAgricultureExportPolicyAep}
-            element={<ComingSoon />}
-          />
-        </Route>
-        <Route path={paths.applyOnline} element={<CustomLayout />}>
-          <Route
-            path={paths.applyOnlineMukhyamantriKrushiUdyogYojanaMkuy}
-            element={<ComingSoon />}
-          />
-          <Route
-            path={paths.applyOnlineColdStorages}
-            element={<ComingSoon />}
-          />
-          <Route path={paths.applyOnlineAeps} element={<ComingSoon />} />
-          <Route path={paths.applyOnlinePmfme} element={<ComingSoon />} />
-          <Route path={paths.applyOnlineAep} element={<ComingSoon />} />
-        </Route>
-        <Route path={paths.successStories} element={<CustomLayout />}>
-          <Route
-            path={paths.successStoriesAgriculture}
-            element={<Agriculture />}
-          />
-          <Route
-            path={paths.successStoriesHorticulture}
-            element={<ComingSoon />}
-          />
-          <Route
-            path={paths.successStoriesAnimalResource}
-            element={<ComingSoon />}
-          />
-          <Route path={paths.successStoriesFishery} element={<ComingSoon />} />
-          <Route
-            path={paths.successStoriesIntegratedFarming}
-            element={<ComingSoon />}
-          />
-        </Route>
-        <Route path={paths.reports} element={<CustomLayout />}>
-          <Route path={paths.reportsAnnualReports} element={<ComingSoon />} />
-          <Route path={paths.reportsStudyReports} element={<ComingSoon />} />
-        </Route>
-        <Route path={paths.notice} element={<CustomLayout />}></Route>
-        <Route path={paths.downloads} element={<CustomLayout />}>
-          <Route path={paths.downloadsModelDpr} element={<ComingSoon />} />
-          <Route
-            path={paths.downloadsBriefProjectProfile}
-            element={<ComingSoon />}
-          />
-          <Route path={paths.downloadsPresentations} element={<ComingSoon />} />
-          <Route path={paths.downloadsTechnicalInfo} element={<ComingSoon />} />
-          <Route path={paths.downloadsMobileApps} element={<ComingSoon />} />
-          <Route
-            path={paths.downloadsDistrictManagers}
-            element={<ComingSoon />}
-          />
-          <Route path={paths.downloadsNodalOfficers} element={<ComingSoon />} />
-          <Route path={paths.downloadsBlockOfficers} element={<ComingSoon />} />
-          <Route path={paths.downloadsSuppliers} element={<ComingSoon />} />
-          <Route path={paths.downloadsBankers} element={<ComingSoon />} />
-        </Route>
-        <Route path={paths.entrepreneurs} element={<CustomLayout />}></Route>
-        <Route path={paths.gallery} element={<CustomLayout />}>
-          <Route path={paths.galleryPhotos} element={<ComingSoon />} />
-          <Route path={paths.galleryVideos} element={<ComingSoon />} />
-        </Route>
-        </Route>
-      </Routes> */}
-
       <Routes>
         {" "}
         <Route path="/" element={<PrimeLayout />}>
           <Route index element={<Home />} />
 
-          {/* <Route path="about-us" element={<AboutsUs />} /> */}
           <Route path={paths.aboutUs} element={<AboutsUs />} />
           <Route path={paths.aboutUsAboutApicol} element={<AboutsUs />} />
           <Route
@@ -190,14 +89,18 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.downloadsBlockOfficers} element={<ComingSoon />} />
           <Route path={paths.downloadsSuppliers} element={<ComingSoon />} />
           <Route path={paths.downloadsBankers} element={<ComingSoon />} />
-          <Route path={paths.notice} element={<ComingSoon />} />
+          <Route path={paths.notice} element={<Events />} />
+          <Route path={paths.events} element={<Events />} />
+          <Route path={paths.notification} element={<Notification />} />
+          <Route path={paths.tenders} element={<Tender />} />
+          <Route path={paths.recruitment} element={<Recruitment />} />
           <Route path={paths.entrepreneurs} element={<ComingSoon />} />
-          <Route path={paths.gallery} element={<ComingSoon />} />
+          <Route path={paths.gallery} element={<ImageGallery />} />
           <Route path={paths.galleryPhotos} element={<ImageGallery />} />
           <Route path={paths.galleryVideos} element={<VideoGallery />} />
           <Route path={paths.contactUs} element={<ContactUs />} />
-          {/* ... other schemes ... */}
         </Route>
+          <Route path='apicol' element={<DDH />} />
       </Routes>
     </>
   );
