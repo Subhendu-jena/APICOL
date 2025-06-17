@@ -24,9 +24,8 @@ export const ContactUs: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [activeTab, setActiveTab] = useState("apicol");
 
-  const gradientBackground = "bg-gradient-to-r from-[#ff8008] to-[#ffc837]";
-  const gradientBackgroundHover = "bg-gradient-to-r from-[#514A9D] to-[#24C6DC]";
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
+  const gradientBackgroundHover = "bg-gradient-to-r from-[#000000] to-[#00A650]";
 
   
   const tabClasses = (tab: string) =>

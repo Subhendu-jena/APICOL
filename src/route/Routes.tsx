@@ -18,6 +18,7 @@ import Tender from "../components/Tender/Tender";
 import Notification from "../components/notification/Notification";
 import Events from "../components/events/Events";
 import Recruitment from "../components/recruitment/Recruitment";
+import AnnualReports from "../pages/reports/AnnualReports";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -76,7 +77,7 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.successStoriesFishery} element={<ComingSoon />} />
           <Route path={paths.successStoriesIntegratedFarming} element={<ComingSoon />} />
           <Route path={paths.reports} element={<ComingSoon />} />
-          <Route path={paths.reportsAnnualReports} element={<ComingSoon />} />
+          <Route path={paths.reportsAnnualReports} element={<AnnualReports />} />
           <Route path={paths.reportsStudyReports} element={<ComingSoon />} />
           <Route path={paths.downloads} element={<ComingSoon />} />
           <Route path={paths.downloadsModelDpr} element={<ComingSoon />} />
