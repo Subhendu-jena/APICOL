@@ -26,7 +26,7 @@ const Advertise: React.FC = () => {
   ];
 
   return (
-    <div className="py-5  bg-white">
+    <div className="py-5  bg-white hidden md:block">
       
       <div className="max-w-7xl mx-auto ">
         {/* Tabs */}

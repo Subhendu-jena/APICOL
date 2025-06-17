@@ -35,7 +35,7 @@ export default function Header() {
                 Grievance Portal
               </Link>
               <span>|</span>
-              <Link
+              {/* <Link
                 to="https://rtiodisha.gov.in/pa/T1RJLzIzLzgzLzE5"
                 className="text-sm hover:text-gray-300"
                 target="_blank"
@@ -43,7 +43,7 @@ export default function Header() {
               >
                 RTI
               </Link>
-              <span>|</span>
+              <span>|</span> */}
               <Link to="/contact-us/" className="text-sm hover:text-gray-300">
                 Contact Us
               </Link>
@@ -96,13 +96,13 @@ export default function Header() {
         <div className="container mx-auto px-4 flex flex-row md:flex-row justify-between items-center">
           <SlideInFromLeft>
             <Link to={paths.home}>
-              <div className="flex items-center mb-4 md:mb-0">
+              <div className="flex items-center mb-4 md:mb-0 ">
                 <img
                   src={apicol}
                   alt="APICOL Logo"
                   className="mr-4 w-20 h-20"
                 />
-                <div className="hidden md:block">
+                <div className="hidden sm:block md:block">
                   <h3 className="text-lg font-bold">
                     ଓଡ଼ିଶା କୃଷି ପ୍ରୋତ୍ସାହନ ଏବଂ ପୁଞ୍ଜି ଲଗାଣ ନିଗମ ଲିଃ <br />
                     The Agricultural Promotion and Investment <br />

@@ -247,7 +247,7 @@ const social = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-gray-900 text-gray-200">
+    <footer className="w-full bg-gray-900 text-gray-200 mt-20">
       {/* Grievance Contact Bar */}
       <div className="w-full z-10 -mt-14 px-4">
         <div className="max-w-7xl mx-auto rounded-2xl px-6 py-8 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 bg-orange-600">

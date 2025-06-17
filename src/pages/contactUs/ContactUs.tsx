@@ -1,6 +1,8 @@
-import { Globe, LocateIcon, Mail, Phone } from "lucide-react";
+import {  LocateIcon, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
-import ContactCard from "../../components/contactUsCard/ContactCard";
+import Apicol from "./Apicol";
+import CDAO from "./CDAO";
+import CDVO from "./CDVO";
 
 type ContactForm = {
   name: string;
@@ -20,7 +22,24 @@ export const ContactUs: React.FC = () => {
   const [form, setForm] = useState<ContactForm>(initialForm);
   const [errors, setErrors] = useState<Partial<ContactForm>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [activeTab, setActiveTab] = useState("apicol");
 
+  const gradientBackground = "bg-gradient-to-r from-[#ff8008] to-[#ffc837]";
+  const gradientBackgroundHover = "bg-gradient-to-r from-[#514A9D] to-[#24C6DC]";
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  
+  const tabClasses = (tab: string) =>
+    `w-full py-4 px-24 font-medium rounded-4xl transition-all duration-300 ${
+      activeTab === tab
+        ? `${gradientBackgroundHover} text-white shadow-lg transform scale-105`
+        : `${gradientBackground}  text-white shadow-lg transform scale-105 `
+    }`;
+  const tabs = [
+    { key: "apicol", label: "APICOL Scheme Officers" },
+    { key: "nodal", label: "District Nodal Officers" },
+    { key: "coordinator", label: "District Coordinators" },
+  ];
   const validate = (): boolean => {
     const errs: Partial<ContactForm> = {};
     if (!form.name.trim()) errs.name = "Name is required";
@@ -227,35 +246,34 @@ export const ContactUs: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto  grid grid-cols-1 md:grid-cols-4 gap-4 mb-30">
-{["Apicol","APTT","District Manager",'Chief District Agricultural Officer','Chief District Vertinary Officer','Deputy Director Horticulture','District Fishery Officer  '].map((item:any, index) => ( 
-
-  <ContactCard title={item} key={index} />
-))}
+    <div className="max-w-7xl mx-auto ">
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-between px-auto">
+          {tabs.map(({ key, label }) => (
+              <div className="justify-center">
+                <button
+                  key={key}
+                  className={tabClasses(key)}
+                  onClick={() => setActiveTab(key)}
+                >
+                  {label}
+                </button>
+                {activeTab === key && (
+                  <div className="">
+                    <div className={`w-0 h-0  border-l-20 border-r-20 border-t-20 border-l-transparent border-r-transparent ${gradientBackground} mx-auto`}></div>
+                  </div>
+                )}
+              </div>
+          ))}
+        </div>
+        {/* Tab Content */}
+        <div className="w-full">
+          {activeTab === "apicol" && <Apicol />}
+          {activeTab === "nodal" && <CDAO />}
+          {activeTab === "coordinator" && <CDVO />}
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center items-center min-h-screen bg-gray-100 px-4 py-8">
-      <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4">
-        <a href="#" className="block bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
-          <div className="relative p-6">
-            {/* Icon Section */}
-            <div className="flex justify-center items-center w-16 h-16 rounded-full bg-orange-500 mx-auto mb-4">
-              <Globe className="text-white text-2xl" />
-            </div>
-
-            {/* Title */}
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-green-700 mb-2">APICOL</h3>
-              <p className="text-gray-500 text-sm">
-                {/* Optional description goes here */}
-              </p>
-            </div>
-
-            {/* Decorative footer part, optional */}
-            <div className="absolute bottom-0 left-0 right-0 h-2 bg-orange-100 rounded-b-xl" />
-          </div>
-        </a>
-      </div>
-    </div>
+  
     </>
   );
 };

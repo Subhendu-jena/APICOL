@@ -3,21 +3,30 @@ import Table1 from "../../components/table/Table";
 
 const Apicol: React.FC = () => {
   const headers = [
+    
+  // { accessor: "slNo", header: "Sl. No.",render: (row: any) => {
+  //   console.log(row)
+  //   return(
+  //     <div className="text-black">{row.slNo}</div>
+  //   )},
+  //   size: 10, },
     {
       header: "Title",
       accessor: "title",
-      render: (row: any) => (
-        <div className="text-black font-semibold hover:underline cursor-pointer ">
+      render: (row: any) => {
+        console.log(row)
+        return(
+        <div className="text-black">
           {row.title}
         </div>
-      ),
+      )},
     },
     {
       header: "Name of the Officers",
       accessor: "name",
       render: (row: any) => (
-        <div className="text-black font-semibold hover:underline cursor-pointer ">
-          {row.name}
+        <div className="text-black">
+          {row.name ? row.name : "N/A"}
         </div>
       ),
     },
@@ -26,7 +35,7 @@ const Apicol: React.FC = () => {
       accessor: "contactNo",
       render: (row: any) => (
         <div className="text-black font-semibold hover:underline cursor-pointer">
-          {row.contactNo}
+          {row.contactNo ? row.contactNo : "N/A"}
         </div>
       ),
     },
@@ -35,7 +44,7 @@ const Apicol: React.FC = () => {
       accessor: "email",
       render: (row: any) => (
         <div className="text-black font-semibold hover:underline cursor-pointer">
-          {row.email}
+          {row.email ? row.email : "N/A"}
         </div>
       ),
     },

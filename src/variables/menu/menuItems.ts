@@ -67,6 +67,19 @@ export const menuItems = [
     ],
   },
   {
+    name:'Model DPRs',
+    href:'#',
+    dropdown:[
+      {name:'Mukhyamantri Krushi Udyog Yojana (MKUY)',href:'#'},
+      {name:'Agriculture',href:'#'},
+      {name:'Horticulture',href:'#'},
+      {name:'AH&VS',href:'#'},
+      {name:'Fishery',href:'#'},
+      {name:'Inter Departmental',href:'#'},
+    ]
+
+  },
+  {
     name: "Success Stories",
     href: paths.successStories,
     dropdown: [
@@ -137,6 +150,10 @@ export const menuItems = [
     dropdown: [
       { name: "Photos", href: paths.galleryPhotos },
       { name: "Videos", href: paths.galleryVideos },
+      { name: "News Clipping (Last 1 Year)", href: '#' },
+      { name: "Mukhyamantri Krushi Udyog Yojana (MKUY)", href: '#' },
+      { name: "Financial Assistance to Cold Storages (FACS)", href: '#' },
+      { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: '#' },
     ],
   },
 ];

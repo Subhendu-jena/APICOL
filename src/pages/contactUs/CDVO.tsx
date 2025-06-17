@@ -38,6 +38,8 @@ const CDVO: React.FC = () => {
           )}
         </div>
       ),
+      size: 300,
+
     },
     {
       accessor: "contact",
@@ -55,7 +57,7 @@ const CDVO: React.FC = () => {
           )}
         </div>
       ),
-      size: 200,
+      size: 300,
     },
   ];
 

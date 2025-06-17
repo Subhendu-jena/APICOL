@@ -36,8 +36,8 @@ const PrimeLayout: React.FC = () => {
                   {item.href ? (
                     <Link
                       to={item.href}
-                      target={item.target ? "_blank" : "_self"}
-                      className="flex items-center px-3 py-3 hover:bg-orange-800 text-sm lg:text-base text-white cursor-pointer gap-1"
+                      target={item.target ? "_blank" : "_self"}   
+                      className="flex items-center px-3 py-3 hover:bg-orange-800 text-[15px]  text-white cursor-pointer gap-1"
                     >
                       {item.name}
                        {item.dropdown && <ChevronDown size={16}  className="transition-transform duration-200 group-hover:rotate-180"/>}
