@@ -43,6 +43,16 @@ export const paths = {
   reportsStudyReports: "/reports/study-reports",
 
   notice: "/notice",
+  
+  modelDpr: "/model-dpr",
+  modelDprMukhyamantriKrushiUdyogYojana: "/model-dpr/MukhyamantriKrushiUdyogYojana",
+  modelDprAgriculture: "/model-dpr/agriculture",
+  modelDprHorticulture: "/model-dpr/horticulture",
+  modelDprAHAndVS: "/model-dpr/ah-and-vs",
+  modelDprFishery: "/model-dpr/fishery",
+  modelDprInterDepartmental: "/model-dpr/inter-departmental",
+
+
   events: "/notice/events",
   notification: "/notice/notification",
   tenders: "/notice/tenders",

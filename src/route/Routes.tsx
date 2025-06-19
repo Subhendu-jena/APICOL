@@ -21,6 +21,11 @@ import Recruitment from "../components/recruitment/Recruitment";
 import AnnualReports from "../pages/reports/AnnualReports";
 import CoffeeTableBook from "../pages/successStories/CoffeeTableBook";
 import Compendium from "../pages/successStories/Compendium";
+import StudyReports from "../pages/reports/StudyReports";
+import DPRAgriculture from "../pages/modelDpr/DPRAgriculture";
+import DPRAHandVS from "../pages/modelDpr/DPRAHandVS";
+import DPRHorticulture from "../pages/modelDpr/DPRHorticulture";
+import DPRFishery from "../pages/modelDpr/DPRFishery";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -82,7 +87,16 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.successStoriesIntegratedFarming} element={<ComingSoon />} />
           <Route path={paths.reports} element={<AnnualReports />} />
           <Route path={paths.reportsAnnualReports} element={<AnnualReports />} />
-          <Route path={paths.reportsStudyReports} element={<ComingSoon />} />
+          <Route path={paths.reportsStudyReports} element={<StudyReports />} />
+          
+          <Route path={paths.modelDpr} element={<DPRAgriculture />} />
+          <Route path={paths.modelDprMukhyamantriKrushiUdyogYojana} element={<ComingSoon />} />
+          <Route path={paths.modelDprAgriculture} element={<DPRAgriculture />} />
+          <Route path={paths.modelDprHorticulture} element={<DPRHorticulture />} />
+          <Route path={paths.modelDprAHAndVS} element={<DPRAHandVS />} />
+          <Route path={paths.modelDprFishery} element={<DPRFishery />} />
+          <Route path={paths.modelDprInterDepartmental} element={<ComingSoon />} />
+
           <Route path={paths.downloads} element={<ComingSoon />} />
           <Route path={paths.downloadsModelDpr} element={<ComingSoon />} />
           <Route path={paths.downloadsBriefProjectProfile} element={<ComingSoon />} />

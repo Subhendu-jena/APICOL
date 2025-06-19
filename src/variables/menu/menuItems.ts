@@ -1,3 +1,4 @@
+import path from "path";
 import { paths } from "../../route/path";
 
 export const menuItems = [
@@ -68,13 +69,13 @@ export const menuItems = [
   },
   {
     name:'Model DPRs',
-    href:'#',
+    href:paths.modelDpr,
     dropdown:[
       {name:'Mukhyamantri Krushi Udyog Yojana (MKUY)',href:'#'},
-      {name:'Agriculture',href:'#'},
-      {name:'Horticulture',href:'#'},
-      {name:'AH&VS',href:'#'},
-      {name:'Fishery',href:'#'},
+      {name:'Agriculture',href:paths.modelDprAgriculture},
+      {name:'Horticulture',href:paths.modelDprHorticulture},
+      {name:'AH&VS',href:paths.modelDprAHAndVS},
+      {name:'Fishery',href:paths.modelDprFishery},
       {name:'Inter Departmental',href:'#'},
     ]
 
