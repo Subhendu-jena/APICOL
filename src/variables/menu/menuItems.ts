@@ -1,4 +1,3 @@
-import path from "path";
 import { paths } from "../../route/path";
 
 export const menuItems = [
