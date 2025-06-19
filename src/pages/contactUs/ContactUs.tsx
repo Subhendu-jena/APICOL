@@ -97,8 +97,8 @@ export const ContactUs: React.FC = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="py-10 bg-gray-50 flex items-center justify-center mb-20">
-        <div className="max-w-6xl w-full bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="py-10 bg-gray-100 flex items-center justify-center mb-20">
+        <div className="max-w-6xl w-full bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="md:flex">
             {/* Info Side */}
             <div className="md:w-1/2 bg-gray-600 text-white p-8">

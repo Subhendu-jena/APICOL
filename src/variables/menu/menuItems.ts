@@ -83,8 +83,8 @@ export const menuItems = [
     name: "Success Stories",
     href: paths.successStories,
     dropdown: [
-      { name: "Coffee Table Book", href: "#" },
-      { name: "Success Story Compendium", href: "#" },
+      { name: "Coffee Table Book", href: paths.successStoriesCoffeeTableBook },
+      { name: "Success Story Compendium", href: paths.successStoriesCompendium },
       { name: "Agriculture", href: paths.successStoriesAgriculture },
       { name: "Horticulture", href: paths.successStoriesHorticulture },
       {
@@ -109,7 +109,7 @@ export const menuItems = [
     ],
   },
 
-  { name: "Analytics (Dashboard of MKUY)", href: "#" },
+  { name: "Analytics", href: "#" },
 
   {
     name: "Downloads",
@@ -136,14 +136,6 @@ export const menuItems = [
       { name: "Bankers' List", href: paths.downloadsBankers },
     ],
   },
-
-  {
-    name: "Entrepreneur's Corner",
-    href: "https://entrepreneur-s-corner-frontend.onrender.com",
-    target: true,
-  },
- 
-
   {
     name: "Gallery",
     href: paths.gallery,
@@ -156,4 +148,12 @@ export const menuItems = [
       { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: '#' },
     ],
   },
+
+  {
+    name: "Entrepreneur's Corner",
+    href: "https://entrepreneur-s-corner-frontend.onrender.com",
+    target: true,
+  },
+ 
+
 ];

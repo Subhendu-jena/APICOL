@@ -30,6 +30,8 @@ export const paths = {
   applyOnlineAep: "/apply-online/agriculture-export-policy-aep",
 
   successStories: "/success-stories",
+  successStoriesCoffeeTableBook: "/success-stories/coffee-table-book",
+  successStoriesCompendium: "/success-stories/compendium",
   successStoriesAgriculture: "/success-stories/agriculture",
   successStoriesHorticulture: "/success-stories/horticulture",
   successStoriesAnimalResource: "/success-stories/animal-resource",

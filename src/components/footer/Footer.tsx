@@ -209,7 +209,8 @@ import {
   MapPin,
   Phone,
 } from "lucide-react";
-import logo from "../../assets/logos/APICOL-Logo.png"
+import logo from "../../assets/logos/APICOL-Logo.png";
+import VisitorCounter from "../visitorCounter/VisitorCounter";
 
 interface FooterLink {
   text: string;
@@ -239,10 +240,10 @@ const QuickLinks: FooterLink[] = [
 ];
 
 const social = [
-  { logo: <Twitter/>, href: "https://x.com/APICOLBBSR" },
-  { logo: <Facebook/>, href: "https://www.facebook.com/apicolodisha/" },
-  { logo: <Instagram/>, href: "https://www.instagram.com/apicolodisha/" },
-  { logo: <Youtube/>, href: "https://www.youtube.com/@Apicolodisha" },
+  { logo: <Twitter />, href: "https://x.com/APICOLBBSR" },
+  { logo: <Facebook />, href: "https://www.facebook.com/apicolodisha/" },
+  { logo: <Instagram />, href: "https://www.instagram.com/apicolodisha/" },
+  { logo: <Youtube />, href: "https://www.youtube.com/@Apicolodisha" },
 ];
 
 const Footer = () => {
@@ -255,7 +256,8 @@ const Footer = () => {
             {
               icon: <MapPin className="w-6 h-6" />,
               title: "Office Address",
-              content: "Plot No. 326, OUAT Agriculture Farm Road, Baramunda, Bhubaneswar, Odisha, PIN-751003",
+              content:
+                "Plot No. 326, OUAT Agriculture Farm Road, Baramunda, Bhubaneswar, Odisha, PIN-751003",
             },
             {
               icon: <Mail className="w-6 h-6" />,
@@ -267,7 +269,6 @@ const Footer = () => {
               title: "Mobile Number",
               content: "+91 9437207150",
             },
-            
           ].map(({ icon, title, content }, index) => (
             <div
               key={index}
@@ -291,11 +292,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4 max-w-md">
             <div className="flex items-center space-x-4">
-              <img
-                src={logo}
-                alt="Logo"
-                className="w-12 h-12 object-contain"
-              />
+              <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
               <h3 className="text-lg font-semibold">
                 Agricultural Promotion and Investment Corporation of Odisha
                 Limited
@@ -313,7 +310,8 @@ const Footer = () => {
                   href={Icon.href}
                   target="_blank"
                   className="text-gray-400 hover:text-white"
-                >{Icon.logo}
+                >
+                  {Icon.logo}
                 </a>
               ))}
             </div>
@@ -345,15 +343,17 @@ const Footer = () => {
               )}
             </div>
           </div>
-
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59878.68358261181!2d85.8008194!3d20.2829697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a786ac87447f%3A0xf9e98d6ae9e82e17!2sApicol!5e0!3m2!1sen!2sin!4v1748253648714!5m2!1sen!2sin"
-            width="340"
-            height="180"
-            style={{ border: "0" }}
-            loading="lazy"
-            className="rounded-2xl"
-          ></iframe>
+          <div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59878.68358261181!2d85.8008194!3d20.2829697!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a786ac87447f%3A0xf9e98d6ae9e82e17!2sApicol!5e0!3m2!1sen!2sin!4v1748253648714!5m2!1sen!2sin"
+              width="340"
+              height="180"
+              style={{ border: "0" }}
+              loading="lazy"
+              className="rounded-2xl"
+            ></iframe>
+            <VisitorCounter />
+          </div>
         </div>
       </div>
 

@@ -21,7 +21,7 @@ const SlideInFromRight: React.FC<SlideInFromRightProps> = ({
   return (
     <motion.div
       ref={ref}
-    initial={{ x: 200, opacity: 0 }}
+      initial={{ x: '10vw', opacity: 0 }}
       animate={inView ? { x: 0, y: 0, opacity: 1 } : {}}
       transition={{ type: "tween", duration: 1, delay }}
       className={className}

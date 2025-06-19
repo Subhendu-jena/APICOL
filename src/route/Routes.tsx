@@ -19,6 +19,8 @@ import Notification from "../components/notification/Notification";
 import Events from "../components/events/Events";
 import Recruitment from "../components/recruitment/Recruitment";
 import AnnualReports from "../pages/reports/AnnualReports";
+import CoffeeTableBook from "../pages/successStories/CoffeeTableBook";
+import Compendium from "../pages/successStories/Compendium";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -70,13 +72,15 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.applyOnlineAeps} element={<ComingSoon />} />
           <Route path={paths.applyOnlinePmfme} element={<ComingSoon />} />
           <Route path={paths.applyOnlineAep} element={<ComingSoon />} />
-          <Route path={paths.successStories} element={<Agriculture />} />
+          <Route path={paths.successStories} element={<CoffeeTableBook />} />
+          <Route path={paths.successStoriesCoffeeTableBook} element={<CoffeeTableBook />} />
+          <Route path={paths.successStoriesCompendium} element={<Compendium />} />
           <Route path={paths.successStoriesAgriculture} element={<Agriculture />} />
           <Route path={paths.successStoriesHorticulture} element={<ComingSoon />} />
           <Route path={paths.successStoriesAnimalResource} element={<ComingSoon />} />
           <Route path={paths.successStoriesFishery} element={<ComingSoon />} />
           <Route path={paths.successStoriesIntegratedFarming} element={<ComingSoon />} />
-          <Route path={paths.reports} element={<ComingSoon />} />
+          <Route path={paths.reports} element={<AnnualReports />} />
           <Route path={paths.reportsAnnualReports} element={<AnnualReports />} />
           <Route path={paths.reportsStudyReports} element={<ComingSoon />} />
           <Route path={paths.downloads} element={<ComingSoon />} />

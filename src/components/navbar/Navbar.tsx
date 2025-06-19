@@ -11,7 +11,8 @@ export default function Header() {
       <div className="bg-orange-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div>
-            <span className="mr-4">ଓଡିଶା ସରକାର</span>
+            <span >ଓଡିଶା ସରକାର</span>
+              <span className="mx-4">|</span>
             <span>Government of Odisha</span>
           </div>
           <div className="hidden md:flex items-center space-x-4">

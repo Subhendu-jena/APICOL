@@ -4,6 +4,35 @@
   0% { transform: translateX(100%); }
   100% { transform: translateX(-100%); }
 }
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ea580c; /* Tailwind gray-700 */
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ea580c; 
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color:  #4b5563 #f0f0ff; /* thumb color, track color */
+
+}
+
 
 .animate-marquee {
   display: inline-block;
