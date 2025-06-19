@@ -1,8 +1,8 @@
 import React from 'react';
 import ModelDprCard from '../../components/modelDprCard/ModelDprCard';
 
-import aquaShop_500 from '../../assets/pdfs/MODELDPR/Fishery/Aqua Shop (500 sq. ft.) (1).pdf';
-import aquaShop_1000 from '../../assets/pdfs/MODELDPR/Fishery/Aqua Shop (1000 sq. ft.) (1).pdf';
+import aquaShop_500 from '../../assets/pdfs/MODELDPR/Fishery/Aqua Shop500.pdf';
+import aquaShop_1000 from '../../assets/pdfs/MODELDPR/Fishery/Aqua Shop1000.pdf';
 import bio_floc_10_BF from '../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 10 Tanks Bank Finance.pdf';
 import bio_floc_25_BF from '../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 25 Tanks Bank Finance.pdf';
 import bio_floc_50_BF from '../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 50 Tanks Self- Finance.pdf';
