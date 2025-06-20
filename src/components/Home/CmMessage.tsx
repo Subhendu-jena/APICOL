@@ -3,9 +3,9 @@ import md from "../../assets/all/arabinda.png";
 import chairman from "../../assets/all/prem.png";
 import bgCM from "../../assets/all/bgf.png";
 import SlideInFromBottom from "../animation/SlideInFromBottom";
-import SlideInFromLeft from "../animation/SlideInFromLeft";
 import SlideInFromRight from "../animation/SlideInFromRight";
 import Slider from "react-slick";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function MessageSection() {
   const data = [
@@ -23,6 +23,7 @@ export default function MessageSection() {
       message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
+
     {
       designation: "Managing Director",
       image: md,
@@ -31,7 +32,17 @@ export default function MessageSection() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
   ];
+const CustomPrevArrow = ({ className, onClick }: any) => (
+  <div className={`${className} z-10 left-2`} onClick={onClick}>
+    <ChevronLeft size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
+  </div>
+);
 
+const CustomNextArrow = ({ className, onClick }: any) => (
+  <div className={`${className} z-10 right-2`} onClick={onClick}>
+    <ChevronRight size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
+  </div>
+);
   const settings = {
     dots: true,
     infinite: true,
@@ -41,6 +52,8 @@ export default function MessageSection() {
     autoplay: true,
     autoplaySpeed: 7000,
     arrows: true,
+     nextArrow: <CustomNextArrow/>,
+    prevArrow: <CustomPrevArrow />
   };
 
   const Card = ({
@@ -64,13 +77,13 @@ export default function MessageSection() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/5">
               <div className="relative group">
-                <SlideInFromLeft className="w-full md:w-full">
-                  <img
-                    src={image}
-                    alt={name}
-                    className="rounded-full shadow-lg w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500"
-                  />
-                </SlideInFromLeft>
+                {/* <SlideInFromLeft className="w-90 md:w-full"> */}
+                <img
+                  src={image}
+                  alt={name}
+                  className="rounded-full shadow-lg w-full aspect-square object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                {/* </SlideInFromLeft> */}
               </div>
             </div>
             <div className="w-full md:w-4/5">
@@ -82,7 +95,9 @@ export default function MessageSection() {
                   "{message}"
                 </p>
                 <div className="border-l-4 border-orange-600 pl-6">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-1">{name}</h2>
+                  <h2 className="text-2xl font-bold text-gray-800 mb-1">
+                    {name}
+                  </h2>
                   <h3 className="text-lg text-orange-600 font-semibold">
                     Hon'ble {designation} of Odisha
                   </h3>
@@ -96,12 +111,9 @@ export default function MessageSection() {
   );
 
   return (
-    <>
+    <div style={{ backgroundImage: `url(${bgCM})` }} className="bg-cover bg-center">
       <div className="h-1 bg-orange-500"></div>
-      <section
-        className="bg-cover bg-center bg-black py-8"
-        style={{ backgroundImage: `url(${bgCM})` }}
-      >
+      <section className="bg-cover bg-center  py-8 max-w-7xl mx-auto">
         <Slider {...settings}>
           {data.map((item, index) => (
             <Card key={index} {...item} />
@@ -109,6 +121,6 @@ export default function MessageSection() {
         </Slider>
       </section>
       <div className="h-1 bg-orange-500"></div>
-    </>
+    </div>
   );
 }

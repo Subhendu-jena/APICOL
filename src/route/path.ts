@@ -4,7 +4,9 @@ export const paths = {
   aboutUsAboutApicol: "/about-us/about-apicol",
   aboutUsBoardOfDirectors: "/about-us/board-of-directors",
   aboutUsOrganogram: "/about-us/organogram",
-  aboutUsManagingDirectorsMessage: "/about-us/managing-directors-message",
+  aboutUsMessage: "/about-us/message",
+  aboutUsChairmansMessage: "/about-us/message/chairman's-message",
+  aboutUsManagingDirectorsMessage: "/about-us/message/managing-directors-message",
   aboutUsRti: "/about-us/rti",
 
   schemes: "/schemes",

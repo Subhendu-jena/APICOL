@@ -3,14 +3,19 @@ import { Outlet, useLocation, Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import { menuItems } from "../../variables/menu/menuItems";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 const PrimeLayout: React.FC = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-
+  const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(null);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
+    null
+  );
+  const [openSidebarDropdownIndex, setOpenSidebarDropdownIndex] = useState<
+    number | null
+  >(null);
 
   // Find current section and its sidebar children
   const currentSection = menuItems.find(
@@ -25,7 +30,7 @@ const PrimeLayout: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* Navbar */}
-      <Navbar/>
+      <Navbar />
       <div className="bg-orange-700 text-white shadow-lg">
         <div className="container mx-auto px-4">
           {/* Desktop Navbar */}
@@ -36,30 +41,72 @@ const PrimeLayout: React.FC = () => {
                   {item.href ? (
                     <Link
                       to={item.href}
-                      target={item.target ? "_blank" : "_self"}   
-                      className="flex items-center px-3 py-3 hover:bg-orange-800 text-[15px]  text-white cursor-pointer gap-1"
+                      target={item.target ? "_blank" : "_self"}
+                      className="flex items-center px-3 py-3 hover:bg-orange-800 text-[15px] text-white cursor-pointer gap-1"
                     >
                       {item.name}
-                       {item.dropdown && <ChevronDown size={16}  className="transition-transform duration-200 group-hover:rotate-180"/>}
+                      {item.dropdown && (
+                        <ChevronDown
+                          size={16}
+                          className="transition-transform duration-200 group-hover:rotate-180"
+                        />
+                      )}
                     </Link>
                   ) : (
-                    <div className="px-3 py-3 text-sm lg:text-base">{item.name}</div>
+                    <div className="px-3 py-3 text-sm lg:text-base">
+                      {item.name}
+                    </div>
                   )}
-                 
                 </div>
 
+                {/* First-level Dropdown */}
                 {item.dropdown && (
                   <div className="absolute left-0 top-full z-50 hidden group-hover:block min-w-[250px]">
-                    <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
+                    <div className="bg-white shadow-lg rounded-b-lg overflow-visible">
                       {item.dropdown.map((option: any, idx: number) => (
-                        <Link
-                          key={idx}
-                          to={option.href}
-                          target={option.target ? "_blank" : "_self"}
-                          className="block px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white"
-                        >
-                          {option.name}
-                        </Link>
+                        <div key={idx} className="relative group">
+                          {option.children ? (
+                            <>
+                              <Link
+                                to={option.href}
+                                target={option.target ? "_blank" : "_self"}
+                                onMouseEnter={() => setShowSubmenu2(true)}
+                                className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
+                              >
+                                {option.name}
+                                <ChevronRight size={16} />
+                              </Link>
+                              <div className="absolute left-full top-0 hidden group-hover:block min-w-[250px] z-50">
+                                <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
+                                  {showSubmenu2 &&
+                                    option.children.map(
+                                      (subItem: any, subIdx: number) => (
+                                        <Link
+                                          key={subIdx}
+                                          to={subItem.href}
+                                          onClick={() => setShowSubmenu2(false)}
+                                          target={
+                                            subItem.target ? "_blank" : "_self"
+                                          }
+                                          className="block px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white"
+                                        >
+                                          {subItem.name}
+                                        </Link>
+                                      )
+                                    )}
+                                </div>
+                              </div>
+                            </>
+                          ) : (
+                            <Link
+                              to={option.href}
+                              target={option.target ? "_blank" : "_self"}
+                              className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
+                            >
+                              {option.name}
+                            </Link>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -77,12 +124,32 @@ const PrimeLayout: React.FC = () => {
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
                 </svg>
               )}
             </button>
@@ -96,7 +163,10 @@ const PrimeLayout: React.FC = () => {
           >
             <nav className="flex flex-col py-2">
               {menuItems.map((item, idx) => (
-                <div key={idx} className="border-b border-orange-600 last:border-b-0">
+                <div
+                  key={idx}
+                  className="border-b border-orange-600 last:border-b-0"
+                >
                   <div className="flex justify-between items-center">
                     <Link
                       to={item.href}
@@ -119,7 +189,12 @@ const PrimeLayout: React.FC = () => {
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
                         </svg>
                       </button>
                     )}
@@ -158,19 +233,63 @@ const PrimeLayout: React.FC = () => {
                     const isActive =
                       currentPath === item.href ||
                       (currentPath === currentSection?.href && idx === 0);
+
                     return (
-                      <Link
-                        to={item.href}
-                        key={item.name}
-                        target={item.target ? "_blank" : "_self"}
-                        className={`block px-4 py-3 rounded-lg shadow-md ${
-                          isActive
-                            ? "bg-orange-600 text-white"
-                            : "text-gray-700 hover:bg-orange-500 hover:text-white"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
+                      <div key={item.name} className="relative group">
+                        <Link
+                          to={item.href || item.name}
+                          target={item.target ? "_blank" : "_self"}
+                          onClick={() =>
+                            setOpenSidebarDropdownIndex(
+                              openSidebarDropdownIndex === idx ? null : idx
+                            )
+                          }
+                          className={`block px-4 py-3 rounded-lg shadow-md ${
+                            isActive
+                              ? "bg-orange-600 text-white"
+                              : "text-gray-700 hover:bg-orange-500 hover:text-white"
+                          } flex justify-between items-center`}
+                        >
+                          {item.name}
+                          {item.children && (
+                            <ChevronRight
+                              className={`w-4 h-4 ml-2 transform transition-transform duration-200 ${
+                                openSidebarDropdownIndex === idx
+                                  ? "rotate-90"
+                                  : ""
+                              }`}
+                            />
+                          )}
+                        </Link>
+
+                        {/* Second-level Dropdown */}
+                        {item.children && openSidebarDropdownIndex === idx && (
+                          <div className="  bottom-0 z-50  ml-4 min-w-[200px]">
+                            <div className="   overflow-hidden">
+                              {item.children.map((subItem: any) => {
+                                const isActive =
+                                  currentPath === subItem.href ||
+                                  (currentPath === currentSection?.href &&
+                                    idx === 0);
+                                return (
+                                  <Link
+                                    to={subItem.href}
+                                    key={subItem.name}
+                                    // className="block px-4 py-2 m-1 rounded-lg text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
+                                    className={`block m-2 px-4 py-3 rounded-lg  ${
+                                      isActive
+                                        ? "bg-orange-600 text-white"
+                                        : "text-gray-700 hover:bg-orange-500 hover:text-white"
+                                    } flex justify-between items-center`}
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
                     );
                   })}
                 </nav>
@@ -179,14 +298,13 @@ const PrimeLayout: React.FC = () => {
 
             {/* Content Area */}
             <div className="lg:col-span-3">
-              <div className=" p-4">
+              <div className="p-4">
                 <Outlet />
               </div>
             </div>
           </div>
         ) : (
-          // No sidebar
-              <Outlet />
+          <Outlet />
         )}
       </main>
 

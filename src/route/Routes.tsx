@@ -26,6 +26,7 @@ import DPRAgriculture from "../pages/modelDpr/DPRAgriculture";
 import DPRAHandVS from "../pages/modelDpr/DPRAHandVS";
 import DPRHorticulture from "../pages/modelDpr/DPRHorticulture";
 import DPRFishery from "../pages/modelDpr/DPRFishery";
+import ChairmansMessage from "../pages/about/ChairmansMessage";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -42,6 +43,14 @@ const AppRoutes: React.FC = () => {
             element={<BoardOfDirectors />}
           />
           <Route path={paths.aboutUsOrganogram} element={<Organogram />} />
+          <Route
+            path={paths.aboutUsMessage}
+            element={<ManagingDirectorsMessage />}
+          />
+          <Route
+            path={paths.aboutUsChairmansMessage}
+            element={<ChairmansMessage />}
+          />
           <Route
             path={paths.aboutUsManagingDirectorsMessage}
             element={<ManagingDirectorsMessage />}
