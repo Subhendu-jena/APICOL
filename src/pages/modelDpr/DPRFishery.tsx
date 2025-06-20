@@ -1,26 +1,26 @@
 import React from "react";
 import ModelDprCard from "../../components/modelDprCard/ModelDprCard";
-import aquaShop_500 from "../../assets/pdfs/MODELDPR/Fishery/Aqua_Shop500.pdf";
-import aquaShop_1000 from "../../assets/pdfs/MODELDPR/Fishery/Aqua_Shop1000.pdf";
-import bio_floc_10_BF from "../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 10 Tanks Bank Finance.pdf";
-import bio_floc_25_BF from "../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 25 Tanks Bank Finance.pdf";
-import bio_floc_50_BF from "../../assets/pdfs/MODELDPR/Fishery/Bio-Floc- 50 Tanks Self- Finance.pdf";
-import bio_floc_10_SF from "../../assets/pdfs/MODELDPR/Fishery/Bio-Floc-10 Tanks Self-Finance.pdf";
-import bio_floc_25_SF from "../../assets/pdfs/MODELDPR/Fishery/Bio-Floc-25 Tanks Self-Finance.pdf";
-import fish_seed_10M_BF from "../../assets/pdfs/MODELDPR/Fishery/Fish Seed Hatchery - 10 million Fry- Bank Finance.pdf";
-import fish_seed_10M_SF from "../../assets/pdfs/MODELDPR/Fishery/Fish Seed Hatchery- 10 million Fry- Self-Finance.pdf";
-import fish_seed_hatchery from "../../assets/pdfs/MODELDPR/Fishery/Fish Seed Hatchery.pdf";
-import pearl_culture_BF from "../../assets/pdfs/MODELDPR/Fishery/Freshwater Pearl Culture- 1 acre- Bankable.pdf";
-import pearl_culture_SF from "../../assets/pdfs/MODELDPR/Fishery/Freshwater Pearl Culture- 1 acre- Self-Finance.pdf";
-import ice_plant_40MT_BF from "../../assets/pdfs/MODELDPR/Fishery/Ice Plant-40 MT-Bank Finance.pdf";
-import ice_plant_40MT_SF from "../../assets/pdfs/MODELDPR/Fishery/Ice Plant-40 MT-Self Finance.pdf";
-import ice_plant from "../../assets/pdfs/MODELDPR/Fishery/Ice Plant.pdf";
-import ice_plant_SF from "../../assets/pdfs/MODELDPR/Fishery/Ice Plant-Self-Finance.pdf";
-import protein_fish_feed from "../../assets/pdfs/MODELDPR/Fishery/Insect Based Protein Fish Feed Unit-Black Soldier Fly (BSF)-10 TPD-Bank Finance.pdf";
-import isulated_van from "../../assets/pdfs/MODELDPR/Fishery/Insulated Van.pdf";
-import intra_fish_seed_hatchery from "../../assets/pdfs/MODELDPR/Fishery/Intra Sector-Fish Seed Hatchery-Prawn Seed Hatchery-Commercial Fish Farming-Bank Finance.pdf";
-import ornamental_fish_breeding from "../../assets/pdfs/MODELDPR/Fishery/Ornamental Fish Breeding & Marketing Bank Finance.pdf";
-import shrimp_breeding from "../../assets/pdfs/MODELDPR/Fishery/Shrimp Farming-5 Acre WSA-(10 nos 0.5 ac WSA each).pdf";
+import aquaShop_500 from "../../assets/pdfs/MODELDPR/fishery/Aqua_Shop500.pdf";
+import aquaShop_1000 from "../../assets/pdfs/MODELDPR/fishery/Aqua_Shop1000.pdf";
+import bio_floc_10_BF from "../../assets/pdfs/MODELDPR/fishery/Bio-Floc- 10 Tanks Bank Finance.pdf";
+import bio_floc_25_BF from "../../assets/pdfs/MODELDPR/fishery/Bio-Floc- 25 Tanks Bank Finance.pdf";
+import bio_floc_50_BF from "../../assets/pdfs/MODELDPR/fishery/Bio-Floc- 50 Tanks Self- Finance.pdf";
+import bio_floc_10_SF from "../../assets/pdfs/MODELDPR/fishery/Bio-Floc-10 Tanks Self-Finance.pdf";
+import bio_floc_25_SF from "../../assets/pdfs/MODELDPR/fishery/Bio-Floc-25 Tanks Self-Finance.pdf";
+import fish_seed_10M_BF from "../../assets/pdfs/MODELDPR/fishery/Fish Seed Hatchery - 10 million Fry- Bank Finance.pdf";
+import fish_seed_10M_SF from "../../assets/pdfs/MODELDPR/fishery/Fish Seed Hatchery- 10 million Fry- Self-Finance.pdf";
+import fish_seed_hatchery from "../../assets/pdfs/MODELDPR/fishery/Fish Seed Hatchery.pdf";
+import pearl_culture_BF from "../../assets/pdfs/MODELDPR/fishery/Freshwater Pearl Culture- 1 acre- Bankable.pdf";
+import pearl_culture_SF from "../../assets/pdfs/MODELDPR/fishery/Freshwater Pearl Culture- 1 acre- Self-Finance.pdf";
+import ice_plant_40MT_BF from "../../assets/pdfs/MODELDPR/fishery/Ice Plant-40 MT-Bank Finance.pdf";
+import ice_plant_40MT_SF from "../../assets/pdfs/MODELDPR/fishery/Ice Plant-40 MT-Self Finance.pdf";
+import ice_plant from "../../assets/pdfs/MODELDPR/fishery/Ice Plant.pdf";
+import ice_plant_SF from "../../assets/pdfs/MODELDPR/fishery/Ice Plant-Self-Finance.pdf";
+import protein_fish_feed from "../../assets/pdfs/MODELDPR/fishery/Insect Based Protein Fish Feed Unit-Black Soldier Fly (BSF)-10 TPD-Bank Finance.pdf";
+import isulated_van from "../../assets/pdfs/MODELDPR/fishery/Insulated Van.pdf";
+import intra_fish_seed_hatchery from "../../assets/pdfs/MODELDPR/fishery/Intra Sector-Fish Seed Hatchery-Prawn Seed Hatchery-Commercial Fish Farming-Bank Finance.pdf";
+import ornamental_fish_breeding from "../../assets/pdfs/MODELDPR/fishery/Ornamental Fish Breeding & Marketing Bank Finance.pdf";
+import shrimp_breeding from "../../assets/pdfs/MODELDPR/fishery/Shrimp Farming-5 Acre WSA-(10 nos 0.5 ac WSA each).pdf";
 
 const DPRFishery: React.FC = () => {
   const data = [
