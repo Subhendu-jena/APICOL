@@ -1,11 +1,11 @@
 import React from 'react';
 import ModelDprCard from '../../components/modelDprCard/ModelDprCard';
 
-import milk_2kl from '../../assets/pdfs/MODELDPR/ah&vs/2 KL Milk Processing Unit.pdf';
-import milk_10kl from '../../assets/pdfs/MODELDPR/ah&vs/10 KL Milk Processing Unit.pdf';
-import iceCream_500LPH from '../../assets/pdfs/MODELDPR/ah&vs/500LPH Ice Cream Plant.pdf';
-import breeder from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Breeder Farm.pdf';
-import broiler_10k from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Broiler Farm (10,000 EC).pdf';
+import milk_2kl from '../../assets/pdfs/MODELDPR/ah&vs/2_KL_Milk_Processing_Unit.pdf';
+import milk_10kl from '../../assets/pdfs/MODELDPR/ah&vs/10_KL_Milk_Processing_Unit.pdf';
+import iceCream_500LPH from '../../assets/pdfs/MODELDPR/ah&vs/500LPH_Ice_Cream_Plant.pdf';
+import breeder from '../../assets/pdfs/MODELDPR/ah&vs/Commercial_Breeder_Farm.pdf';
+import broiler_10k from '../../assets/pdfs/MODELDPR/ah&vs/Commercial_Broiler_Farm_10000EC.pdf';
 import dairy_8cows from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Dairy Farming_8 Cows.pdf';
 import diary_10 from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Dairy Farming_10 Cows.pdf';
 import duck_1k from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Duck Farming (1000).pdf';
@@ -14,8 +14,8 @@ import goat_100 from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Goat Farming (
 import modern from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Modern Slaughtering House.pdf';
 import pig from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Pig Farming (50+5).pdf';
 import sheep from '../../assets/pdfs/MODELDPR/ah&vs/Commercial Sheep Farming (100+5).pdf';
-import egg from '../../assets/pdfs/MODELDPR/ah&vs/Egg Processing (Egg Powder).pdf';
-import feed from '../../assets/pdfs/MODELDPR/ah&vs/Feed Plant (Cattle and Poultry).pdf';
+import egg from '../../assets/pdfs/MODELDPR/ah&vs/Egg_Processing _Egg_Powder.pdf';
+import feed from '../../assets/pdfs/MODELDPR/ah&vs/Feed Plant_Cattle and Poultry.pdf';
 import meat from '../../assets/pdfs/MODELDPR/ah&vs/Meat Proessing.pdf';
 import milk from '../../assets/pdfs/MODELDPR/ah&vs/Milk Tanker.pdf';
 import refrigerated from '../../assets/pdfs/MODELDPR/ah&vs/Refrigerated Van.pdf';

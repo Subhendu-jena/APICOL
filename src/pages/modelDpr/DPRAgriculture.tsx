@@ -1,18 +1,18 @@
 import React from 'react'
 import ModelDprCard from '../../components/modelDprCard/ModelDprCard';
 
-import agroTractor from '../../assets/pdfs/MODELDPR/agriculture/Agro Service Center (Tractor based) (1).pdf';
-import agroHarvest from '../../assets/pdfs/MODELDPR/agriculture/Agro Service Center (combine harvester based) (1).pdf';
-import bakeryAndConfectionary from '../../assets/pdfs/MODELDPR/agriculture/Bakery and Confectionery.pdf';
-import crop from '../../assets/pdfs/MODELDPR/agriculture/Crop residue based products.pdf';
-import ground from '../../assets/pdfs/MODELDPR/agriculture/Groundnut Processing.pdf';
-import jute from '../../assets/pdfs/MODELDPR/agriculture/Jute Based Industry.pdf';
-import maize from '../../assets/pdfs/MODELDPR/agriculture/Maize Processing Unit (Flour).pdf';
-import millet from '../../assets/pdfs/MODELDPR/agriculture/Millet Processing.pdf';
-import oil from '../../assets/pdfs/MODELDPR/agriculture/Oil Extraction Mill.pdf';
-import pulses from '../../assets/pdfs/MODELDPR/agriculture/Pulses Processing Unit.pdf';
-import seed from '../../assets/pdfs/MODELDPR/agriculture/Seed Processing Unit.pdf';
-import soya from '../../assets/pdfs/MODELDPR/agriculture/Soya Chunk Processing.pdf';
+import agroTractor from '../../assets/pdfs/MODELDPR/agriculture/Agro_Service_Center_Tractor_based.pdf';
+import agroHarvest from '../../assets/pdfs/MODELDPR/agriculture/Agro_Service_Center_combine_harvester_based.pdf';
+import bakeryAndConfectionary from '../../assets/pdfs/MODELDPR/agriculture/Bakery_and_Confectionery.pdf';
+import crop from '../../assets/pdfs/MODELDPR/agriculture/Crop_residue based_products.pdf';
+import ground from '../../assets/pdfs/MODELDPR/agriculture/Groundnut_Processing.pdf';
+import jute from '../../assets/pdfs/MODELDPR/agriculture/Jute_Based_Industry.pdf';
+import maize from '../../assets/pdfs/MODELDPR/agriculture/Maize_Processing_Unit.pdf';
+import millet from '../../assets/pdfs/MODELDPR/agriculture/Millet_Processing.pdf';
+import oil from '../../assets/pdfs/MODELDPR/agriculture/Oil_Extraction_Mill.pdf';
+import pulses from '../../assets/pdfs/MODELDPR/agriculture/Oil_Extraction_Mill.pdf';
+import seed from '../../assets/pdfs/MODELDPR/agriculture/Seed_Processing_Unit.pdf';
+import soya from '../../assets/pdfs/MODELDPR/agriculture/Soya_Chunk_Processing.pdf';
 
 const DPRAgriculture: React.FC = () => {
    const data = [
