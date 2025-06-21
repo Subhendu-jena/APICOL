@@ -32,11 +32,13 @@ export const menuItems = [
     dropdown: [
       {
         name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-        href: paths.schemesMukhyamantriKrushiUdyogYojanaMkuy,
+        href:'https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D',
+        target: true
       },
       {
         name: "Financial assistance to Cold storages",
-        href: paths.schemesFinancialAssistanceToColdStorages,
+        href: 'https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D',
+        target: true
       },
       {
         name: "Agriculture Entrepreneurship Promotion Scheme (AEPS)",

@@ -27,6 +27,7 @@ import DPRAHandVS from "../pages/modelDpr/DPRAHandVS";
 import DPRHorticulture from "../pages/modelDpr/DPRHorticulture";
 import DPRFishery from "../pages/modelDpr/DPRFishery";
 import ChairmansMessage from "../pages/about/ChairmansMessage";
+import RedirectNotice from "../components/redirectNotice/RedirectNotice";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -60,7 +61,7 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.schemes} element={<ComingSoon />} />
           <Route
             path={paths.schemesMukhyamantriKrushiUdyogYojanaMkuy}
-            element={<ComingSoon />}
+            element={<RedirectNotice />}
           />
           <Route
             path={paths.schemesFinancialAssistanceToColdStorages}

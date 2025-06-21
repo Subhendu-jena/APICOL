@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 
 const SocialMedia: React.FC = () => {
-
-
   const socialEmbeds = {
     Instagram: {
       embedUrl: "https://www.instagram.com/apicolodisha/embed",
@@ -19,16 +17,16 @@ const SocialMedia: React.FC = () => {
     },
   };
 
-useEffect(() => {
-  const script = document.createElement("script");
-  script.src = "https://platform.twitter.com/widgets.js";
-  script.async = true;
-  document.body.appendChild(script);
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    document.body.appendChild(script);
 
-  return () => {
-    document.body.removeChild(script);
-  };
-}, []);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const renderInstagramFeed = () => (
     <iframe
@@ -48,7 +46,7 @@ useEffect(() => {
       src={socialEmbeds.Facebook.embedUrl}
       width="100%"
       height="100%"
-      style={{ border: "none", overflow: "hidden",width:"100%" }}
+      style={{ border: "none", overflow: "hidden", width: "100%" }}
       scrolling="yes"
       frameBorder="0"
       allow="encrypted-media"
@@ -81,41 +79,41 @@ useEffect(() => {
     </div>
   );
 
-
-
-
   return (
-   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-    {/* Instagram */}
-    <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
-      <div className="bg-gradient-to-r from-pink-50 to-pink-100 px-4 py-3 border-b">
-        <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-          📷 Latest on Instagram
-        </h3>
-      </div>
-      <div className="h-96">{renderInstagramFeed()}</div>
-    </div>
+    <>
+      <h2 className="text-2xl font-bold text-gray-800 py-4">Social Media</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Instagram */}
+        <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
+          <div className="bg-gradient-to-r from-pink-50 to-pink-100 px-4 py-3 border-b">
+            <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+              📷 Latest on Instagram
+            </h3>
+          </div>
+          <div className="h-96">{renderInstagramFeed()}</div>
+        </div>
 
-    {/* Facebook */}
-    <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
-      <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 border-b">
-        <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-          👥 Latest on Facebook
-        </h3>
-      </div>
-      <div className="h-96">{renderFacebookFeed()}</div>
-    </div>
+        {/* Facebook */}
+        <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 border-b">
+            <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+              👥 Latest on Facebook
+            </h3>
+          </div>
+          <div className="h-96">{renderFacebookFeed()}</div>
+        </div>
 
-    {/* X (Twitter) */}
-    <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
-      <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b">
-        <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-          🐦 Latest on X
-        </h3>
+        {/* X (Twitter) */}
+        <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
+          <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b">
+            <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
+              🐦 Latest on X
+            </h3>
+          </div>
+          <div className="h-96">{renderXFeed()}</div>
+        </div>
       </div>
-      <div className="h-96">{renderXFeed()}</div>
-    </div>
-  </div>
+    </>
   );
 };
 

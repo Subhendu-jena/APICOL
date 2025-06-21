@@ -13,9 +13,9 @@ const PrimeLayout: React.FC = () => {
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
     null
   );
-  const [openSidebarDropdownIndex, setOpenSidebarDropdownIndex] = useState<
-    number | null
-  >(null);
+  // const [openSidebarDropdownIndex, setOpenSidebarDropdownIndex] = useState<
+  //   number | null
+  // >(null);
 
   // Find current section and its sidebar children
   const currentSection = menuItems.find(
@@ -101,6 +101,16 @@ const PrimeLayout: React.FC = () => {
                             <Link
                               to={option.href}
                               target={option.target ? "_blank" : "_self"}
+                              onClick={(e) => {
+                                if (option.target === "_blank") {
+                                  const confirmed = window.confirm(
+                                    "Are you sure you want to leave this page?"
+                                  );
+                                  if (!confirmed) {
+                                    e.preventDefault(); // Cancel the navigation
+                                  }
+                                }
+                              }}
                               className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
                             >
                               {option.name}
@@ -222,13 +232,13 @@ const PrimeLayout: React.FC = () => {
       </div>
 
       {/* Main Content */}
-      <main className="w-full flex-1">
+      <main className="w-full flex-1 ">
         {sidebarItems.length > 0 ? (
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-4 mb-30">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 p-4 mb-30 ">
             {/* Sidebar */}
             <div className="lg:col-span-1 bg-gray-100 px-4 py-4">
               <div className="rounded-2xl sticky top-8">
-                <nav className="space-y-2">
+                <nav className="space-y-2 hidden md:block">
                   {sidebarItems.map((item: any, idx: number) => {
                     const isActive =
                       currentPath === item.href ||
@@ -236,14 +246,14 @@ const PrimeLayout: React.FC = () => {
 
                     return (
                       <div key={item.name} className="relative group">
-                        <Link
+                        <Link     
                           to={item.href || item.name}
                           target={item.target ? "_blank" : "_self"}
-                          onClick={() =>
-                            setOpenSidebarDropdownIndex(
-                              openSidebarDropdownIndex === idx ? null : idx
-                            )
-                          }
+                          // onClick={() =>
+                          //   setOpenSidebarDropdownIndex(
+                          //     openSidebarDropdownIndex === idx ? null : idx
+                          //   )
+                          // }
                           className={`block px-4 py-3 rounded-lg shadow-md ${
                             isActive
                               ? "bg-orange-600 text-white"
@@ -253,43 +263,41 @@ const PrimeLayout: React.FC = () => {
                           {item.name}
                           {item.children && (
                             <ChevronRight
-                              className={`w-4 h-4 ml-2 transform transition-transform duration-200 ${
-                                openSidebarDropdownIndex === idx
-                                  ? "rotate-90"
-                                  : ""
-                              }`}
+                              className={`w-4 h-4 ml-2 transform transition-transform duration-200 `}
+                                // ${openSidebarDropdownIndex === idx ? "rotate-90" : ""}
                             />
                           )}
                         </Link>
 
                         {/* Second-level Dropdown */}
-                        {item.children && openSidebarDropdownIndex === idx && (
+                        {/* {item.children && openSidebarDropdownIndex === idx && (
                           <div className="  bottom-0 z-50  ml-4 min-w-[200px]">
-                            <div className="   overflow-hidden">
-                              {item.children.map((subItem: any) => {
-                                const isActive =
-                                  currentPath === subItem.href ||
-                                  (currentPath === currentSection?.href &&
-                                    idx === 0);
-                                return (
-                                  <Link
-                                    to={subItem.href}
-                                    key={subItem.name}
-                                    // className="block px-4 py-2 m-1 rounded-lg text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                                    className={`block m-2 px-4 py-3 rounded-lg  ${
-                                      isActive
-                                        ? "bg-orange-600 text-white"
-                                        : "text-gray-700 hover:bg-orange-500 hover:text-white"
-                                    } flex justify-between items-center`}
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        )}
+                            <div className="   overflow-hidden"> */}
+                        {item.children &&
+                          item.children.map((subItem: any) => {
+                            const isActive =
+                              currentPath === subItem.href ||
+                              (currentPath === currentSection?.href &&
+                                idx === 0);
+                            return (
+                              <Link
+                                to={subItem.href}
+                                key={subItem.name}
+                                // className="block px-4 py-2 m-1 rounded-lg text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
+                                className={`block m-2 px-2 py-2 rounded-lg text-sm  ${
+                                  isActive
+                                    ? "bg-orange-600 text-white"
+                                    : "text-gray-700 hover:bg-orange-500 hover:text-white"
+                                } flex justify-between items-center`}
+                              >
+                                {subItem.name}
+                              </Link>
+                            );
+                          })}
                       </div>
+                      //   </div>
+                      // )}
+                      // </div>
                     );
                   })}
                 </nav>

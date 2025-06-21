@@ -1,10 +1,58 @@
-import { Award, Building2, Eye, Target, Users } from "lucide-react";
+import {
+  Award,
+  Building2,
+  DogIcon,
+  Eye,
+  FishIcon,
+  Target,
+  TreeDeciduousIcon,
+  TreePalmIcon,
+  Users,
+  WarehouseIcon,
+} from "lucide-react";
 import React from "react";
 import agri from "../../assets/images/aboutUs/agri.png";
+import agriculture from "../../assets/images/aboutUs/agriculture1.avif";
+import horticulture from "../../assets/images/aboutUs/Horticulture1.avif";
+import fishery from "../../assets/images/aboutUs/fishery1.avif";
+import interDepartmental from "../../assets/images/aboutUs/InterDepartmental1.avif";
+import ahandvs from "../../assets/images/aboutUs/AHandVS.avif";
 import SlideInFromTop from "../../components/animation/SlideInFromTop";
 import SlideInFromLeft from "../../components/animation/SlideInFromLeft";
 import SlideInFromRight from "../../components/animation/SlideInFromRight";
 const AboutsUs: React.FC = () => {
+  const data = [
+    {
+      dept: "Agriculture",
+      imageUrl: agriculture,
+      icon: <TreePalmIcon className="w-10 h-10" />,
+      sectors: "28",
+    },
+    {
+      dept: "Horticulture",
+      imageUrl: horticulture,
+      icon: <TreeDeciduousIcon className="w-10 h-10" />,
+      sectors: "34",
+    },
+    {
+      dept: "AH&VS",
+      imageUrl: ahandvs,
+      icon: <DogIcon className="w-10 h-10" />,
+      sectors: "17",
+    },
+    {
+      dept: "Fishery",
+      imageUrl: fishery,
+      icon: <FishIcon className="w-10 h-10" />,
+      sectors: "16",
+    },
+    {
+      dept: "Inter Departmental",
+      imageUrl: interDepartmental,
+      icon: <WarehouseIcon className="w-10 h-10" />,
+      sectors: "22",
+    },
+  ];
   return (
     <>
       <div className="space-y-8">
@@ -29,36 +77,34 @@ const AboutsUs: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5">
-
           <div className="col-span-3">
-          <SlideInFromLeft>
-            {" "}
-            <img src={agri} alt="" className=" w-full" />
-          </SlideInFromLeft>
+            <SlideInFromLeft>
+              {" "}
+              <img src={agri} alt="" className=" w-full" />
+            </SlideInFromLeft>
           </div>
 
           <div className="space-y-8 col-span-2 space-x-2">
             {" "}
-          <SlideInFromRight className="w-full overflow-hidden">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 ">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <Eye className="w-6 h-6 text-blue-600" />
+            <SlideInFromRight className="w-full overflow-hidden">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 ">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Eye className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    Our Vision
+                  </h3>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900">
-                  Our Vision
-                </h3>
+                <p className="text-gray-700">
+                  Bringing in a shift from subsistence to commercial
+                  Agriculture.Providing an integration among technology, economy
+                  and society for a faster development of broad based
+                  agriculture.Building up a robust base for enhanced production,
+                  value addition and market linkage.
+                </p>
               </div>
-              <p className="text-gray-700">
-                Bringing in a shift from subsistence to commercial
-                Agriculture.Providing an integration among technology, economy
-                and society for a faster development of broad based
-                agriculture.Building up a robust base for enhanced production,
-                value addition and market linkage.
-              </p>
-            </div>
-          </SlideInFromRight>
-
+            </SlideInFromRight>
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-green-100 rounded-lg">
@@ -74,9 +120,7 @@ const AboutsUs: React.FC = () => {
                 promise to help and help to promise.
               </p>
             </div>
-
           </div>
-
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {" "}
@@ -119,6 +163,43 @@ const AboutsUs: React.FC = () => {
           </div>
         </div>
 
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5">
+          {data.map((item, idx) => (
+            <div
+              key={idx}
+              className="relative group overflow-hidden shadow-md h-80 cursor-pointer bg-black"
+            >
+              {/* Image */}
+              <img
+                src={item.imageUrl}
+                alt={item.dept}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+              />
+
+              {/* Overlay with fade effect */}
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex flex-col items-center justify-center text-white">
+                {/* Icon */}
+                <div className="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center mb-4">
+                  {item.icon}
+                </div>
+
+                {/* Department Name */}
+                <div className="font-semibold hidden group-hover:block z-30">
+
+                <h3 className="text-lg ">
+                  {item.dept}
+                </h3>
+                <h3 className="text-md text-center">
+                  {item.sectors}
+                </h3>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+        
         <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
           <h3 className="text-2xl font-semibold text-gray-900 mb-6">
             Key Achievements
