@@ -1,18 +1,18 @@
 import React from "react";
-import prem from "../../assets/images/boardOfDirectors/Dr.-Saroj-Kumar-Swain.png";
+import prem from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
 const ChairmansMessage: React.FC = () => {
   return (
     <>
       <div className="space-y-8">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Chairman's Message
+            Director's Message
           </h2>
         </div>
 
         <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="flex-shrink-0">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+            <div className="col-span-1">
               <img
                 src={prem}
                 alt="Managing Director"
@@ -20,12 +20,13 @@ const ChairmansMessage: React.FC = () => {
               />
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-semibold text-gray-900">
-                  Sri Prem Chandra Choudhary
+                  Sri Shubham Saxena , IAS
                 </p>
-                <p className="text-gray-600">IAS, Managing Director, APICOL</p>
+                <p className="text-gray-600"> Director, </p>
+                <p className="text-gray-600">Agriculture and Food Production </p>
               </div>
             </div>
-            <div className="flex-1">
+            <div className="col-span-4">
               <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus finibus, mauris vitae vehicula dignissim, nunc nisl

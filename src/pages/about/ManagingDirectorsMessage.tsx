@@ -1,5 +1,5 @@
 import React from "react";
-import prem from "../../assets/images/boardOfDirectors/prem-chand.png";
+import prem from "../../assets/chiefs/Sh. Nikhil Pawan Kalyan,Managing Director-APICOL.jpeg";
 const ManagingDirectorsMessage: React.FC = () => {
   return (
     <>
@@ -11,8 +11,8 @@ const ManagingDirectorsMessage: React.FC = () => {
         </div>
 
         <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            <div className="flex-shrink-0">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
+            <div className="col-span-1">
               <img
                 src={prem}
                 alt="Managing Director"
@@ -20,12 +20,12 @@ const ManagingDirectorsMessage: React.FC = () => {
               />
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-semibold text-gray-900">
-                  Sri Prem Chandra Choudhary
+                  Sri Nikhil Pawan Kalyan , IAS
                 </p>
-                <p className="text-gray-600">IAS, Managing Director, APICOL</p>
+                <p className="text-gray-600"> Managing Director, APICOL</p>
               </div>
             </div>
-            <div className="flex-1">
+            <div className="col-span-4">
               <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4">
                " APICOL was established in 1996 as a wholly owned corporation of
                 Govt. of Odisha with intent to promote commercial agriculture

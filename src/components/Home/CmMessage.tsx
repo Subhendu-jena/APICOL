@@ -1,6 +1,6 @@
 import cm from "../../assets/all/cm.jpeg";
-import md from "../../assets/all/arabinda.png";
-import chairman from "../../assets/all/prem.png";
+import director from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
+import managingDirector from "../../assets/chiefs/Sh. Nikhil Pawan Kalyan,Managing Director-APICOL.jpeg";
 import bgCM from "../../assets/all/bgf.png";
 import SlideInFromBottom from "../animation/SlideInFromBottom";
 import SlideInFromRight from "../animation/SlideInFromRight";
@@ -17,17 +17,17 @@ export default function MessageSection() {
         "Agriculture is the backbone of Odisha's economy. Through APICOL, we are committed to empowering our farmers with modern technology, financial support, and sustainable practices. Our vision is to make Odisha a leading state in agricultural innovation and food security, ensuring prosperity for our farming communities.",
     },
     {
-      designation: "Chairman",
-      image: chairman,
-      name: "Prem Chandra Chaudhary, IAS",
+      designation: "Managing Director, APICOL",
+      image: managingDirector,
+      name: "Sri Nikhil Pavan Kalyan,IAS",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
 
     {
-      designation: "Managing Director",
-      image: md,
-      name: "Dr Arabinda Kumar Padhee, IAS",
+      designation: "Director, Agriculture & Food Production",
+      image: director,
+      name: "Sri Shubham Saxena, IAS",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },

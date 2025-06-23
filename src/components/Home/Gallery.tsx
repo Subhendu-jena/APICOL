@@ -4,10 +4,12 @@ import SlideInFromLeft from "../animation/SlideInFromLeft";
 import ImageGallery from "./ImageGallery";
 import VideoGallery from "./VideoGallery";
 import SocialMedia from "./SocialMedia";
+import { paths } from "../../route/path";
+import { useNavigate } from "react-router-dom";
 
 const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState("photo");
-
+const navigate = useNavigate();
   // const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
   // const gradientBackgroundHover =
   //   "bg-gradient-to-r from-[#000000] to-[#00A650]";
@@ -61,7 +63,7 @@ const Gallery: React.FC = () => {
                       <h2 className="text-2xl font-bold text-gray-800">
                         Photo Gallery
                       </h2>
-                      <button className="text-sm font-medium text-orange-600 hover:underline">
+                      <button className="text-sm font-medium text-orange-600 hover:underline" onClick={() => navigate(paths.galleryPhotos)}>
                         View All
                       </button>
                     </div>

@@ -28,6 +28,7 @@ import DPRHorticulture from "../pages/modelDpr/DPRHorticulture";
 import DPRFishery from "../pages/modelDpr/DPRFishery";
 import ChairmansMessage from "../pages/about/ChairmansMessage";
 import RedirectNotice from "../components/redirectNotice/RedirectNotice";
+import NotFound from "../components/errorHandling/NotFound";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -130,6 +131,7 @@ const AppRoutes: React.FC = () => {
           <Route path={paths.contactUs} element={<ContactUs />} />
         </Route>
           <Route path='apicol' element={<DDH />} />
+          <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   );

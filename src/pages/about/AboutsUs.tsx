@@ -1,17 +1,12 @@
 import {
   Award,
   Building2,
-  DogIcon,
   Eye,
-  FishIcon,
   Target,
-  TreeDeciduousIcon,
-  TreePalmIcon,
   Users,
-  WarehouseIcon,
 } from "lucide-react";
 import React from "react";
-import agri from "../../assets/images/aboutUs/agri.png";
+import agri from "../../assets/images/aboutUs/Apicol22.png";
 import agriculture from "../../assets/images/aboutUs/agriculture1.avif";
 import horticulture from "../../assets/images/aboutUs/Horticulture1.avif";
 import fishery from "../../assets/images/aboutUs/fishery1.avif";
@@ -20,36 +15,46 @@ import ahandvs from "../../assets/images/aboutUs/AHandVS.avif";
 import SlideInFromTop from "../../components/animation/SlideInFromTop";
 import SlideInFromLeft from "../../components/animation/SlideInFromLeft";
 import SlideInFromRight from "../../components/animation/SlideInFromRight";
+import agriIcon from "../../assets/images/aboutUs/4.svg";
+import hortiIcon from "../../assets/images/aboutUs/3.svg";
+import ahAndvsIcon from "../../assets/images/aboutUs/1.svg";
+import fisheryIcon from "../../assets/images/aboutUs/2.svg";
+import interIcon from "../../assets/images/aboutUs/6.svg";
 const AboutsUs: React.FC = () => {
   const data = [
     {
       dept: "Agriculture",
       imageUrl: agriculture,
-      icon: <TreePalmIcon className="w-10 h-10" />,
+      bg:'bg-[#dbab61]',
+      icon:agriIcon,
       sectors: "28",
     },
     {
       dept: "Horticulture",
       imageUrl: horticulture,
-      icon: <TreeDeciduousIcon className="w-10 h-10" />,
+         bg:'bg-[#8cc63e]',
+      icon: hortiIcon,
       sectors: "34",
     },
     {
       dept: "AH&VS",
       imageUrl: ahandvs,
-      icon: <DogIcon className="w-10 h-10" />,
+         bg:'bg-[#8d2b38]',
+      icon: ahAndvsIcon,
       sectors: "17",
     },
     {
       dept: "Fishery",
       imageUrl: fishery,
-      icon: <FishIcon className="w-10 h-10" />,
+         bg:'bg-[#253e8e]',
+      icon: fisheryIcon,
       sectors: "16",
     },
     {
       dept: "Inter Departmental",
       imageUrl: interDepartmental,
-      icon: <WarehouseIcon className="w-10 h-10" />,
+         bg:'bg-[#e45760]',
+      icon: interIcon,
       sectors: "22",
     },
   ];
@@ -168,29 +173,34 @@ const AboutsUs: React.FC = () => {
           {data.map((item, idx) => (
             <div
               key={idx}
-              className="relative group overflow-hidden shadow-md h-80 cursor-pointer bg-black"
+              className="relative group overflow-hidden  h-50 cursor-pointer bg-black "
             >
               {/* Image */}
-              <img
+              {/* <img
                 src={item.imageUrl}
                 alt={item.dept}
                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
-              />
+              /> */}
 
               {/* Overlay with fade effect */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-500 flex flex-col items-center justify-center text-white">
+              <div className="absolute inset-0 bg-white group-hover:bg-gray-200 transition-colors duration-500 flex flex-col items-center justify-center text-white">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-black/50 rounded-full flex items-center justify-center mb-4">
-                  {item.icon}
+                <div className={`w-16 h-16  p-3 ${item.bg} rounded-full flex items-center justify-center mb-4`}>
+                  {/* {item.icon} */}
+                  <img
+                src={item.icon}
+                alt={item.dept}
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-in-out"
+              />
                 </div>
 
                 {/* Department Name */}
-                <div className="font-semibold hidden group-hover:block z-30">
+                <div className="font-semibold  z-30">
 
-                <h3 className="text-lg ">
+                <h3 className={`text-xl text-center h-10 w-10 flex justify-center items-center mx-auto text-black rounded-full`}>
                   {item.dept}
                 </h3>
-                <h3 className="text-md text-center">
+                <h3 className="text-md text-center h-10 w-10 flex justify-center items-center mx-auto bg-white/50 text-black rounded-full">
                   {item.sectors}
                 </h3>
                 </div>

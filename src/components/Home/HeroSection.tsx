@@ -4,9 +4,9 @@ import plant1 from "../../assets/images/imageGallery/1.png";
 import farmer from "../../assets/images/imageGallery/2.png";
 import modern from "../../assets/images/imageGallery/3.png";
 import sus from "../../assets/images/imageGallery/4.png";
-import arabinda from "../../assets/all/arabinda.png";
-import prem from "../../assets/all/prem.png";
-import SlideInFromBottom from "../animation/SlideInFromBottom";
+// import arabinda from "../../assets/all/arabinda.png";
+// import prem from "../../assets/all/prem.png";
+// import SlideInFromBottom from "../animation/SlideInFromBottom";
 import { ChevronRight,ChevronLeft } from "lucide-react";
 const HeroSection: React.FC = () => {
   const slides = [
@@ -119,8 +119,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Overlay cards at bottom-right (slightly moved up) */}
-<div className="absolute bottom-20 right-6 z-10 hidden md:grid grid-cols-2 gap-6">
-        {/* Card 1 */}
+{/* <div className="absolute bottom-20 right-6 z-10 hidden md:grid grid-cols-2 gap-6">
         <SlideInFromBottom>
           <div className="flex items-center bg-white/20 backdrop-blur-md rounded-full shadow-lg p-5 pr-8 w-fit slide-in-right">
             <img
@@ -136,7 +135,6 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </SlideInFromBottom>
-        {/* Card 2 */}
         <SlideInFromBottom delay={1}>
           <div className="flex items-center bg-white/20 backdrop-blur-md rounded-full shadow-lg p-5 pr-8 w-fit slide-in-right">
             <img
@@ -152,7 +150,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
         </SlideInFromBottom>
-      </div>
+      </div> */}
     </div>
   );
 };

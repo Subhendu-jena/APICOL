@@ -74,7 +74,7 @@
 //   const [searchTerm, setSearchTerm] = useState('');
 //   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-//   const filteredPDFs = mockPDFs.filter(pdf => 
+//   const filteredPDFs = mockPDFs.filter(pdf =>
 //     pdf.title.toLowerCase().includes(searchTerm.toLowerCase())
 //   );
 
@@ -93,7 +93,7 @@
 //                 <p className="text-sm text-gray-600">PDF Collection</p>
 //               </div>
 //             </div>
-            
+
 //             <div className="flex items-center space-x-4">
 //               <div className="relative">
 //                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
@@ -105,7 +105,7 @@
 //                   className="pl-10 pr-4 py-2 w-64 bg-gray-100 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
 //                 />
 //               </div>
-              
+
 //               <div className="flex bg-gray-100 rounded-xl p-1">
 //                 <button
 //                   onClick={() => setViewMode('grid')}
@@ -134,8 +134,8 @@
 //         </div>
 
 //         {/* PDF Grid/List */}
-//         <div className={viewMode === 'grid' 
-//           ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4" 
+//         <div className={viewMode === 'grid'
+//           ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
 //           : "space-y-3"
 //         }>
 //           {filteredPDFs.map(pdf => (
@@ -146,12 +146,12 @@
 //               <div className={`relative overflow-hidden flex-shrink-0 ${
 //                 viewMode === 'list' ? 'w-16 h-16' : 'aspect-square w-full'
 //               }`}>
-//                 <img 
-//                   src={pdf.thumbnail} 
+//                 <img
+//                   src={pdf.thumbnail}
 //                   alt={pdf.title}
 //                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
 //                 />
-                
+
 //                 {/* Overlay Actions */}
 //                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
 //                   <div className="flex space-x-2">
@@ -191,73 +191,55 @@
 
 // export default ModelDprCard;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import React from 'react'
-import { FileText } from 'lucide-react'
+import React from "react";
+import { Download, FileText } from "lucide-react";
 interface ModelDprCardProps {
   title: string;
   description?: string; // optional
   link: string;
 }
-const ModelDprCard: React.FC<ModelDprCardProps>= ({title, description, link}:any) => {
+const ModelDprCard: React.FC<ModelDprCardProps> = ({
+  title,
+  description,
+  link,
+}: any) => {
   return (
     <>
-     <div
-            className="relative bg-white/30 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] group"
-          >
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-black to-green-500 rounded-t-3xl" />
-            <div className="p-6">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="bg-gradient-to-br from-orange-200 to-orange-100 p-3 rounded-xl">
-                  <FileText className="text-orange-600 w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
-                  <p className="text-gray-600 text-sm mt-2">{description}</p>
-                </div>
-              </div>
-              <a
-                href={link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bottom-0 bg-gradient-to-r from-orange-600 to-orange-300 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all"
-              >
-                View PDF <FileText size={16} />
-              </a>
+      <div className="relative bg-white/30 backdrop-blur-md border border-gray-200 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-[1.03] group">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-black to-green-500 rounded-t-3xl" />
+        <div className="p-6">
+          <div className="flex items-start gap-4 mb-8">
+            <div className="bg-gradient-to-br from-orange-200 to-orange-100 p-3 rounded-xl">
+              <FileText className="text-orange-600 w-6 h-6" />
             </div>
-          </div> 
+            <div>
+              <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+              <p className="text-gray-600 text-sm mt-2">{description}</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 absolute mb-2 bottom-0">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bottom-0 bg-gradient-to-r from-orange-600 to-orange-300 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all"
+            >
+              View PDF <FileText size={16} />
+            </a>
+            <a
+              href={link}
+              target="_blank"
+              download={true}
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bottom-0 bg-gradient-to-r from-orange-600 to-orange-300 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all"
+            >
+              Download <Download size={16} />
+            </a>
+          </div>
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ModelDprCard
+export default ModelDprCard;

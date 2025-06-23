@@ -18,7 +18,7 @@ export const menuItems = [
         target: false,
         children: [
           {name: "Managing Director's message", href: paths.aboutUsManagingDirectorsMessage},
-          {name: "Chairman's message", href: paths.aboutUsChairmansMessage},
+          {name: "Director's message", href: paths.aboutUsChairmansMessage},
         ],
       },
     ],

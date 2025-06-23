@@ -14,7 +14,9 @@ const StudyReports : React.FC = () => {
         }
     ]
   return (
-        <div className="flex flex-wrap gap-6 p-4">
+    <>
+   <h2 className="text-3xl font-bold text-left mb-6 text-gray-800">Annual Reports</h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {data.map((item, index) => (
         <ReportCard
           key={index}
@@ -25,6 +27,7 @@ const StudyReports : React.FC = () => {
         />
       ))}
     </div>
+    </>
   )
 }
 
