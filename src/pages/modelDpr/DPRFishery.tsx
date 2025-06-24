@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ModelDprCard from "../../components/modelDprCard/ModelDprCard";
 import aquaShop_500 from "../../assets/pdfs/MODELDPR/fishery/Aqua_Shop500.pdf";
 import aquaShop_1000 from "../../assets/pdfs/MODELDPR/fishery/Aqua_Shop1000.pdf";
@@ -23,6 +23,7 @@ import ornamental_fish_breeding from "../../assets/pdfs/MODELDPR/fishery/Ornamen
 import shrimp_breeding from "../../assets/pdfs/MODELDPR/fishery/Shrimp Farming-5 Acre WSA-(10 nos 0.5 ac WSA each).pdf";
 
 const DPRFishery: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
   const data = [
     {
       title: "Aqua Shop (500 sq. ft.)",
@@ -135,23 +136,43 @@ const DPRFishery: React.FC = () => {
       link: shrimp_breeding,
     },
   ];
-
+  const filteredData = data.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-6 md:px-12">
-      <h2 className="text-3xl font-bold text-left mb-10 text-gray-800">
-        Model DPRs – Fishery
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.map((item, index) => (
-          <ModelDprCard
-            key={index}
-            title={item.title}
-            description={item.description}
-            link={item.link}
+    <>
+      <div className="flex justify-between">
+        <h2 className="text-3xl font-bold text-left mb-10 text-gray-800">
+          Model DPRs – Fishery
+        </h2>
+
+        <div className="mb-6">
+          <input
+            type="text"
+            placeholder="Search reports..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-auto max-w-md px-2 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-orange-500"
           />
-        ))}
+        </div>
       </div>
-    </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredData.length > 0 ? (
+          filteredData.map((item, index) => (
+            <ModelDprCard
+              key={index}
+              title={item?.title}
+              description={item?.description || ""}
+              link={item.link}
+            />
+          ))
+        ) : (
+          <p className="text-gray-500 col-span-full">No reports found.</p>
+        )}
+      </div>
+    </>
   );
 };
 
