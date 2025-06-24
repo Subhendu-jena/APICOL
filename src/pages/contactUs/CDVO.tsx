@@ -279,6 +279,15 @@ const CDVO: React.FC = () => {
       <div className="text-2xl font-bold">
         Chief District Veterinary Officer (CDVO)
       </div>
+       <div className="flex justify-end">
+        <input
+          type="text"
+          placeholder="Search..."
+          //   value={searchTerm}
+          //   onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
+        />
+      </div>
       <Table1 columns={cdvoHeaders} data={cdvoData} />
     </div>
   );

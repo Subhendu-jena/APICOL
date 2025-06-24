@@ -2,14 +2,15 @@ import React from "react";
 import Table1 from "../../components/table/Table";
 
 const Apicol: React.FC = () => {
+  
   const headers = [
     
   // { accessor: "slNo", header: "Sl. No.",render: (row: any) => {
   //   console.log(row)
   //   return(
-  //     <div className="text-black">{row.slNo}</div>
-  //   )},
-  //   size: 10, },
+    //     <div className="text-black">{row.slNo}</div>
+    //   )},
+    //   size: 10, },
     {
       header: "Title",
       accessor: "title",
@@ -167,6 +168,15 @@ const Apicol: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">APICOL</div>
+       <div className="flex justify-end">
+        <input
+          type="text"
+          placeholder="Search..."
+          //   value={searchTerm}
+          //   onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
+        />
+      </div>
       <Table1 columns={headers} data={flattenedData} />
     </div>
   );

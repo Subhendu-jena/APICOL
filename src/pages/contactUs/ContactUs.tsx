@@ -18,7 +18,7 @@ const initialForm: ContactForm = {
   message: "",
 };
 
-export const ContactUs: React.FC = () => {
+const ContactUs: React.FC = () => {
   const [form, setForm] = useState<ContactForm>(initialForm);
   const [errors, setErrors] = useState<Partial<ContactForm>>({});
   const [submitted, setSubmitted] = useState(false);
@@ -276,3 +276,4 @@ export const ContactUs: React.FC = () => {
     </>
   );
 };
+export default ContactUs
