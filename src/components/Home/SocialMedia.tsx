@@ -8,7 +8,7 @@ const SocialMedia: React.FC = () => {
     },
     Facebook: {
       embedUrl:
-        "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fapicolodisha&tabs=timeline&width=100%&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId",
+        "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fapicolodisha&tabs=timeline&width=410&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId",
       fallbackUrl: "https://www.facebook.com/apicolodisha/",
     },
     X: {
