@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Table1 from '../../components/table/Table';
 
 const CDAO : React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
     const ddHeaders = [
   { accessor: "slNo", header: "Sl. No.",render: (row: any) => (
       <div className="text-black">{row.slNo}</div>
@@ -254,7 +255,18 @@ const CDAO : React.FC = () => {
     contact: "9437373373",
   },
 ];
+const [filteredData, setFilteredData] = useState(ddData);
+useEffect(() => {
+  const lowerCaseTerm = searchTerm.toLowerCase();
 
+  const filtered = ddData.filter((item) =>
+    Object.values(item).some((value) =>
+      value?.toString().toLowerCase().includes(lowerCaseTerm)
+    )
+  );
+
+  setFilteredData(filtered);
+}, [searchTerm, ddData]);
   return (
      <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">Chief District Agriculture Officer (CDAO)</div>
@@ -262,12 +274,12 @@ const CDAO : React.FC = () => {
         <input
           type="text"
           placeholder="Search..."
-          //   value={searchTerm}
-          //   onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
         />
       </div>
-      <Table1 columns={ddHeaders} data={ddData} />
+      <Table1 columns={ddHeaders} data={filteredData} />
     </div>
   )
 }

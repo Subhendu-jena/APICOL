@@ -1,34 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Table1 from "../../components/table/Table";
 
 const Apicol: React.FC = () => {
-  
+  const [searchTerm, setSearchTerm] = useState("");
   const headers = [
-    
-  // { accessor: "slNo", header: "Sl. No.",render: (row: any) => {
-  //   console.log(row)
-  //   return(
-    //     <div className="text-black">{row.slNo}</div>
-    //   )},
-    //   size: 10, },
+    // {
+    //   accessor: "slNo",
+    //   header: "Sl. No.",
+    //   render: (row: any) => {
+    //     return <div className="text-black">{row.slNo}</div>;
+    //   },
+    // },
     {
       header: "Title",
       accessor: "title",
       render: (row: any) => {
-        console.log(row)
-        return(
-        <div className="text-black">
-          {row.title}
-        </div>
-      )},
+        return <div className="text-black">{row.title}</div>;
+      },
     },
     {
       header: "Name of the Officers",
       accessor: "name",
       render: (row: any) => (
-        <div className="text-black">
-          {row.name ? row.name : "N/A"}
-        </div>
+        <div className="text-black">{row.name ? row.name : "N/A"}</div>
       ),
     },
     {
@@ -148,6 +142,7 @@ const Apicol: React.FC = () => {
   const flattenedData = officialsData.flatMap((item) => {
     if (item.officials && Array.isArray(item.officials)) {
       return item.officials.map((official: any) => ({
+        slNo: item.slNo,
         title: item.title,
         name: official.name,
         contactNo: official.contactNo,
@@ -157,6 +152,7 @@ const Apicol: React.FC = () => {
 
     return [
       {
+        slNo: item.slNo,
         title: item.title,
         name: item.name || "",
         contactNo: item.contactNo || "",
@@ -164,20 +160,31 @@ const Apicol: React.FC = () => {
       },
     ];
   });
+  const [filteredData, setFilteredData] = useState(flattenedData);
+  useEffect(() => {
+    const lowerCaseTerm = searchTerm.toLowerCase();
 
+    const filtered = flattenedData.filter((item) =>
+      Object.values(item).some((value) =>
+        value?.toString().toLowerCase().includes(lowerCaseTerm)
+      )
+    );
+
+    setFilteredData(filtered);
+  }, [searchTerm, flattenedData]);
   return (
     <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">APICOL</div>
-       <div className="flex justify-end">
+      <div className="flex justify-end">
         <input
           type="text"
           placeholder="Search..."
-          //   value={searchTerm}
-          //   onChange={(e) => setSearchTerm(e.target.value)}
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
         />
       </div>
-      <Table1 columns={headers} data={flattenedData} />
+      <Table1 columns={headers} data={filteredData} />
     </div>
   );
 };

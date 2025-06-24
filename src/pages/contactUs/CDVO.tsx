@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from 'react'
 import Table1 from "../../components/table/Table";
 
 const CDVO: React.FC = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+  
   const cdvoHeaders = [
     {
       accessor: "slNo",
@@ -273,7 +275,18 @@ const CDVO: React.FC = () => {
       contact: "9437285420",
     },
   ];
+const [filteredData, setFilteredData] = useState(cdvoData);
+useEffect(() => {
+  const lowerCaseTerm = searchTerm.toLowerCase();
 
+  const filtered = cdvoData.filter((item) =>
+    Object.values(item).some((value) =>
+      value?.toString().toLowerCase().includes(lowerCaseTerm)
+    )
+  );
+
+  setFilteredData(filtered);
+}, [searchTerm, cdvoData]);
   return (
     <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">
@@ -283,12 +296,12 @@ const CDVO: React.FC = () => {
         <input
           type="text"
           placeholder="Search..."
-          //   value={searchTerm}
-          //   onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
         />
       </div>
-      <Table1 columns={cdvoHeaders} data={cdvoData} />
+      <Table1 columns={cdvoHeaders} data={filteredData} />
     </div>
   );
 };
