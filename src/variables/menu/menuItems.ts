@@ -77,7 +77,7 @@ export const menuItems = [
       {name:'Horticulture',href:paths.modelDprHorticulture},
       {name:'AH&VS',href:paths.modelDprAHAndVS},
       {name:'Fishery',href:paths.modelDprFishery},
-      {name:'Inter Departmental',href:'#'},
+      {name:'Inter Departmental',href:paths.modelDprInterDepartmental},
     ]
 
   },
