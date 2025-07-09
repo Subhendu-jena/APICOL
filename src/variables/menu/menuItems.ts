@@ -85,8 +85,8 @@ export const menuItems = [
     name: "Success Stories",
     href: paths.successStories,
     dropdown: [
-      { name: "Coffee Table Book", href: paths.successStoriesCoffeeTableBook },
-      { name: "Success Story Compendium", href: paths.successStoriesCompendium },
+      { name: "Coffee Table Book 2023-24", href: paths.successStoriesCoffeeTableBook },
+      { name: "Success Story Compendium 2024-25", href: paths.successStoriesCompendium },
       { name: "Agriculture", href: paths.successStoriesAgriculture },
       { name: "Horticulture", href: paths.successStoriesHorticulture },
       {
