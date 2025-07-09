@@ -1,5 +1,5 @@
 import React from "react";
-import prem from '../../assets/images/boardOfDirectors/prem-chand.png'
+import prem from '../../assets/images/boardOfDirectors/blankImage.webp'
 import rohit from '../../assets/images/boardOfDirectors/Sri-Rohit-Kumar-Lenka.png'
 import biswa from '../../assets/images/boardOfDirectors/Sri-Biswa-Mohan-Ray.png'
 import nidhi from '../../assets/images/boardOfDirectors/Sri-Nidhi-Kumar-Rautray.png'
@@ -14,7 +14,7 @@ interface Director {
 
 const directors: Director[] = [
   {
-    name: "Sri Prem Chandra Choudhary,IAS",
+    name: "Sh. Shubhranshu Mishra",
     title: "Director & Managing Director of Apicol",
     imageUrl: prem,
     description: "Oversees board operations and strategy.",

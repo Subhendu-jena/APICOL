@@ -1,5 +1,5 @@
 import React from "react";
-import prem from "../../assets/chiefs/Sh. Nikhil Pawan Kalyan,Managing Director-APICOL.jpeg";
+import prem from "../../assets/images/boardOfDirectors/blankImage.webp";
 const ManagingDirectorsMessage: React.FC = () => {
   return (
     <>
@@ -20,7 +20,7 @@ const ManagingDirectorsMessage: React.FC = () => {
               />
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-semibold text-gray-900">
-                  Sri Nikhil Pawan Kalyan , IAS
+                  Sh. Shubhranshu Mishra
                 </p>
                 <p className="text-gray-600"> Managing Director, APICOL</p>
               </div>

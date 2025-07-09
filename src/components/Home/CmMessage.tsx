@@ -1,6 +1,6 @@
 import cm from "../../assets/all/cm.jpeg";
 import director from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
-import managingDirector from "../../assets/chiefs/Sh. Nikhil Pawan Kalyan,Managing Director-APICOL.jpeg";
+import managingDirector from "../../assets/images/boardOfDirectors/blankImage.webp";
 import bgCM from "../../assets/all/bgf.png";
 import SlideInFromBottom from "../animation/SlideInFromBottom";
 import SlideInFromRight from "../animation/SlideInFromRight";
@@ -19,7 +19,7 @@ export default function MessageSection() {
     {
       designation: "Managing Director, APICOL",
       image: managingDirector,
-      name: "Sri Nikhil Pavan Kalyan,IAS",
+      name: "Sh. Shubhranshu Mishra",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
