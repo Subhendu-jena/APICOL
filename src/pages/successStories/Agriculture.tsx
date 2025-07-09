@@ -14,6 +14,8 @@ import image11 from "../../assets/agri/a11.avif";
 import image12 from "../../assets/agri/a12.avif";
 import image13 from "../../assets/agri/a13.avif";
 import image14 from "../../assets/agri/a14.avif";
+import seed from "../../assets/successPDFS/1.MKUY_Success Story_Subernapur_Mushroom Spawn Production Unit_Babita Meher (1).pdf";
+import oraganic from "../../assets/successPDFS/2.MKUY_Success Story_Jharsuguda_Ice Plant_Nalinikanta Bhoi.pdf";
 
 const Agriculture: React.FC = () => {
   const successStories = [
@@ -22,12 +24,14 @@ const Agriculture: React.FC = () => {
       image: image1,
       description:
         "This is a seed processing unit with processing capacity of 5 MT seeds per hour running successfully at Barapali.",
+        pdf: seed
     },
     {
       title: "Organic Vegetable Farming in Kandhamal",
       image: image2,
       description:
         "Farmers in Kandhamal have adopted organic farming, yielding higher profits and healthier produce while preserving the environment.",
+        pdf: oraganic
     },
     {
       title: "Mushroom Cultivation in Mayurbhanj",
@@ -113,6 +117,7 @@ const Agriculture: React.FC = () => {
             image={story.image}
             title={story.title}
             description={story.description}
+            link={story.pdf}
           />
         ))}
       </div>

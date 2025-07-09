@@ -15,7 +15,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
   link = "#",
 }) => {
   return (
-    <Link to={link}>
+    <Link to={link} target="_blank">
       <div className="relative overflow-hidden rounded-xl shadow-lg group h-80 w-full">
         {/* Image */}
         <img
