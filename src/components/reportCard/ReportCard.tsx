@@ -8,7 +8,7 @@ const ReportCard: React.FC<{
   link: string;
 }> = ({ title, bgImage, description, link }) => {
   return (
-    <div className="group relative w-[300px] h-[200px] bg-white border border-orange-200 rounded-md shadow-sm overflow-hidden m-2">
+    <div className="group relative  h-[200px] bg-white border border-orange-200 rounded-md shadow-sm overflow-hidden  m-2">
       {/* Background image */}
       <a
         href={link}

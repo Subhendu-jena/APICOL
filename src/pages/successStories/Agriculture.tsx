@@ -110,7 +110,7 @@ const Agriculture: React.FC = () => {
   return (
       <div className="min-h-screen bg-gray-50 ">
       <h2 className="text-3xl font-bold text-left mb-6 text-gray-800">Agriculture</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  gap-4">
         {successStories.map((story, index) => (
           <SuccessStoriesCard
             key={index}

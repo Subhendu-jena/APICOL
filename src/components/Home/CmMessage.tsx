@@ -91,7 +91,7 @@ const CustomNextArrow = ({ className, onClick }: any) => (
                 <div className="mb-6">
                   <i className="fas fa-quote-left text-3xl text-orange-600 mb-4"></i>
                 </div>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed italic">
+                <p className="text-gray-700 mb-8 text-lg leading-relaxed italic text-justify">
                   "{message}"
                 </p>
                 <div className="border-l-4 border-orange-600 pl-6">

@@ -33,13 +33,13 @@ const directors: Director[] = [
   },
   {
     name: "Sri Nidhi Kumar Rautray",
-    title: "Special Secretary to Govt. Finance Dept., Odiaha, Bhubaneswar & Director APICOL",
+    title: "Special Secretary to Govt. Finance Dept., Odisha, Bhubaneswar & Director APICOL",
     imageUrl: nidhi,
     description: "Leads technical vision and infrastructure.",
   },
   {
     name: "Dr. Saroj Kumar Swain",
-    title: "Director, CIFA, Kaushalyagang, Bhubaneswar , Director APICOL",
+    title: "Director, CIFA, Kaushalyagang, Bhubaneswar & Director APICOL",
     imageUrl: saroj,
     description: "Leads technical vision and infrastructure.",
   },

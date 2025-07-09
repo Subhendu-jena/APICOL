@@ -146,7 +146,7 @@ export const menuItems = [
       { name: "Videos", href: paths.galleryVideos },
       { name: "News Clipping (Last 1 Year)", href: '#' },
       { name: "Mukhyamantri Krushi Udyog Yojana (MKUY)", href: '#' },
-      { name: "Financial Assistance to Cold Storages (FACS)", href: '#' },
+      // { name: "Financial Assistance to Cold Storages (FACS)", href: '#' },
       { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: '#' },
     ],
   },

@@ -27,7 +27,7 @@ const ChairmansMessage: React.FC = () => {
               </div>
             </div>
             <div className="col-span-4">
-              <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4 text-justify">
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus finibus, mauris vitae vehicula dignissim, nunc nisl
                 tempus sem, et cursus risus metus eget lorem. Vivamus ex felis,
@@ -39,7 +39,7 @@ const ChairmansMessage: React.FC = () => {
                 eget felis ac nisi imperdiet iaculis. Vivamus in tortor
                 vulputate, blandit magna a, sagittis dui."
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus finibus, mauris vitae vehicula dignissim, nunc nisl
                 tempus sem, et cursus risus metus eget lorem. Vivamus ex felis,
@@ -51,7 +51,7 @@ const ChairmansMessage: React.FC = () => {
                 eget felis ac nisi imperdiet iaculis. Vivamus in tortor
                 vulputate, blandit magna a, sagittis dui.
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 Our state govt. have strong focus on developing agriculture
                 sector and has been taking various measures for all round
                 development. The corporation is now implementing Mukhyamantri
@@ -64,7 +64,7 @@ const ChairmansMessage: React.FC = () => {
                 outreach with more focused, efficient and time bound services to
                 entrepreneurs.
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 I extend my gratitude to APICOL and NIC officials who helped
                 delivering the useful website to connect and serve the Agrarian
                 Community and wish it great success.

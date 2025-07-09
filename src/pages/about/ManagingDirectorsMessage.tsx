@@ -26,7 +26,7 @@ const ManagingDirectorsMessage: React.FC = () => {
               </div>
             </div>
             <div className="col-span-4">
-              <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700 italic leading-relaxed mb-4 text-justify">
                " APICOL was established in 1996 as a wholly owned corporation of
                 Govt. of Odisha with intent to promote commercial agriculture
                 and agri-business in the state for upliftment of agricultural
@@ -34,7 +34,7 @@ const ManagingDirectorsMessage: React.FC = () => {
                 Agribusiness units through implementation of various schemes and
                 activities."
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 In the last 25 years APICOL has supported 1,972 Commercial Agri
                 Enteprises (CAEs) and 4,587 Agro Service Centres (ASCs) with
                 aggregate subsidies amounting to Rs.308 crore. Besides, it has
@@ -49,7 +49,7 @@ const ManagingDirectorsMessage: React.FC = () => {
                 food processing. APICOL has played a significant role in this
                 path of progress.
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 Our state govt. have strong focus on developing agriculture
                 sector and has been taking various measures for all round
                 development. The corporation is now implementing Mukhyamantri
@@ -62,7 +62,7 @@ const ManagingDirectorsMessage: React.FC = () => {
                 outreach with more focused, efficient and time bound services to
                 entrepreneurs.
               </blockquote>
-              <blockquote className="text-md text-gray-700  leading-relaxed mb-4">
+              <blockquote className="text-md text-gray-700  leading-relaxed mb-4 text-justify">
                 I extend my gratitude to APICOL and NIC officials who helped
                 delivering the useful website to connect and serve the Agrarian
                 Community and wish it great success.
