@@ -298,7 +298,7 @@ const Footer = () => {
                 Limited
               </h3>
             </div>
-            <p className="text-gray-400 text-[14px]">
+            <p className="text-gray-400 text-[14px] ">
               Website content is managed by APICOL (The Agricultural Promotion &
               Investment Corporation of Odisha Limited) Department of
               Agriculture & farmers’ Empowerment

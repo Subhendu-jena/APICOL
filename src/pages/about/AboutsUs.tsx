@@ -68,7 +68,7 @@ const AboutsUs: React.FC = () => {
             </h2>
           </SlideInFromTop>
           <div className="prose prose-lg max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-6 text-justify">
               The Agricultural Promotion & Investment Corporation of Odisha
               Limited (APICOL), a wholly owned corporation of Govt. of Odisha.
               Incorporated on 01.03.1996 (CIN: U01409OR1996SGC004357), it
@@ -101,7 +101,7 @@ const AboutsUs: React.FC = () => {
                     Our Vision
                   </h3>
                 </div>
-                <p className="text-gray-700">
+                <p className="text-gray-700 text-justify">
                   Bringing in a shift from subsistence to commercial
                   Agriculture.Providing an integration among technology, economy
                   and society for a faster development of broad based
@@ -119,7 +119,7 @@ const AboutsUs: React.FC = () => {
                   Our Mission
                 </h3>
               </div>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-justify">
                 To fulfill the VISION and contribute to all round economic and
                 social development of the State of Odisha with a motto of
                 promise to help and help to promise.
@@ -138,7 +138,7 @@ const AboutsUs: React.FC = () => {
                 Our Activities
               </h3>
             </div>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               The corporation is implementing the Mukhyamantri Krushi Udyoga
               Yojana (MKUY) and Agriculture Entrepreneurship Promotion Scheme
               (AEPS) of Govt. of Odisha. Besides, it is acting as the State
@@ -156,7 +156,7 @@ const AboutsUs: React.FC = () => {
                 Our Deliveries
               </h3>
             </div>
-            <p className="text-gray-700">
+            <p className="text-gray-700 text-justify">
               So far, the corporation has supported 1,972 Commercial Agri
               Enterprises (CAEs) and 4,587 Agro Service Centres (ASCs) in the
               state with disbursement of subsidies aggregating to around Rs.308

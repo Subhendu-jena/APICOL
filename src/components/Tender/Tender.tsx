@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReusableTable from "../table/Table";
 
 const headers = [
@@ -38,6 +38,13 @@ const sampleData = [
 ];
 
 const Tender: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredData = sampleData.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.openDate.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.closeDate.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   return (
     <div className="p-6">
        <div className="text-2xl font-bold">Tender</div>
@@ -45,12 +52,12 @@ const Tender: React.FC = () => {
         <input
           type="text"
           placeholder="Search..."
-          //   value={searchTerm}
-          //   onChange={(e) => setSearchTerm(e.target.value)}
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
           className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
         />
       </div>
-      <ReusableTable columns={headers} data={sampleData} />
+      <ReusableTable columns={headers} data={filteredData} />
     </div>
   );
 };

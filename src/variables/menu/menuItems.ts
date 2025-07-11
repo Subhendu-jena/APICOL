@@ -137,6 +137,8 @@ export const menuItems = [
       { name: "Suppliers' List", href: paths.downloadsSuppliers },
       { name: "Bankers' List", href: paths.downloadsBankers },
     ],
+     target: false,
+
   },
   {
     name: "Gallery",
@@ -149,13 +151,14 @@ export const menuItems = [
       // { name: "Financial Assistance to Cold Storages (FACS)", href: '#' },
       { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: '#' },
     ],
+     target: false,
   },
 
-  {
-    name: "Entrepreneur's Corner",
-    href: "https://entrepreneur-s-corner-frontend.onrender.com",
-    target: true,
-  },
+  // {
+  //   name: "Entrepreneur's Corner",
+  //   href: "https://entrepreneur-s-corner-frontend.onrender.com",
+  //   target: true,
+  // },
  
 
 ];

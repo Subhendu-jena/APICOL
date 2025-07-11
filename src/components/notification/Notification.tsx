@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReusableTable from "../table/Table";
 
 const headers = [
@@ -36,29 +36,35 @@ const sampleData = [
   {
     title:
       "  Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
-    releaseDate: "10- 4- 2025",
+    releaseDate: "15- 4- 2025",
     subTitle:
       "Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
   },
   {
     title:
       "  Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
-    releaseDate: "10- 4- 2025",
+    releaseDate: "7- 4- 2025",
     subTitle:
       "Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
   },
   {
     title:
       "  Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
-    releaseDate: "10- 4- 2025",
+    releaseDate: "4- 4- 2025",
     subTitle:
-      "Communication of Selected Agri. Entrepreneurs List to undergo registration process under AEPS-OIIPCRA, APICOL",
+      "Communication AEPS-OIIPCRA, APICOL",
   },
 
   // Add more rows to test pagination
 ];
 
 const Notification: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+   const filteredData = sampleData.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.releaseDate.toLowerCase().includes(searchTerm.toLowerCase()) 
+  );
   return (
     <div className="p-6">
        <div className="text-2xl font-bold">Notification</div>
@@ -66,12 +72,12 @@ const Notification: React.FC = () => {
         <input
           type="text"
           placeholder="Search..."
-          //   value={searchTerm}
-          //   onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-90 bg-white placeholder:text-black text-black border-none outline-none px-4 py-2 border rounded-lg"
+         value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          className="w-90 bg-white placeholder:text-black text-black mb-2 px-4 py-2 border rounded-lg"
         />
       </div>
-      <ReusableTable columns={headers} data={sampleData} />
+      <ReusableTable columns={headers} data={filteredData} />
     </div>
   );
 };

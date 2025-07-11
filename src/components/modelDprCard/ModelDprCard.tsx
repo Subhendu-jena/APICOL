@@ -214,7 +214,7 @@ const ModelDprCard: React.FC<ModelDprCardProps> = ({
             </div>
             <div>
               <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
-              <p className="text-gray-600 text-sm mt-2">{description}</p>
+              <p className="text-gray-600 text-sm mt-2 text-justify">{description}</p>
             </div>
           </div>
           <div className="flex items-center gap-4 absolute mb-2 bottom-0">

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-
+import logo from "../../assets/logos/APICOL-Logo.png"
+import twitter from "../../assets/logos/twitter.svg"
 const SocialMedia: React.FC = () => {
   const socialEmbeds = {
     Instagram: {
@@ -55,16 +56,30 @@ const SocialMedia: React.FC = () => {
       title="Facebook Feed"
     />
   );
-
+console.log(socialEmbeds.X.fallbackUrl ,'jqsghgghsgajk')
   const renderXFeed = () => (
     <div className="h-full overflow-auto">
+      <div className="flex justify-end">
+
+      <img src={twitter} alt=""  className="flex justify-end w-8 h-8 rounded-full"/>
+      </div>
       <a
         className="twitter-timeline"
         data-height="450"
         data-theme="light"
         href={`https://twitter.com/${socialEmbeds.X.handle}?ref_src=twsrc%5Etfw`}
       >
-        Tweets by {socialEmbeds.X.handle}
+        {/* Tweets by {socialEmbeds.X.handle} */}
+        <div className="flex gap-2 px-5  items-center">
+          <div> 
+            <img src={logo} alt=""  className=" w-10 h-10 rounded-full"/>
+            </div>
+          <div>
+            <div className=" text-blue-600">APICOL ODISHA </div>
+            <div className=" text-gray-500 ">@APICOLBBSR </div>
+          </div>
+        </div>
+        {/* <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> */}
       </a>
       <div className="mt-4 text-center">
         <a
