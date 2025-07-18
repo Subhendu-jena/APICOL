@@ -4,6 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import { paths } from "./path";
 import PrimeLayout from "../components/layout/PrimeLayout";
 import logo from "../assets/logos/APICOL-Logo.png";
+import Horticulture from "../pages/successStories/Horticulture";
+import AnimalResource from "../pages/successStories/AnimalResource";
+import Fishery from "../pages/successStories/Fishery";
+import IntegratedFarming from "../pages/successStories/IntegratedFarming";
 const Home = lazy(() => import("../pages/home/Home"));
 const AboutUs = lazy(() => import("../pages/about/AboutsUs"));
 const BoardOfDirectors = lazy(() => import("../pages/about/BoardOfDirectors"));
@@ -132,19 +136,19 @@ const AppRoutes: React.FC = () => {
             />
             <Route
               path={paths.successStoriesHorticulture}
-              element={<ComingSoon />}
+              element={<Horticulture />}
             />
             <Route
               path={paths.successStoriesAnimalResource}
-              element={<ComingSoon />}
+              element={<AnimalResource />}
             />
             <Route
               path={paths.successStoriesFishery}
-              element={<ComingSoon />}
+              element={<Fishery />}
             />
             <Route
               path={paths.successStoriesIntegratedFarming}
-              element={<ComingSoon />}
+              element={<IntegratedFarming />}
             />
             <Route path={paths.reports} element={<AnnualReports />} />
             <Route

@@ -111,7 +111,6 @@ export const menuItems = [
     ],
   },
 
-  { name: "Analytics", href: "#" },
 
   {
     name: "Downloads",
@@ -153,6 +152,7 @@ export const menuItems = [
     ],
      target: false,
   },
+  { name: "Analytics", href: "#" },
 
   // {
   //   name: "Entrepreneur's Corner",

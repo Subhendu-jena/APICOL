@@ -8,11 +8,11 @@ const ReportCard: React.FC<{
   link: string;
 }> = ({ title, bgImage, description, link }) => {
   return (
-    <div className="group relative  h-[200px] bg-white border border-orange-200 rounded-md shadow-sm overflow-hidden  m-2">
+    <div className="group relative  h-[200px] bg-white border border-orange-200 rounded-md shadow-sm overflow-hidden m-2">
       {/* Background image */}
       <a
         href={link}
-        target="_blank"
+        target="_blank"  
         className="text-sm font-medium text-gray-700 hover:underline flex items-center gap-1"
       >
         <img
@@ -22,7 +22,7 @@ const ReportCard: React.FC<{
         />
 
         {/* Top-right decoration */}
-        <div className="absolute top-0 right-0 w-16 h-16 bg-orange-300 rounded-bl-full z-10" />
+        <div className="absolute top-0 right-0 w-20 h-20 bg-orange-300 rounded-bl-full z-10" />
 
         {/* Content that slides up */}
         <div className="absolute bottom-0 left-0 right-0 z-20 p-6  bg-opacity-90 transform translate-y-[60%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
