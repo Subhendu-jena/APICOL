@@ -1,5 +1,5 @@
 import React from "react";
-import prem from "../../assets/images/boardOfDirectors/blankImage.webp";
+import prem from "../../assets/chiefs/subhanranshu_Mishra_md.jpeg";
 const ManagingDirectorsMessage: React.FC = () => {
   return (
     <>

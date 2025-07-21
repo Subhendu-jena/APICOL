@@ -1,5 +1,5 @@
 import React from "react";
-import prem from '../../assets/images/boardOfDirectors/blankImage.webp'
+import prem from '../../assets/chiefs/subhanranshu_Mishra_md.jpeg'
 import rohit from '../../assets/images/boardOfDirectors/Sri-Rohit-Kumar-Lenka.png'
 import biswa from '../../assets/images/boardOfDirectors/Sri-Biswa-Mohan-Ray.png'
 import nidhi from '../../assets/images/boardOfDirectors/Sri-Nidhi-Kumar-Rautray.png'

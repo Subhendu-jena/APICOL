@@ -1,6 +1,6 @@
 import cm from "../../assets/all/cm.jpeg";
 import director from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
-import managingDirector from "../../assets/images/boardOfDirectors/blankImage.webp";
+import managingDirector from "../../assets/chiefs/subhanranshu_Mishra_md.jpeg";
 import bgCM from "../../assets/all/bgf.png";
 import SlideInFromBottom from "../animation/SlideInFromBottom";
 import SlideInFromRight from "../animation/SlideInFromRight";
