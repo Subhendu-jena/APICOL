@@ -137,39 +137,14 @@ export const menuItems = [
     ],
   },
 
-  {
-    name: "Downloads",
-    href: paths.downloads,
-    dropdown: [
-      { name: "Model DPR", href: paths.downloadsModelDpr },
-      {
-        name: "Brief Project Profile",
-        href: paths.downloadsBriefProjectProfile,
-      },
-      { name: "Presentations", href: paths.downloadsPresentations },
-      { name: "Technical information", href: paths.downloadsTechnicalInfo },
-      { name: "Mobile Apps", href: paths.downloadsMobileApps },
-      {
-        name: "District Managers' List",
-        href: paths.downloadsDistrictManagers,
-      },
-      {
-        name: "District Nodal Officers List",
-        href: paths.downloadsNodalOfficers,
-      },
-      { name: "Block Level Officers List", href: paths.downloadsBlockOfficers },
-      { name: "Suppliers' List", href: paths.downloadsSuppliers },
-      { name: "Bankers' List", href: paths.downloadsBankers },
-    ],
-    target: false,
-  },
+  
   {
     name: "Gallery",
     href: paths.gallery,
     dropdown: [
       {
         name: "Photo Gallery",
-        href: "/gallery?tab=mkuy",
+        href: paths.galleryPhotos,
         include: true,
         target: false,
         children: [
@@ -192,6 +167,7 @@ export const menuItems = [
     target: false,
   },
   { name: "Analytics", href: "#" },
+  { name: "Contact Us", href: "/contact-us/" },
 
   // {
   //   name: "Entrepreneur's Corner",

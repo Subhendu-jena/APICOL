@@ -1,8 +1,9 @@
-import {  LocateIcon, Mail, Phone } from "lucide-react";
+import { LocateIcon, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
 import Apicol from "./Apicol";
 import CDAO from "./CDAO";
 import CDVO from "./CDVO";
+import ComingSoon from "../../components/comingSoon/ComingSoon";
 
 type ContactForm = {
   name: string;
@@ -25,11 +26,11 @@ const ContactUs: React.FC = () => {
   const [activeTab, setActiveTab] = useState("apicol");
 
   const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
-  const gradientBackgroundHover = "bg-gradient-to-r from-[#000000] to-[#00A650]";
+  const gradientBackgroundHover =
+    "bg-gradient-to-r from-[#000000] to-[#00A650]";
 
-  
   const tabClasses = (tab: string) =>
-    `w-full py-4 px-24 font-medium rounded-4xl transition-all duration-300 ${
+    `w-full  h-15 w-24   text-center flex items-center justify-center rounded-4xl transition-all duration-300 ${
       activeTab === tab
         ? `${gradientBackgroundHover} text-white shadow-lg transform scale-105`
         : `${gradientBackground}  text-white shadow-lg transform scale-105 `
@@ -38,6 +39,8 @@ const ContactUs: React.FC = () => {
     { key: "apicol", label: "APICOL Scheme Officers" },
     { key: "nodal", label: "District Nodal Officers" },
     { key: "coordinator", label: "District Coordinators" },
+    { key: "blockLevel", label: "Block level Officers" },
+    { key: "district", label: "District Manegers" },
   ];
   const validate = (): boolean => {
     const errs: Partial<ContactForm> = {};
@@ -245,35 +248,38 @@ const ContactUs: React.FC = () => {
           </div>
         </div>
       </div>
-    <div className="max-w-7xl mx-auto ">
+      <div className="max-w-7xl mx-auto ">
         {/* Tabs */}
-        <div className="flex flex-wrap justify-between px-auto">
+        <div className="grid grid-cols-5 gap-4">
           {tabs.map(({ key, label }) => (
-              <div className="justify-center">
-                <button
-                  key={key}
-                  className={tabClasses(key)}
-                  onClick={() => setActiveTab(key)}
-                >
-                  {label}
-                </button>
-                {activeTab === key && (
-                  <div className="">
-                    <div className={`w-0 h-0  border-l-20 border-r-20 border-t-20 border-l-transparent border-r-transparent ${gradientBackground} mx-auto`}></div>
-                  </div>
-                )}
-              </div>
+            <div>
+              <button
+                key={key}
+                className={tabClasses(key)}
+                onClick={() => setActiveTab(key)}
+              >
+                <h2 className=" text-left flex">{label}</h2>
+              </button>
+              {activeTab === key && (
+                <div className="">
+                  <div
+                    className={`w-0 h-0  border-l-20 border-r-20 border-t-20 border-l-transparent border-r-transparent ${gradientBackground} mx-auto`}
+                  ></div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
         {/* Tab Content */}
-        <div className="w-full">
+        <div className="">
           {activeTab === "apicol" && <Apicol />}
           {activeTab === "nodal" && <CDAO />}
           {activeTab === "coordinator" && <CDVO />}
+          {activeTab === "blockLevel" && <ComingSoon />}
+          {activeTab === "district" && <ComingSoon />}
         </div>
       </div>
-  
     </>
   );
 };
-export default ContactUs
+export default ContactUs;

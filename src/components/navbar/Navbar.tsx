@@ -28,14 +28,16 @@ export default function Header() {
               </Link>
             </div>
             <div className="flex space-x-2 items-center">
+              <span>|</span>
               <Link to="#" className="text-sm hover:text-gray-300">
-                Activities
+                ଓଡିଆ
               </Link>
+              
               <span>|</span>
               <Link to="https://grievance-ms-frontend.onrender.com" target="_blank" className="text-sm hover:text-gray-300">
                 Grievance Portal
               </Link>
-              <span>|</span>
+              {/* <span>|</span> */}
               {/* <Link
                 to="https://rtiodisha.gov.in/pa/T1RJLzIzLzgzLzE5"
                 className="text-sm hover:text-gray-300"
@@ -45,13 +47,8 @@ export default function Header() {
                 RTI
               </Link>
               <span>|</span> */}
-              <Link to="/contact-us/" className="text-sm hover:text-gray-300">
-                Contact Us
-              </Link>
-              <span>|</span>
-              <Link to="#" className="text-sm hover:text-gray-300">
-                ଓଡିଆ
-              </Link>
+              
+              
             </div>
             <div className="flex space-x-4">
               <a

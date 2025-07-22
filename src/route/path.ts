@@ -74,9 +74,9 @@ export const paths = {
   entrepreneurs: "/entrepreneurs",
   gallery: "/gallery",
   galleryPhotos: "/gallery/photos",
-  galleryPhotosMKUY: "/gallery?tab=mkuy",
-  galleryPhotosFACS: "/gallery?tab=facs",
-  galleryPhotosAEPS: "/gallery?tab=aeps",
+  galleryPhotosMKUY: "/gallery/photos/mkuy",
+  galleryPhotosFACS: "/gallery/photos/facs",
+  galleryPhotosAEPS: "/gallery/photos/aeps",
   galleryVideos: "/gallery/videos",
 
 

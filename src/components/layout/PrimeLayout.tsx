@@ -348,10 +348,11 @@ const PrimeLayout: React.FC = () => {
                         {item.children &&
                           item.children.map((subItem: any) => {
                             // const isActive =
-                            //   currentPath === subItem.href ||
+                           
                             //   (currentPath === currentSection?.href &&
-                            //     idx === 0);
+                            //     idx === 0)   ||  currentPath === subItem.href;
                             const isActive = currentPath === subItem.href;
+                            
                             return (
                               <Link
                                 to={subItem.href}
