@@ -284,7 +284,7 @@ const PrimeLayout: React.FC = () => {
                                 to={subItem.href}
                                 key={subItem.name}
                                 // className="block px-4 py-2 m-1 rounded-lg text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                                className={`block m-2 px-2 py-2 rounded-lg text-sm  ${
+                                className={`block m-2 ml-10 px-5 py-2 rounded-lg text-sm  ${
                                   isActive
                                     ? "bg-orange-600 text-white"
                                     : "text-gray-700 hover:bg-orange-500 hover:text-white"

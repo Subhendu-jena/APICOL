@@ -8,6 +8,7 @@ import Horticulture from "../pages/successStories/Horticulture";
 import AnimalResource from "../pages/successStories/AnimalResource";
 import Fishery from "../pages/successStories/Fishery";
 import IntegratedFarming from "../pages/successStories/IntegratedFarming";
+import PhotosGallery from "../pages/gallery/PhotosGallery";
 const Home = lazy(() => import("../pages/home/Home"));
 const AboutUs = lazy(() => import("../pages/about/AboutsUs"));
 const BoardOfDirectors = lazy(() => import("../pages/about/BoardOfDirectors"));
@@ -34,7 +35,6 @@ const Notification = lazy(
   () => import("../components/notification/Notification")
 );
 const Recruitment = lazy(() => import("../components/recruitment/Recruitment"));
-const ImageGallery = lazy(() => import("../components/Home/ImageGallery"));
 const VideoGallery = lazy(() => import("../components/Home/VideoGallery"));
 const Tender = lazy(() => import("../components/Tender/Tender"));
 const ComingSoon = lazy(() => import("../components/comingSoon/ComingSoon"));
@@ -215,8 +215,9 @@ const AppRoutes: React.FC = () => {
             <Route path={paths.tenders} element={<Tender />} />
             <Route path={paths.recruitment} element={<Recruitment />} />
             <Route path={paths.entrepreneurs} element={<ComingSoon />} />
-            <Route path={paths.gallery} element={<ImageGallery />} />
-            <Route path={paths.galleryPhotos} element={<ImageGallery />} />
+            <Route path={paths.gallery} element={<PhotosGallery />} />
+            <Route path={paths.galleryPhotos} element={<PhotosGallery />} />
+            <Route path={paths.galleryMkuy} element={<PhotosGallery />} />
             <Route path={paths.galleryVideos} element={<VideoGallery />} />
             <Route path={paths.contactUs} element={<ContactUs />} />
           </Route>

@@ -17,8 +17,11 @@ export const menuItems = [
         include: true,
         target: false,
         children: [
-          {name: "Managing Director's message", href: paths.aboutUsManagingDirectorsMessage},
-          {name: "Director's message", href: paths.aboutUsChairmansMessage},
+          {
+            name: "Managing Director's message",
+            href: paths.aboutUsManagingDirectorsMessage,
+          },
+          { name: "Director's message", href: paths.aboutUsChairmansMessage },
         ],
       },
     ],
@@ -26,19 +29,19 @@ export const menuItems = [
 
   {
     name: "Schemes",
-    href: paths.schemes,
+    href: "#",
     include: true,
 
     dropdown: [
       {
         name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-        href:'https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D',
-        target: true
+        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D",
+        target: true,
       },
       {
         name: "Financial assistance to Cold storages",
-        href: 'https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D',
-        target: true
+        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D",
+        target: true,
       },
       {
         name: "Agriculture Entrepreneurship Promotion Scheme (AEPS)",
@@ -46,7 +49,7 @@ export const menuItems = [
       },
     ],
   },
- {
+  {
     name: "Notices",
     href: paths.notice,
     dropdown: [
@@ -69,24 +72,37 @@ export const menuItems = [
     ],
   },
   {
-    name:'Model DPRs',
-    href:paths.modelDpr,
-    dropdown:[
-      {name:'Mukhyamantri Krushi Udyog Yojana (MKUY)',href:'#'},
-      {name:'Agriculture',href:paths.modelDprAgriculture},
-      {name:'Horticulture',href:paths.modelDprHorticulture},
-      {name:'AH&VS',href:paths.modelDprAHAndVS},
-      {name:'Fishery',href:paths.modelDprFishery},
-      {name:'Inter Departmental',href:paths.modelDprInterDepartmental},
-    ]
+    name: "Model DPRs",
+    href: paths.modelDpr,
+    dropdown: [
+      {
+        name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
+        href: "#",
+        include: true,
+        target: false,
 
+        children: [
+          { name: "Agriculture", href: paths.modelDprAgriculture },
+          { name: "Horticulture", href: paths.modelDprHorticulture },
+          { name: "AH&VS", href: paths.modelDprAHAndVS },
+          { name: "Fishery", href: paths.modelDprFishery },
+          { name: "Inter Departmental", href: paths.modelDprInterDepartmental },
+        ],
+      },
+    ],
   },
   {
     name: "Success Stories",
     href: paths.successStories,
     dropdown: [
-      { name: "Coffee Table Book 2023-24", href: paths.successStoriesCoffeeTableBook },
-      { name: "Success Story Compendium 2024-25", href: paths.successStoriesCompendium },
+      {
+        name: "Coffee Table Book 2023-24",
+        href: paths.successStoriesCoffeeTableBook,
+      },
+      {
+        name: "Success Story Compendium 2024-25",
+        href: paths.successStoriesCompendium,
+      },
       { name: "Agriculture", href: paths.successStoriesAgriculture },
       { name: "Horticulture", href: paths.successStoriesHorticulture },
       {
@@ -110,7 +126,6 @@ export const menuItems = [
       { name: "Enterprise Guidebook", href: "#" },
     ],
   },
-
 
   {
     name: "Downloads",
@@ -136,21 +151,29 @@ export const menuItems = [
       { name: "Suppliers' List", href: paths.downloadsSuppliers },
       { name: "Bankers' List", href: paths.downloadsBankers },
     ],
-     target: false,
-
+    target: false,
   },
   {
     name: "Gallery",
     href: paths.gallery,
     dropdown: [
-      { name: "Photos", href: paths.galleryPhotos },
-      { name: "Videos", href: paths.galleryVideos },
-      { name: "News Clipping (Last 1 Year)", href: '#' },
-      { name: "Mukhyamantri Krushi Udyog Yojana (MKUY)", href: '#' },
-      // { name: "Financial Assistance to Cold Storages (FACS)", href: '#' },
-      { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: '#' },
+      {
+        name: "Photo Gallery",
+        href: paths.galleryPhotos,
+        include: true,
+        target: false,
+        children: [
+          {
+            name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
+            href: paths.galleryMkuy,
+          },
+          { name: "Financial Assistance to Cold Storages (FACS)", href: "#" },
+          { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: "#" },
+        ],
+      },
+      { name: "Video Gallery", href: paths.galleryVideos },
     ],
-     target: false,
+    target: false,
   },
   { name: "Analytics", href: "#" },
 
@@ -159,6 +182,4 @@ export const menuItems = [
   //   href: "https://entrepreneur-s-corner-frontend.onrender.com",
   //   target: true,
   // },
- 
-
 ];
