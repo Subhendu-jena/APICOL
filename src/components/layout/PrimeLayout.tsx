@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
@@ -61,7 +61,15 @@ const PrimeLayout: React.FC = () => {
           {/* Desktop Navbar */}
           <div className="hidden md:flex justify-center items-center">
             {menuItems.map((item, index) => {
-              const isActive = currentPath === item.href;
+              const isActive =
+                currentPath === item.href ||
+                item.dropdown?.some(
+                  (sub: any) =>
+                    currentPath === sub.href ||
+                    sub.children?.some(
+                      (child: any) => currentPath === child.href
+                    )
+                );
               return (
                 <div
                   key={index}
