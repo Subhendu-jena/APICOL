@@ -26,7 +26,7 @@ const ReportCard: React.FC<{
 
         {/* Content that slides up */}
         <div className="absolute bottom-0 left-0 right-0 z-20 p-6  bg-opacity-90 transform translate-y-[60%] group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
-          <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
+          <h3 className=" font-semibold text-gray-800 md: text-md lg:text-lg">{title}</h3>
           <p className="text-sm text-gray-600 mt-4">{description}</p>
           <div className="mt-4 flex items-center justify-between">
             <a

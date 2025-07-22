@@ -110,7 +110,14 @@
 
 
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
+.blink-hover:hover {
+  animation: blink 0.8s steps(2, start) infinite;
+}
 
 
 

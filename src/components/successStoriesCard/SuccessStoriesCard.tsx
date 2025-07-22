@@ -1,8 +1,8 @@
 import { Eye } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
-import no_image from '../../assets/no_image.jpg'
-
+import no_image from "../../assets/no_image.jpg";
+import { motion } from "framer-motion";
 interface HoverCardProps {
   image?: string;
   title: string;
@@ -37,11 +37,22 @@ const HoverCard: React.FC<HoverCardProps> = ({
               <>
                 {" "}
                 <p className="text-[12px]/4 text-gray-700 text-center text-clamp-3 hidden group-hover:block ">
-                <hr  className="mx-10 my-5"/>
-                  {description || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore'}
-                <Eye  className="mx-auto my-5 flex justify-center items-center"/>
+                  <hr className="mx-10 my-5" />
+                  {description ||
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"}
+                  <motion.div
+                    whileHover={{ opacity: [1, 0, 1] }}
+                    transition={{
+                      duration: 0.8,
+                      repeat: Infinity,
+                      repeatType: "loop",
+                    }}
+                    className="mx-auto my-5 flex justify-center items-center"
+                  >
+                    <Eye className="mx-auto my-5 flex justify-center items-center" />
+                  </motion.div>
                 </p>
-                </>
+              </>
             )}
           </div>
         </div>
