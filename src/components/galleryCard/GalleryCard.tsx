@@ -128,15 +128,15 @@ const ArchivalGallery: React.FC = () => {
     },
     {
       heading: "Horticulture",
+      posterImage: noImage,
       description: "Horticulture",
-      posterImage: horti1,
-      images: [horti1, horti2, horti3, horti4],
+      images: [],
     },
     {
       heading: "AH&VS",
       description: "AH&VS",
-      posterImage: noImage,
-      images: [],
+      posterImage: horti1,
+      images: [horti1, horti2, horti3, horti4],
     },
     {
       heading: "Fishery",
