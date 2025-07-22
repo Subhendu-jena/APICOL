@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
@@ -29,18 +29,18 @@ const PrimeLayout: React.FC = () => {
       setAlignRight(isOverflowing);
     }
   };
-  useEffect(() => {
-    const observer = new ResizeObserver(() => {
-      checkOverflow();
-    });
+  // useEffect(() => {
+  //   const observer = new ResizeObserver(() => {
+  //     checkOverflow();
+  //   });
 
-    if (submenuRef.current) {
-      observer.observe(submenuRef.current);
-      checkOverflow(); // initial check
-    }
+  //   if (submenuRef.current) {
+  //     observer.observe(submenuRef.current);
+  //     checkOverflow(); // initial check
+  //   }
 
-    return () => observer.disconnect();
-  }, []);
+  //   return () => observer.disconnect();
+  // }, []);
 
   // Find current section and its sidebar children
   const currentSection = menuItems.find(
@@ -60,113 +60,128 @@ const PrimeLayout: React.FC = () => {
         <div className="container mx-auto px-4">
           {/* Desktop Navbar */}
           <div className="hidden md:flex justify-center items-center">
-            {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="relative group"
-                onMouseEnter={() => {
-                  setIsHovered(true);
-                  checkOverflow();
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false);
-                  setAlignRight(false);
-                }}
-              >
-                <div className="flex items-center">
-                  {item.href ? (
-                    <Link
-                      to={item.href}
-                      target={item.target ? "_blank" : "_self"}
-                      className="flex items-center px-3 py-3 hover:bg-orange-800 text-[15px] text-white cursor-pointer gap-1"
-                    >
-                      {item.name}
-                      {item.dropdown && (
-                        <ChevronDown
-                          size={16}
-                          className="transition-transform duration-200 group-hover:rotate-180"
-                        />
-                      )}
-                    </Link>
-                  ) : (
-                    <div className="px-3 py-3 text-sm lg:text-base">
-                      {item.name}
-                    </div>
-                  )}
-                </div>
+            {menuItems.map((item, index) => {
+              const isActive = currentPath === item.href;
+              return (
+                <div
+                  key={index}
+                  className="relative group"
+                  onMouseEnter={() => {
+                    setIsHovered(true);
+                    checkOverflow();
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovered(false);
+                    setAlignRight(false);
+                  }}
+                >
+                  <div className="flex items-center">
+                    {item.href ? (
+                      <Link
+                        to={item.href}
+                        target={item.target ? "_blank" : "_self"}
+                        className={`flex items-center px-3 py-3 ${
+                          isActive && "bg-orange-900 text-white"
+                        }  hover:bg-orange-800 text-[15px] text-white cursor-pointer gap-1`}
+                      >
+                        {item.name}
+                        {item.dropdown && (
+                          <ChevronDown
+                            size={16}
+                            className="transition-transform duration-200 group-hover:rotate-180"
+                          />
+                        )}
+                      </Link>
+                    ) : (
+                      <div className="px-3 py-3 text-sm lg:text-base">
+                        {item.name}
+                      </div>
+                    )}
+                  </div>
 
-                {/* First-level Dropdown */}
-                {item.dropdown && (
-                  <div className="absolute left-0 top-full overflow-visible z-50 hidden group-hover:block min-w-[250px]">
-                    <div className="bg-white shadow-lg rounded-b-lg overflow-visible" onMouseLeave={() => setShowSubmenu2(false)}>
-                      {item.dropdown.map((option: any, idx: number) => (
-                        <div key={idx} className="relative group">
-                          {option.children ? (
-                            <>
+                  {/* First-level Dropdown */}
+                  {item.dropdown && (
+                    <div className="absolute left-0 top-full overflow-visible z-50 hidden group-hover:block min-w-[250px]">
+                      <div
+                        className="bg-white shadow-lg rounded-b-lg overflow-visible"
+                        onMouseLeave={() => setShowSubmenu2(false)}
+                      >
+                        {item.dropdown.map((option: any, idx: number) => (
+                          <div key={idx} className="relative group">
+                            {option.children ? (
+                              <>
+                                <Link
+                                  to={option.href}
+                                  target={option.target ? "_blank" : "_self"}
+                                  onMouseEnter={() => setShowSubmenu2(true)}
+                                  className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
+                                >
+                                  {option.name}
+                                  <ChevronRight size={16} />
+                                </Link>
+                                <div
+                                  ref={submenuRef}
+                                  className={`absolute top-0 min-w-[250px] z-50 transition-all overflow-hidden duration-200 
+                                  ${alignRight ? "right-full" : "left-full"}
+                                  ${
+                                    isHovered
+                                      ? "opacity-100 visible"
+                                      : "opacity-0 invisible"
+                                  } 
+                                    `}
+                                  // className="absolute left-full top-0 hidden group-hover:block min-w-[250px] z-50"
+                                >
+                                  <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
+                                    {showSubmenu2 &&
+                                      option.children.map(
+                                        (subItem: any, subIdx: number) => (
+                                          <Link
+                                            key={subIdx}
+                                            to={subItem.href}
+                                            onClick={() =>
+                                              setShowSubmenu2(false)
+                                            }
+                                            target={
+                                              subItem.target
+                                                ? "_blank"
+                                                : "_self"
+                                            }
+                                            className="block px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white"
+                                          >
+                                            {subItem.name}
+                                          </Link>
+                                        )
+                                      )}
+                                  </div>
+                                </div>
+                              </>
+                            ) : (
                               <Link
                                 to={option.href}
                                 target={option.target ? "_blank" : "_self"}
-                                onMouseEnter={() => setShowSubmenu2(true)}
+                                onClick={(e) => {
+                                  if (option.target === "_blank") {
+                                    const confirmed = window.confirm(
+                                      "Are you sure you want to leave this page?"
+                                    );
+                                    if (!confirmed) {
+                                      e.preventDefault(); // Cancel the navigation
+                                    }
+                                  }
+                                }}
                                 className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
                               >
                                 {option.name}
-                                <ChevronRight size={16} />
                               </Link>
-                              <div
-                                ref={submenuRef}
-                                className={`absolute top-0 min-w-[250px] z-50 transition-all duration-200 ${
-                                  isHovered
-                                    ? "opacity-100 visible"
-                                    : "opacity-0 invisible"
-                                } ${alignRight ? "right-full" : "left-full"}`}
-                                // className="absolute left-full top-0 hidden group-hover:block min-w-[250px] z-50"
-                              >
-                                <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
-                                  {showSubmenu2 &&
-                                    option.children.map(
-                                      (subItem: any, subIdx: number) => (
-                                        <Link
-                                          key={subIdx}
-                                          to={subItem.href}
-                                          onClick={() => setShowSubmenu2(false)}
-                                          target={
-                                            subItem.target ? "_blank" : "_self"
-                                          }
-                                          className="block px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white"
-                                        >
-                                          {subItem.name}
-                                        </Link>
-                                      )
-                                    )}
-                                </div>
-                              </div>
-                            </>
-                          ) : (
-                            <Link
-                              to={option.href}
-                              target={option.target ? "_blank" : "_self"}
-                              onClick={(e) => {
-                                if (option.target === "_blank") {
-                                  const confirmed = window.confirm(
-                                    "Are you sure you want to leave this page?"
-                                  );
-                                  if (!confirmed) {
-                                    e.preventDefault(); // Cancel the navigation
-                                  }
-                                }
-                              }}
-                              className="px-6 py-3 bg-gray-100 text-gray-800 text-sm hover:bg-orange-500 hover:text-white flex justify-between items-center"
-                            >
-                              {option.name}
-                            </Link>
-                          )}
-                        </div>
-                      ))}
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Mobile Navbar */}
@@ -291,7 +306,8 @@ const PrimeLayout: React.FC = () => {
                       currentPath === item.href ||
                       item.children?.some(
                         (child: any) => child.href === currentPath
-                      ) || (currentPath === currentSection?.href && idx === 0);;
+                      ) ||
+                      (currentPath === currentSection?.href && idx === 0);
                     return (
                       <div key={item.name} className="relative group">
                         <Link
