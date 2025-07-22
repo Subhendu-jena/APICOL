@@ -13,11 +13,11 @@ import prakriti_frozenPDF from "../../assets/successPDFS/horticulture/Prakriti F
 
 const Horticulture: React.FC = () => {
   const successStories = [
-    { title: "Frozen Fruits & Vegetables: An Innovative Intermediary Activity", image: prakriti_frozen, description: "", pdf: prakriti_frozenPDF },
-    { title: "ଛତୁ ମଞ୍ଜି ଛତୁ ଚାଷ: ଲକ୍ଷ୍ମୀ ହୁଅନ୍ତି ସେଇଠି ଵଶ", image: rasmirekha_mushroom, description: "", pdf: rasmirekha_mushroomPDF },
-    { title: "Vermicompost Unit: Earns Much - Promotes Organic Farming", image: kanak_bio, description: "", pdf: kanak_bioPDF },
-    { title: "An inspiration for many women-Babita Meher", image: inspiration, description: "", pdf: inspirationPDF },
-    { title: "Empowering growth through mushroom business", image: empowering, description: "", pdf: empoweringPDF },
+    { title: "Frozen Fruits & Vegetables: An Innovative Intermediary Activity", image: prakriti_frozen, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: prakriti_frozenPDF },
+    { title: "ଛତୁ ମଞ୍ଜି ଛତୁ ଚାଷ: ଲକ୍ଷ୍ମୀ ହୁଅନ୍ତି ସେଇଠି ଵଶ", image: rasmirekha_mushroom, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: rasmirekha_mushroomPDF },
+    { title: "Vermicompost Unit: Earns Much - Promotes Organic Farming", image: kanak_bio, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: kanak_bioPDF },
+    { title: "An inspiration for many women-Babita Meher", image: inspiration, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: inspirationPDF },
+    { title: "Empowering growth through mushroom business", image: empowering, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: empoweringPDF },
   ];
   return (
     <div className="min-h-screen bg-gray-50 ">

@@ -8,9 +8,9 @@ import enterprise from "../../assets/successPDFS/fishery/Enterprising venture on
 import enterprise_image from "../../assets/successPDFS/fishery/Enterprising venture on Re-Circulatory Aquaculture System_image.jpeg";
 const Fishery: React.FC = () => {
   const successStories = [
-    { title: "Fishery: Water Turns to Wealth", image: fishery_1_image, description: "", pdf: fishery_1 },
-    { title: "Providing solution to fish farmers : A tale of a successful entrepreneur", image: providing_image, description: "", pdf: providing },
-    { title: "Enterprising venture on Re-Circulatory Aquaculture System (RAS)in Jagatsinghpur", image: enterprise_image, description: "", pdf: enterprise },
+    { title: "Fishery: Water Turns to Wealth", image: fishery_1_image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: fishery_1 },
+    { title: "Providing solution to fish farmers : A tale of a successful entrepreneur", image: providing_image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: providing },
+    { title: "Enterprising venture on Re-Circulatory Aquaculture System (RAS)in Jagatsinghpur", image: enterprise_image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: enterprise },
   ];
   return (
     <div className="min-h-screen bg-gray-50 ">

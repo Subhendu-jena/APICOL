@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Outlet, useLocation, Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
@@ -7,7 +7,12 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 
 const PrimeLayout: React.FC = () => {
   const location = useLocation();
-  const currentPath = location.pathname;
+  // const currentPath = location.pathname;
+  const currentPath = `${location.pathname}${location.search}`;
+  const submenuRef = useRef<HTMLDivElement>(null);
+  const [alignRight, setAlignRight] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
   const [showSubmenu2, setShowSubmenu2] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState<number | null>(
@@ -16,6 +21,26 @@ const PrimeLayout: React.FC = () => {
   // const [openSidebarDropdownIndex, setOpenSidebarDropdownIndex] = useState<
   //   number | null
   // >(null);
+
+  const checkOverflow = () => {
+    if (submenuRef.current) {
+      const rect = submenuRef.current.getBoundingClientRect();
+      const isOverflowing = rect.right > window.innerWidth;
+      setAlignRight(isOverflowing);
+    }
+  };
+  useEffect(() => {
+    const observer = new ResizeObserver(() => {
+      checkOverflow();
+    });
+
+    if (submenuRef.current) {
+      observer.observe(submenuRef.current);
+      checkOverflow(); // initial check
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Find current section and its sidebar children
   const currentSection = menuItems.find(
@@ -36,7 +61,18 @@ const PrimeLayout: React.FC = () => {
           {/* Desktop Navbar */}
           <div className="hidden md:flex justify-center items-center">
             {menuItems.map((item, index) => (
-              <div key={index} className="relative group">
+              <div
+                key={index}
+                className="relative group"
+                onMouseEnter={() => {
+                  setIsHovered(true);
+                  checkOverflow();
+                }}
+                onMouseLeave={() => {
+                  setIsHovered(false);
+                  setAlignRight(false);
+                }}
+              >
                 <div className="flex items-center">
                   {item.href ? (
                     <Link
@@ -61,8 +97,8 @@ const PrimeLayout: React.FC = () => {
 
                 {/* First-level Dropdown */}
                 {item.dropdown && (
-                  <div className="absolute left-0 top-full z-50 hidden group-hover:block min-w-[250px]">
-                    <div className="bg-white shadow-lg rounded-b-lg overflow-visible">
+                  <div className="absolute left-0 top-full overflow-visible z-50 hidden group-hover:block min-w-[250px]">
+                    <div className="bg-white shadow-lg rounded-b-lg overflow-visible" onMouseLeave={() => setShowSubmenu2(false)}>
                       {item.dropdown.map((option: any, idx: number) => (
                         <div key={idx} className="relative group">
                           {option.children ? (
@@ -76,7 +112,15 @@ const PrimeLayout: React.FC = () => {
                                 {option.name}
                                 <ChevronRight size={16} />
                               </Link>
-                              <div className="absolute left-full top-0 hidden group-hover:block min-w-[250px] z-50">
+                              <div
+                                ref={submenuRef}
+                                className={`absolute top-0 min-w-[250px] z-50 transition-all duration-200 ${
+                                  isHovered
+                                    ? "opacity-100 visible"
+                                    : "opacity-0 invisible"
+                                } ${alignRight ? "right-full" : "left-full"}`}
+                                // className="absolute left-full top-0 hidden group-hover:block min-w-[250px] z-50"
+                              >
                                 <div className="bg-white shadow-lg rounded-b-lg overflow-hidden">
                                   {showSubmenu2 &&
                                     option.children.map(
@@ -240,13 +284,17 @@ const PrimeLayout: React.FC = () => {
               <div className="rounded-2xl sticky top-8">
                 <nav className="space-y-2 hidden md:block">
                   {sidebarItems.map((item: any, idx: number) => {
+                    // const isActive =
+                    //   currentPath === item.href ||
+                    //   (currentPath === currentSection?.href && idx === 0);
                     const isActive =
                       currentPath === item.href ||
-                      (currentPath === currentSection?.href && idx === 0);
-
+                      item.children?.some(
+                        (child: any) => child.href === currentPath
+                      ) || (currentPath === currentSection?.href && idx === 0);;
                     return (
                       <div key={item.name} className="relative group">
-                        <Link     
+                        <Link
                           to={item.href || item.name}
                           target={item.target ? "_blank" : "_self"}
                           // onClick={() =>
@@ -264,7 +312,7 @@ const PrimeLayout: React.FC = () => {
                           {item.children && (
                             <ChevronRight
                               className={`w-4 h-4 ml-2 transform transition-transform duration-200 `}
-                                // ${openSidebarDropdownIndex === idx ? "rotate-90" : ""}
+                              // ${openSidebarDropdownIndex === idx ? "rotate-90" : ""}
                             />
                           )}
                         </Link>
@@ -275,16 +323,17 @@ const PrimeLayout: React.FC = () => {
                             <div className="   overflow-hidden"> */}
                         {item.children &&
                           item.children.map((subItem: any) => {
-                            const isActive =
-                              currentPath === subItem.href ||
-                              (currentPath === currentSection?.href &&
-                                idx === 0);
+                            // const isActive =
+                            //   currentPath === subItem.href ||
+                            //   (currentPath === currentSection?.href &&
+                            //     idx === 0);
+                            const isActive = currentPath === subItem.href;
                             return (
                               <Link
                                 to={subItem.href}
                                 key={subItem.name}
                                 // className="block px-4 py-2 m-1 rounded-lg text-sm text-gray-700 hover:bg-orange-500 hover:text-white"
-                                className={`block m-2 ml-10 px-5 py-2 rounded-lg text-sm  ${
+                                className={`block m-2 ml-10 px-5 py-2  rounded-lg text-sm  ${
                                   isActive
                                     ? "bg-orange-600 text-white"
                                     : "text-gray-700 hover:bg-orange-500 hover:text-white"

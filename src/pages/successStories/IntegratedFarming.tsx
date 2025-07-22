@@ -10,7 +10,7 @@ import blossoms from "../../assets/successPDFS/integratedFarming/Deogarh_Refrige
 import blossoms_image from "../../assets/successPDFS/integratedFarming/Deogarh_Refrigerated Van_Sebati Pradhan_image.jpeg";
 const IntegratedFarming: React.FC = () => {
   const successStories = [
-    { title: "ସମନ୍ୱିତ କୃଷି ସଭିଏଁ ଖୁସି", image: krushi_image, description: "", pdf: krushi },
+    { title: "ସମନ୍ୱିତ କୃଷି ସଭିଏଁ ଖୁସି", image: krushi_image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e", pdf: krushi },
     {
       title:
         "A Women Entrepreneur revolutionizing the Farm Business with Passion and Perseverance",

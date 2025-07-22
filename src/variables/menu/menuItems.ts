@@ -13,7 +13,7 @@ export const menuItems = [
       { name: "Organogram", href: paths.aboutUsOrganogram },
       {
         name: "Messages",
-        href: paths.aboutUsMessage,
+        href: paths.aboutUsManagingDirectorsMessage,
         include: true,
         target: false,
         children: [
@@ -103,7 +103,14 @@ export const menuItems = [
         name: "Success Story Compendium 2024-25",
         href: paths.successStoriesCompendium,
       },
-      { name: "Agriculture", href: paths.successStoriesAgriculture },
+      {
+        name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
+        href: paths.successStoriesAgriculture,
+        include: true,
+        target: false,
+
+        children: [
+          { name: "Agriculture", href: paths.successStoriesAgriculture },
       { name: "Horticulture", href: paths.successStoriesHorticulture },
       {
         name: "Animal Resource Development",
@@ -114,6 +121,9 @@ export const menuItems = [
         name: "Integrated Farming",
         href: paths.successStoriesIntegratedFarming,
       },
+        ],
+      },
+      
     ],
   },
 
@@ -159,16 +169,22 @@ export const menuItems = [
     dropdown: [
       {
         name: "Photo Gallery",
-        href: paths.galleryPhotos,
+        href: "/gallery?tab=mkuy",
         include: true,
         target: false,
         children: [
           {
             name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-            href: paths.galleryMkuy,
+            href: paths.galleryPhotosMKUY,
           },
-          { name: "Financial Assistance to Cold Storages (FACS)", href: "#" },
-          { name: "Agri entrepreneurship Promotion Scheme (AEPS)", href: "#" },
+          {
+            name: "Financial Assistance to Cold Storages (FACS)",
+            href: paths.galleryPhotosFACS,
+          },
+          {
+            name: "Agri entrepreneurship Promotion Scheme (AEPS)",
+            href: paths.galleryPhotosAEPS,
+          },
         ],
       },
       { name: "Video Gallery", href: paths.galleryVideos },

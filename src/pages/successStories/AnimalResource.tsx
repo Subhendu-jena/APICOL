@@ -21,7 +21,7 @@ const AnimalResource: React.FC = () => {
     {
       title: "Dairy Milk: Beckons Value Addition for Profit",
       image: dairyMilk_image,
-      description: "",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       pdf: dairyMilk,
     },
     {
@@ -31,7 +31,7 @@ const AnimalResource: React.FC = () => {
       pdf: brand,
     },
     { title: "Dairy: Dedicated for Social Cause",  description: "MRS. PRIYALAXMI BEURA, W/O SRI NIHAR RANJAN BEURA, AN IITIAN HAS BEEN PROVIDED", pdf: nihar },
-    { title: "Dairy: A Profitable Enterprise", image: shramistha_image, description: "", pdf: shramistha },
+    { title: "Dairy: A Profitable Enterprise", image: shramistha_image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore", pdf: shramistha },
   ];
   return (
     <div className="min-h-screen bg-gray-50 ">

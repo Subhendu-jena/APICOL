@@ -74,7 +74,9 @@ export const paths = {
   entrepreneurs: "/entrepreneurs",
   gallery: "/gallery",
   galleryPhotos: "/gallery/photos",
-  galleryMkuy: "/gallery/mukhyamantri-krushi-udyog-yojana-mkuy",
+  galleryPhotosMKUY: "/gallery?tab=mkuy",
+  galleryPhotosFACS: "/gallery?tab=facs",
+  galleryPhotosAEPS: "/gallery?tab=aeps",
   galleryVideos: "/gallery/videos",
 
 

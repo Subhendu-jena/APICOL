@@ -1,16 +1,23 @@
-
-
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SlideInFromBottom from "../../components/animation/SlideInFromBottom";
 import SlideInFromLeft from "../../components/animation/SlideInFromLeft";
 import ArchivalGallery from "../../components/galleryCard/GalleryCard";
 import ComingSoon from "../../components/comingSoon/ComingSoon";
+import { useSearchParams } from "react-router-dom";
 
 const PhotosGallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState("photo");
+  const [searchParams] = useSearchParams();
+  const tabParam = searchParams.get("tab");
+console.log(tabParam,'tabParam')
+  useEffect(() => {
+    if (tabParam) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
   const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
-  const gradientBackgroundHover = "bg-gradient-to-r from-[#000000] to-[#00A650]";
+  const gradientBackgroundHover =
+    "bg-gradient-to-r from-[#000000] to-[#00A650]";
   const tabClasses = (tab: string) =>
     `w-full py-4 px-15 font-medium rounded-2xl transition-all duration-300 ${
       activeTab === tab
@@ -18,9 +25,9 @@ const PhotosGallery: React.FC = () => {
         : `${gradientBackground}  text-white shadow-lg transform scale-105 `
     }`;
   const tabs = [
-    { key: "photo", label: "Mukhyamantri Krushi Udyog Yojana (MKUY)" },
-    { key: "video", label: "Financial Assistance to Cold Storages (FACS)" },
-    { key: "social", label: "Agri entrepreneurship Promotion Scheme (AEPS)" },
+    { key: "mkuy", label: "Mukhyamantri Krushi Udyog Yojana (MKUY)" },
+    { key: "facs", label: "Financial Assistance to Cold Storages (FACS)" },
+    { key: "aeps", label: "Agri entrepreneurship Promotion Scheme (AEPS)" },
   ];
 
   return (
@@ -51,29 +58,30 @@ const PhotosGallery: React.FC = () => {
         </div>
         {/* Tab Content */}
         <div className="w-full">
-          {activeTab === "photo" && (
+          {activeTab === "mkuy" && (
             <>
               <SlideInFromLeft>
                 <div className="bg-white p-6 rounded-xl shadow-md">
-                 
                   <ArchivalGallery />
                 </div>
               </SlideInFromLeft>
             </>
           )}
-          {activeTab === "video" && (
+          {activeTab === "facs" && (
             <>
               {/* <SlideInFromLeft> */}
-                {/* Video Gallery Section */}
-                <div className="bg-white p-6 rounded-xl shadow-md">
-                  
-                  <ComingSoon />
-                </div>
+              {/* Video Gallery Section */}
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <ComingSoon />
+              </div>
               {/* </SlideInFromLeft> */}
             </>
           )}
-          {activeTab === "social" && (<><ComingSoon/>
-          </>)}
+          {activeTab === "aeps" && (
+            <>
+              <ComingSoon />
+            </>
+          )}
         </div>
       </div>
     </div>

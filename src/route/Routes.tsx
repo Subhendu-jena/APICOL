@@ -217,7 +217,6 @@ const AppRoutes: React.FC = () => {
             <Route path={paths.entrepreneurs} element={<ComingSoon />} />
             <Route path={paths.gallery} element={<PhotosGallery />} />
             <Route path={paths.galleryPhotos} element={<PhotosGallery />} />
-            <Route path={paths.galleryMkuy} element={<PhotosGallery />} />
             <Route path={paths.galleryVideos} element={<VideoGallery />} />
             <Route path={paths.contactUs} element={<ContactUs />} />
           </Route>
