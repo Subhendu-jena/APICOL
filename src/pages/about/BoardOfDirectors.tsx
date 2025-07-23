@@ -15,7 +15,7 @@ interface Director {
 const directors: Director[] = [
   {
     name: "Sh. Shubhranshu Mishra",
-    title: "Managing Director, Apicol",
+    title: "Managing Director, APICOL",
     imageUrl: prem,
     description: "Oversees board operations and strategy.",
   },

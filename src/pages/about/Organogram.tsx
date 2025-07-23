@@ -1,5 +1,5 @@
 import React from 'react'
-import organogram from '../../assets/images/aboutUs/Apicol Organogram.png'
+import organogram from '../../assets/images/aboutUs/Apicol Organogram.svg'
 const Organogram : React.FC = () => {
   return (
     <div className='flex justify-center     '>

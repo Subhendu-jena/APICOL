@@ -35,12 +35,12 @@ export const menuItems = [
     dropdown: [
       {
         name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D",
+        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTl5RWZMM05wOEpUSFU0SXVUVnNoOFFPd2N6bnpSTW9yOD0%3D",
         target: true,
       },
       {
         name: "Financial assistance to Cold storages",
-        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTlISnVUQkx0TDNGZnNsQlk3alVONHBMeVM0VUM1WDJiMD0%3D",
+        href: "https://sugam.odisha.gov.in/website/home/scheme-list/VTJGc2RHVmtYMTl5RWZMM05wOEpUSFU0SXVUVnNoOFFPd2N6bnpSTW9yOD0%3D",
         target: true,
       },
       {
@@ -86,7 +86,7 @@ export const menuItems = [
           { name: "Horticulture", href: paths.modelDprHorticulture },
           { name: "AH&VS", href: paths.modelDprAHAndVS },
           { name: "Fishery", href: paths.modelDprFishery },
-          { name: "Inter Departmental", href: paths.modelDprInterDepartmental },
+          { name: "Inter Sector", href: paths.modelDprInterDepartmental },
         ],
       },
     ],
