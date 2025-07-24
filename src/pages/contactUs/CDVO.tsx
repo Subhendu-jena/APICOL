@@ -286,7 +286,7 @@ useEffect(() => {
   );
 
   setFilteredData(filtered);
-}, [searchTerm, cdvoData]);
+}, [searchTerm]);
   return (
     <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">

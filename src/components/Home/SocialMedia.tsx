@@ -56,7 +56,6 @@ const SocialMedia: React.FC = () => {
       title="Facebook Feed"
     />
   );
-console.log(socialEmbeds.X.fallbackUrl ,'jqsghgghsgajk')
   const renderXFeed = () => (
     <div className="h-full overflow-auto">
       <div className="flex justify-end">

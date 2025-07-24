@@ -266,7 +266,7 @@ useEffect(() => {
   );
 
   setFilteredData(filtered);
-}, [searchTerm, ddData]);
+}, [searchTerm]);
   return (
      <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">Chief District Agriculture Officer (CDAO)</div>

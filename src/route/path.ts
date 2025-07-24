@@ -80,5 +80,5 @@ export const paths = {
   galleryVideos: "/gallery/videos",
 
 
-  contactUs: "/contact-us",
+  contactUs: "/contactUs",
 };

@@ -171,7 +171,7 @@ const Apicol: React.FC = () => {
     );
 
     setFilteredData(filtered);
-  }, [searchTerm, flattenedData]);
+  }, [searchTerm]);
   return (
     <div className="max-w-6xl mx-auto py-8">
       <div className="text-2xl font-bold">APICOL</div>

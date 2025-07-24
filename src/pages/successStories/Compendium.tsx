@@ -13,8 +13,8 @@ const Compendium: React.FC = () => {
         showControls={true}
         allowFullscreen={true}
         allowDownload={true}
-        onLoadStart={() => console.log("PDF loading started")}
-        onLoadEnd={() => console.log("PDF loaded successfully")}
+        // onLoadStart={() => console.log("PDF loading started")}
+        // onLoadEnd={() => console.log("PDF loaded successfully")}
         onError={(error) => console.error("PDF error:", error)}
       />
     </div>

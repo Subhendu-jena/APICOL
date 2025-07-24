@@ -77,10 +77,9 @@ export const menuItems = [
     dropdown: [
       {
         name: "Mukhyamantri Krushi Udyog Yojana (MKUY)",
-        href: "#",
+        href: paths.modelDprAgriculture,
         include: true,
         target: false,
-
         children: [
           { name: "Agriculture", href: paths.modelDprAgriculture },
           { name: "Horticulture", href: paths.modelDprHorticulture },
@@ -108,22 +107,20 @@ export const menuItems = [
         href: paths.successStoriesAgriculture,
         include: true,
         target: false,
-
         children: [
           { name: "Agriculture", href: paths.successStoriesAgriculture },
-      { name: "Horticulture", href: paths.successStoriesHorticulture },
-      {
-        name: "Animal Resource Development",
-        href: paths.successStoriesAnimalResource,
-      },
-      { name: "Fishery", href: paths.successStoriesFishery },
-      {
-        name: "Integrated Farming",
-        href: paths.successStoriesIntegratedFarming,
-      },
+          { name: "Horticulture", href: paths.successStoriesHorticulture },
+          {
+            name: "Animal Resource Development",
+            href: paths.successStoriesAnimalResource,
+          },
+          { name: "Fishery", href: paths.successStoriesFishery },
+          {
+            name: "Integrated Farming",
+            href: paths.successStoriesIntegratedFarming,
+          },
         ],
       },
-      
     ],
   },
 
@@ -137,14 +134,13 @@ export const menuItems = [
     ],
   },
 
-  
   {
     name: "Gallery",
-    href: paths.gallery,
+    href: paths.galleryPhotosMKUY,
     dropdown: [
       {
         name: "Photo Gallery",
-        href: paths.galleryPhotos,
+        href: paths.galleryPhotosMKUY,
         include: true,
         target: false,
         children: [
@@ -167,11 +163,5 @@ export const menuItems = [
     target: false,
   },
   { name: "Analytics", href: "#" },
-  { name: "Contact Us", href: "/contact-us/" },
-
-  // {
-  //   name: "Entrepreneur's Corner",
-  //   href: "https://entrepreneur-s-corner-frontend.onrender.com",
-  //   target: true,
-  // },
+  { name: "Contact Us", href: paths.contactUs },
 ];

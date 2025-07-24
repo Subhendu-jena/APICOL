@@ -7,14 +7,6 @@ import InterDepartmental from "./InterDepartmental";
 
 const CentralGallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState("agriculture");
-  // const [searchParams] = useSearchParams();
-  // const tabParam = searchParams.get("tab");
-  // console.log(tabParam, "tabParam");
-  // useEffect(() => {
-  //   if (tabParam) {
-  //     setActiveTab(tabParam);
-  //   }
-  // }, [tabParam]);
   const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
   const gradientBackgroundHover =
     "bg-gradient-to-r from-[#000000] to-[#00A650]";

@@ -1,5 +1,5 @@
-import { LocateIcon, Mail, Phone } from "lucide-react";
 import React, { useState } from "react";
+import { LocateIcon, Mail, Phone } from "lucide-react";
 import Apicol from "./Apicol";
 import CDAO from "./CDAO";
 import CDVO from "./CDVO";
@@ -65,7 +65,6 @@ const ContactUs: React.FC = () => {
     if (!validate()) return;
 
     // TODO: Send data to API
-    console.log("Form submitted:", form);
     setSubmitted(true);
     setForm(initialForm);
   };
@@ -88,7 +87,6 @@ const ContactUs: React.FC = () => {
   ];
   return (
     <>
-      {/* <div className="text-3xl font-bold">Contact Us</div> */}
       <div>
         {" "}
         <iframe
@@ -110,17 +108,6 @@ const ContactUs: React.FC = () => {
                 Have questions, feedback or need support? We’d love to hear from
                 you. Fill out the form and we’ll be in touch soon.
               </p>
-              {/* <ul className="space-y-3">
-                <li>
-                  <strong>Email:</strong> support@yourdomain.com
-                </li>
-                <li>
-                  <strong>Phone:</strong> +1 (123) 456-7890
-                </li>
-                <li>
-                  <strong>Address:</strong> 1234 Elm Street, City, Country
-                </li>
-              </ul> */}
               <div className="space-y-2">
                 {data.map((item, index) => (
                   <div

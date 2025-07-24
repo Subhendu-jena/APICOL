@@ -13,7 +13,6 @@ export default function CustomLayout() {
   const sidebarItems = currentSection?.dropdown || [];
 
 
-  console.log("Sidebar Items:", sidebarItems);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
 
@@ -194,7 +193,6 @@ export default function CustomLayout() {
           <nav className="space-y-2">
             {sidebarItems &&
               sidebarItems.map((item: any) => {
-                // console.log("Item:", item);
                 return (
                   <Link
                     to={item.href}
