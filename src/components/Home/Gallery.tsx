@@ -32,7 +32,7 @@ const navigate = useNavigate();
         {/* Tabs */}
         <div className="flex">
           {tabs.map(({ key, label }) => (
-            <SlideInFromBottom>
+            <SlideInFromBottom key={key}>
               <div className="justify-center mr-10">
                 <button
                   key={key}

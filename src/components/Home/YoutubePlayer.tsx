@@ -19,14 +19,14 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({  initialVideoId }) => {
   const [error, setError] = useState<string | null>(null);
   const playerRef = useRef<HTMLIFrameElement>(null);
   const playlistRef = useRef<HTMLDivElement>(null);
-
+const api_url = import.meta.env.VITE_API_URL
   // Fetch videos from YouTube channel
   useEffect(() => {
     const fetchVideos = async () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://grievance-ms-backend.onrender.com/api/v1/youtube/get-youtube-video`
+          `${api_url}/api/v1/youtube/get-youtube-video`
         );
         if (!response.ok) {
           throw new Error('Failed to fetch videos');

@@ -32,8 +32,8 @@ const Advertise: React.FC = () => {
         {/* Tabs */}
         <div className="flex flex-wrap justify-between px-auto">
           {tabs.map(({ key, label }) => (
-            <SlideInFromBottom>
-              <div className="justify-center">
+            <SlideInFromBottom key={key}>
+              <div className="justify-center" >
                 <button
                   key={key}
                   className={tabClasses(key)}

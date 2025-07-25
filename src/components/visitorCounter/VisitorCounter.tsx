@@ -1,31 +1,38 @@
 import { Users } from "lucide-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const VisitorCounter: React.FC = () => {
-  // const [, setVisits] = useState<number>(0);
+  const [visits, setVisits] = useState<number | null>(null);
+  const api_url = import.meta.env.VITE_API_URL;
+    useEffect(() => {
+    const recordVisit = async () => {
+      try {
+        const res = await fetch(`${api_url}/api/v1/visiter/count`);
+        const data = await res.json();
+        setVisits(data.totalVisitors);
+      } catch (err) {
+        console.error("Failed to fetch visitor count:", err);
+      }
+    };
 
-  // useEffect(() => {
-  //   const visited = localStorage.getItem("visited");
-  //   if (!visited) {
-  //     const currentCount =
-  //       parseInt(localStorage.getItem("visit-count") || "0") + 5;
-  //     localStorage.setItem("visit-count", currentCount.toString());
-  //     localStorage.setItem("visited", "true");
-  //     setVisits(currentCount);
-  //   } else {
-  //     const currentCount = parseInt(localStorage.getItem("visit-count") || "0");
-  //     setVisits(currentCount);
-  //   }
-  // }, []);
+    recordVisit();
+  }, []);
+
+  const formatVisitorCount = (count: number): string => {
+    return count.toString().padStart(6, "0");
+  };
 
   return (
-    <div className="text-white mt-5 flex gap-2 mx-auto">
-      <Users /> Total visits : 
-        <img
-          src="https://hitwebcounter.com/counter/counter.php?page=21090831&style=0001&nbdigits=4&type=ip&initCount=10"
-          title="Counter Widget"
-          alt="Visit counter For Websites"
-        />
+    <div className="text-white mt-5 flex gap-2 items-center mx-auto">
+      <Users />
+      <span>Total visits:</span>
+      {visits !== null ? (
+        <span className="font-mono font-bold tracking-widest bg-white text-black px-3 rounded-md">
+          {formatVisitorCount(visits)}
+        </span>
+      ) : (
+        <span>Loading...</span>
+      )}
     </div>
   );
 };
