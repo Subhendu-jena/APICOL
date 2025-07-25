@@ -11,7 +11,7 @@ const CentralGallery: React.FC = () => {
   const gradientBackgroundHover =
     "bg-gradient-to-r from-[#000000] to-[#00A650]";
   const tabClasses = (tab: string) =>
-    `w-full py-4 px-15 text-center flex items-center justify-center rounded-2xl transition-all duration-300 ${
+    `w-full py-4  text-center flex items-center justify-center rounded-2xl transition-all duration-300 ${
       activeTab === tab
         ? `${gradientBackgroundHover} text-white shadow-lg transform scale-105`
         : `${gradientBackground}  text-white shadow-lg transform scale-105 `

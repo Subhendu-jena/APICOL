@@ -9,6 +9,7 @@ import AnimalResource from "../pages/successStories/AnimalResource";
 import Fishery from "../pages/successStories/Fishery";
 import IntegratedFarming from "../pages/successStories/IntegratedFarming";
 import CentralGallery from "../pages/gallery/CentralGallery";
+import CentralGallery2 from "../pages/gallery/CentralGallery2";
 const Home = lazy(() => import("../pages/home/Home"));
 const AboutUs = lazy(() => import("../pages/about/AboutsUs"));
 const BoardOfDirectors = lazy(() => import("../pages/about/BoardOfDirectors"));
@@ -29,7 +30,6 @@ const DPRHorticulture = lazy(() => import("../pages/modelDpr/DPRHorticulture"));
 const DPRAHandVS = lazy(() => import("../pages/modelDpr/DPRAHandVS"));
 const DPRFishery = lazy(() => import("../pages/modelDpr/DPRFishery"));
 const ContactUs = lazy(() => import("../pages/contactUs/ContactUs"));
-const DDH = lazy(() => import("../pages/contactUs/DFO"));
 const Events = lazy(() => import("../components/events/Events"));
 const Notification = lazy(
   () => import("../components/notification/Notification")
@@ -38,9 +38,6 @@ const Recruitment = lazy(() => import("../components/recruitment/Recruitment"));
 const VideoGallery = lazy(() => import("../components/Home/VideoGallery"));
 const Tender = lazy(() => import("../components/Tender/Tender"));
 const ComingSoon = lazy(() => import("../components/comingSoon/ComingSoon"));
-const RedirectNotice = lazy(
-  () => import("../components/redirectNotice/RedirectNotice")
-);
 const NotFound = lazy(() => import("../components/errorHandling/NotFound"));
 
 const AppRoutes: React.FC = () => {
@@ -63,8 +60,9 @@ const AppRoutes: React.FC = () => {
       >
         <Routes>
           <Route path="/" element={<PrimeLayout />}>
+            {/* Home */}
             <Route index element={<Home />} />
-
+            {/* About Us */}
             <Route path={paths.aboutUs} element={<AboutUs />} />
             <Route path={paths.aboutUsAboutApicol} element={<AboutUs />} />
             <Route
@@ -84,43 +82,33 @@ const AppRoutes: React.FC = () => {
               path={paths.aboutUsManagingDirectorsMessage}
               element={<ManagingDirectorsMessage />}
             />
-
-            {/* <Route path="schemes" element={<SchemesHome />} /> */}
-            <Route path={paths.schemes} element={<ComingSoon />} />
+            {/* Notice */}
+            <Route path={paths.notice} element={<Events />} />
+            <Route path={paths.events} element={<Events />} />
+            <Route path={paths.notification} element={<Notification />} />
+            <Route path={paths.tenders} element={<Tender />} />
+            <Route path={paths.recruitment} element={<Recruitment />} />
+            {/* Model DPR */}
+            <Route path={paths.modelDpr} element={<DPRAgriculture />} />
             <Route
-              path={paths.schemesMukhyamantriKrushiUdyogYojanaMkuy}
-              element={<RedirectNotice />}
+              path={paths.modelDprMukhyamantriKrushiUdyogYojana}
+              element={<DPRAgriculture />}
             />
             <Route
-              path={paths.schemesFinancialAssistanceToColdStorages}
+              path={paths.modelDprAgriculture}
+              element={<DPRAgriculture />}
+            />
+            <Route
+              path={paths.modelDprHorticulture}
+              element={<DPRHorticulture />}
+            />
+            <Route path={paths.modelDprAHAndVS} element={<DPRAHandVS />} />
+            <Route path={paths.modelDprFishery} element={<DPRFishery />} />
+            <Route
+              path={paths.modelDprInterDepartmental}
               element={<ComingSoon />}
             />
-            <Route
-              path={paths.schemesAgricultureEntrepreneurshipPromotionSchemeAeps}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={
-                paths.schemesPrimeMinisterFormalizationOfMicroFoodProcessingEnterprisesPmfme
-              }
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.schemesAgricultureExportPolicyAep}
-              element={<ComingSoon />}
-            />
-            <Route path={paths.applyOnline} element={<ComingSoon />} />
-            <Route
-              path={paths.applyOnlineMukhyamantriKrushiUdyogYojanaMkuy}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.applyOnlineColdStorages}
-              element={<ComingSoon />}
-            />
-            <Route path={paths.applyOnlineAeps} element={<ComingSoon />} />
-            <Route path={paths.applyOnlinePmfme} element={<ComingSoon />} />
-            <Route path={paths.applyOnlineAep} element={<ComingSoon />} />
+            {/* Success Stories */}
             <Route path={paths.successStories} element={<CoffeeTableBook />} />
             <Route
               path={paths.successStoriesCoffeeTableBook}
@@ -142,14 +130,12 @@ const AppRoutes: React.FC = () => {
               path={paths.successStoriesAnimalResource}
               element={<AnimalResource />}
             />
-            <Route
-              path={paths.successStoriesFishery}
-              element={<Fishery />}
-            />
+            <Route path={paths.successStoriesFishery} element={<Fishery />} />
             <Route
               path={paths.successStoriesIntegratedFarming}
               element={<IntegratedFarming />}
             />
+            {/* Reports */}
             <Route path={paths.reports} element={<AnnualReports />} />
             <Route
               path={paths.reportsAnnualReports}
@@ -159,71 +145,21 @@ const AppRoutes: React.FC = () => {
               path={paths.reportsStudyReports}
               element={<StudyReports />}
             />
-
-            <Route path={paths.modelDpr} element={<DPRAgriculture />} />
-            <Route
-              path={paths.modelDprMukhyamantriKrushiUdyogYojana}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.modelDprAgriculture}
-              element={<DPRAgriculture />}
-            />
-            <Route
-              path={paths.modelDprHorticulture}
-              element={<DPRHorticulture />}
-            />
-            <Route path={paths.modelDprAHAndVS} element={<DPRAHandVS />} />
-            <Route path={paths.modelDprFishery} element={<DPRFishery />} />
-            <Route
-              path={paths.modelDprInterDepartmental}
-              element={<ComingSoon />}
-            />
-
-            <Route path={paths.downloads} element={<ComingSoon />} />
-            <Route path={paths.downloadsModelDpr} element={<ComingSoon />} />
-            <Route
-              path={paths.downloadsBriefProjectProfile}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.downloadsPresentations}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.downloadsTechnicalInfo}
-              element={<ComingSoon />}
-            />
-            <Route path={paths.downloadsMobileApps} element={<ComingSoon />} />
-            <Route
-              path={paths.downloadsDistrictManagers}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.downloadsNodalOfficers}
-              element={<ComingSoon />}
-            />
-            <Route
-              path={paths.downloadsBlockOfficers}
-              element={<ComingSoon />}
-            />
-            <Route path={paths.downloadsSuppliers} element={<ComingSoon />} />
-            <Route path={paths.downloadsBankers} element={<ComingSoon />} />
-            <Route path={paths.notice} element={<Events />} />
-            <Route path={paths.events} element={<Events />} />
-            <Route path={paths.notification} element={<Notification />} />
-            <Route path={paths.tenders} element={<Tender />} />
-            <Route path={paths.recruitment} element={<Recruitment />} />
-            <Route path={paths.entrepreneurs} element={<ComingSoon />} />
+            {/* Gallery */}
             <Route path={paths.gallery} element={<CentralGallery />} />
             <Route path={paths.galleryPhotos} element={<CentralGallery />} />
-            <Route path={paths.galleryPhotosMKUY} element={<CentralGallery />} />
-            <Route path={paths.galleryPhotosFACS} element={<ComingSoon />} />
+            <Route
+              path={paths.galleryPhotosMKUY}
+              element={<CentralGallery />}
+            />
+            <Route path={paths.galleryPhotosFACS} element={<CentralGallery2 />} />
             <Route path={paths.galleryPhotosAEPS} element={<ComingSoon />} />
             <Route path={paths.galleryVideos} element={<VideoGallery />} />
+            {/* Analytics */}
+            <Route path={paths.analytics} element={<ComingSoon />} />
+            {/* Contact Us */}
             <Route path={paths.contactUs} element={<ContactUs />} />
           </Route>
-          <Route path="apicol" element={<DDH />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

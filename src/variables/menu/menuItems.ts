@@ -45,7 +45,7 @@ export const menuItems = [
       },
       {
         name: "Agriculture Entrepreneurship Promotion Scheme (AEPS)",
-        href: paths.schemesAgricultureEntrepreneurshipPromotionSchemeAeps,
+        href: "#",
       },
     ],
   },
@@ -136,8 +136,11 @@ export const menuItems = [
 
   {
     name: "Gallery",
-    href: paths.galleryPhotosMKUY,
+    href: paths.gallery,
+    target: false,
     dropdown: [
+      { name: "Video Gallery", href: paths.galleryVideos },
+
       {
         name: "Photo Gallery",
         href: paths.galleryPhotosMKUY,
@@ -158,10 +161,8 @@ export const menuItems = [
           },
         ],
       },
-      { name: "Video Gallery", href: paths.galleryVideos },
     ],
-    target: false,
   },
-  { name: "Analytics", href: "#" },
+  { name: "Analytics", href: paths.analytics },
   { name: "Contact Us", href: paths.contactUs },
 ];

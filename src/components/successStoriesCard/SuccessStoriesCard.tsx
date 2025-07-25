@@ -1,8 +1,6 @@
-import { Eye } from "lucide-react";
+import { FileText } from "lucide-react";
 import React from "react";
-import { Link } from "react-router-dom";
 import no_image from "../../assets/no_image.jpg";
-import { motion } from "framer-motion";
 interface HoverCardProps {
   image?: string;
   title: string;
@@ -17,7 +15,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
   link = "#",
 }) => {
   return (
-    <Link to={link} target="_blank">
+    // <Link  target="_blank">
       <div className="relative overflow-hidden rounded-xl shadow-lg group h-[320px] w-full">
         {/* Image */}
         <img
@@ -40,7 +38,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
                   <hr className="mx-10 my-5" />
                   {description ||
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"}
-                  <motion.div
+                  {/* <motion.div
                     whileHover={{ opacity: [1, 0, 1] }}
                     transition={{
                       duration: 0.8,
@@ -48,16 +46,26 @@ const HoverCard: React.FC<HoverCardProps> = ({
                       repeatType: "loop",
                     }}
                     className="mx-auto my-5 flex justify-center items-center"
-                  >
-                    <Eye className="mx-auto my-5 flex justify-center items-center" />
-                  </motion.div>
+                  > */}
+                  <div className="mx-auto my-5 flex justify-center items-center">
+
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 bottom-0 bg-gradient-to-r from-orange-600 to-orange-300 text-white rounded-lg font-medium shadow-md hover:shadow-lg hover:scale-105 transition-all"
+                      >
+                      View PDF <FileText size={16} />
+                    </a>
+                      </div>
+                  {/* </motion.div> */}
                 </p>
               </>
             )}
           </div>
         </div>
       </div>
-    </Link>
+    // </Link>
   );
 };
 
