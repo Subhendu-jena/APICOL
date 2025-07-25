@@ -139,8 +139,6 @@ export const menuItems = [
     href: paths.gallery,
     target: false,
     dropdown: [
-      { name: "Video Gallery", href: paths.galleryVideos },
-
       {
         name: "Photo Gallery",
         href: paths.galleryPhotosMKUY,
@@ -161,6 +159,7 @@ export const menuItems = [
           },
         ],
       },
+      { name: "Video Gallery", href: paths.galleryVideos },
     ],
   },
   { name: "Analytics", href: paths.analytics },
