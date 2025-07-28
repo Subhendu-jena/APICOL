@@ -21,7 +21,7 @@ const CentralGallery: React.FC = () => {
     { key: "horticulture", label: "Horticulture" },
     { key: "ahvs", label: "AH & VS" },
     { key: "fishery", label: "Fishery" },
-    { key: "inter", label: "Inter Sector" },
+    { key: "inter", label: "Intersector" },
   ];
 
   return (

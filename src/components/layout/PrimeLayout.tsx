@@ -380,7 +380,7 @@ const PrimeLayout: React.FC = () => {
 
             {/* Content Area */}
             <div className="lg:col-span-3">
-              <div className="p-4">
+              <div className="">
                 <Outlet />
               </div>
             </div>

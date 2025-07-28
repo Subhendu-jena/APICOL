@@ -60,7 +60,7 @@ const AboutsUs: React.FC = () => {
   ];
   return (
     <>
-      <div className="space-y-8">
+      <div className="space-y-8 p-4">
         <div>
           <SlideInFromTop>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">

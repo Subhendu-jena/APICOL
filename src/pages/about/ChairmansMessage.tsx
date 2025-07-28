@@ -3,7 +3,7 @@ import prem from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture 
 const ChairmansMessage: React.FC = () => {
   return (
     <>
-      <div className="space-y-8">
+      <div className="space-y-8 p-4">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Director's Message
