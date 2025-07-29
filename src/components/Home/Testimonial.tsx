@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import TestimonialCard from "../testimonialCard/TestimonialCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-// import bgCM from "../../assets/images/bg-testi.jpg";
+import no_user from "../../assets/no_user.png";
 
 const testimonials = [
   {
@@ -11,7 +11,7 @@ const testimonials = [
       "The platform helped us improve our workflow drastically. Highly recommended!",
     name: "Neha Pattanik",
     designation: "@johnny_dev",
-    image: "https://i.pravatar.cc/301",
+    image: no_user,
   },
   {
     heading: "Great Support Team",
@@ -19,7 +19,7 @@ const testimonials = [
       "They were quick to respond and very helpful throughout. Loved it!",
     name: "Siddhartha Hati",
     designation: "@janesmith",
-    image: "https://i.pravatar.cc/302",
+    image: no_user,
   },
   {
     heading: "Easy to Use",
@@ -27,7 +27,7 @@ const testimonials = [
       "I was able to set up everything within minutes. It's so intuitive!",
     name: "Spandan Satapathy",
     designation: "@robertking",
-    image: "https://i.pravatar.cc/303",
+    image: no_user,
   },
 ];
 const CustomPrevArrow = ({ className, onClick }: any) => (
