@@ -3,22 +3,22 @@ import SlideInFromBottom from "../animation/SlideInFromBottom";
 import SlideInFromLeft from "../animation/SlideInFromLeft";
 import ImageGallery from "./ImageGallery";
 import VideoGallery from "./VideoGallery";
-import SocialMedia from "./SocialMedia";
+import SocialMedia from "./SocialMedia"; 
 import { paths } from "../../route/path";
 import { useNavigate } from "react-router-dom";
 
 const Gallery: React.FC = () => {
   const [activeTab, setActiveTab] = useState("photo");
 const navigate = useNavigate();
-  // const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
-  // const gradientBackgroundHover =
-  //   "bg-gradient-to-r from-[#000000] to-[#00A650]";
+  const gradientBackground = "bg-gradient-to-r from-[#000000] to-[#F47216]";
+  const gradientBackgroundHover =
+    "bg-gradient-to-r from-[#000000] to-[#00A650]";
 
   const tabClasses = (tab: string) =>
-    `w-full py-4 px-15 font-medium rounded-2xl transition-all duration-300 ${
+    `w-full py-4 px-15 font-medium rounded-4xl transition-all duration-300 ${
       activeTab === tab
-        ? `bg-gradient-to-r from-[#000000] to-[#00A650] text-white shadow-lg transform scale-105`
-        : `bg-emerald-700  text-white shadow-lg transform scale-105 `
+        ? `${gradientBackgroundHover} text-white shadow-lg transform scale-105`
+        : `${gradientBackground}  text-white shadow-lg transform scale-105 `
     }`;
   const tabs = [
     { key: "photo", label: "Photo Gallery" },

@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
-import logo from "../../assets/logos/APICOL-Logo.png"
-import twitter from "../../assets/logos/twitter.svg"
+import logo from "../../assets/logos/APICOL-Logo.png";
+import twitter from "../../assets/logos/twitter.svg";
+import facebook from "../../assets/logos/facebook.png";
+import instagram from "../../assets/logos/instagram.png";
 const SocialMedia: React.FC = () => {
   const socialEmbeds = {
     Instagram: {
@@ -59,8 +61,11 @@ const SocialMedia: React.FC = () => {
   const renderXFeed = () => (
     <div className="h-full overflow-auto">
       <div className="flex justify-end">
-
-      <img src={twitter} alt=""  className="flex justify-end w-8 h-8 rounded-full"/>
+        <img
+          src={twitter}
+          alt=""
+          className="flex justify-end w-8 h-8 rounded-full"
+        />
       </div>
       <a
         className="twitter-timeline"
@@ -70,9 +75,9 @@ const SocialMedia: React.FC = () => {
       >
         {/* Tweets by {socialEmbeds.X.handle} */}
         <div className="flex gap-2 px-5  items-center">
-          <div> 
-            <img src={logo} alt=""  className=" w-10 h-10 rounded-full"/>
-            </div>
+          <div>
+            <img src={logo} alt="" className=" w-10 h-10 rounded-full" />
+          </div>
           <div>
             <div className=" text-blue-600">APICOL ODISHA </div>
             <div className=" text-gray-500 ">@APICOLBBSR </div>
@@ -101,7 +106,8 @@ const SocialMedia: React.FC = () => {
         <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
           <div className="bg-gradient-to-r from-pink-50 to-pink-100 px-4 py-3 border-b">
             <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-              📷 Latest on Instagram
+              <img src={instagram} alt="" className=" w-10 h-10 rounded-full" />
+              Latest on Instagram
             </h3>
           </div>
           <div className="h-96">{renderInstagramFeed()}</div>
@@ -111,7 +117,7 @@ const SocialMedia: React.FC = () => {
         <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
           <div className="bg-gradient-to-r from-blue-50 to-blue-100 px-4 py-3 border-b">
             <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-              👥 Latest on Facebook
+               <img src={facebook} alt="" className=" w-10 h-10 rounded-full" /> Latest on Facebook
             </h3>
           </div>
           <div className="h-96">{renderFacebookFeed()}</div>
@@ -121,7 +127,7 @@ const SocialMedia: React.FC = () => {
         <div className="border rounded-lg bg-white shadow-inner overflow-hidden">
           <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-4 py-3 border-b">
             <h3 className="text-lg font-semibold text-gray-700 flex items-center gap-2">
-              🐦 Latest on X
+               <img src={twitter} alt="" className=" w-10 h-10 rounded-full" /> Latest on X
             </h3>
           </div>
           <div className="h-96">{renderXFeed()}</div>
