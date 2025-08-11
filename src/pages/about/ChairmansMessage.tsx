@@ -1,12 +1,14 @@
 import React from "react";
-import prem from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
+// import prem from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
+import arabinda from "../../assets/all/arabinda.png";
+
 const ChairmansMessage: React.FC = () => {
   return (
     <>
       <div className="space-y-8 p-4">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Director's Message
+            Chairman's Message
           </h2>
         </div>
 
@@ -14,16 +16,16 @@ const ChairmansMessage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start">
             <div className="col-span-1">
               <img
-                src={prem}
-                alt="Managing Director"
+                src={arabinda}
+                alt="Chairman"
                 className="w-50 h-50 rounded-full object-cover border-4 border-white shadow-lg"
               />
               <div className="border-t border-gray-200 pt-4">
                 <p className="font-semibold text-gray-900">
-                  Sri Shubham Saxena , IAS
+                  Dr. Arabinda Kumar Padhee , IAS
                 </p>
-                <p className="text-gray-600"> Director, </p>
-                <p className="text-gray-600">Agriculture and Food Production </p>
+                <p className="text-gray-600"> Chairman, </p>
+                <p className="text-gray-600">Principal Secretary to Govt. of Odisha, DA&FE </p>
               </div>
             </div>
             <div className="col-span-4">

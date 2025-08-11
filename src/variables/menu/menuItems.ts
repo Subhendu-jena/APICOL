@@ -13,15 +13,15 @@ export const menuItems = [
       { name: "Organogram", href: paths.aboutUsOrganogram },
       {
         name: "Messages",
-        href: paths.aboutUsManagingDirectorsMessage,
+        href: paths.aboutUsChairmansMessage,
         include: true,
         target: false,
         children: [
           {
-            name: "Managing Director's message",
-            href: paths.aboutUsManagingDirectorsMessage,
+            name: "Chairman's message",
+            href: paths.aboutUsChairmansMessage,
           },
-          { name: "Director's message", href: paths.aboutUsChairmansMessage },
+          { name: "Managing Director's message", href: paths.aboutUsManagingDirectorsMessage },
         ],
       },
     ],
