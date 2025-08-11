@@ -1,12 +1,15 @@
 import "./App.css";
 import ScrollToTopButton from "./components/scrollToTop/ScrollToTop";
 import AppRoutes from "./route/Routes";
+import { TextSizeProvider } from "./variables/textSizeContext";
 
 function App() {
   return (
     <>
-      <AppRoutes />
-      <ScrollToTopButton />
+      <TextSizeProvider>
+        <AppRoutes />
+        <ScrollToTopButton />
+      </TextSizeProvider>
     </>
   );
 }

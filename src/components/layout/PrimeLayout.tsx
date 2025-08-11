@@ -4,6 +4,7 @@ import Footer from "../footer/Footer";
 import Navbar from "../navbar/Navbar";
 import { menuItems } from "../../variables/menu/menuItems";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { useTextSize } from "../../variables/textSizeContext";
 
 const PrimeLayout: React.FC = () => {
   const location = useLocation();
@@ -51,7 +52,7 @@ const PrimeLayout: React.FC = () => {
   const toggleMobileDropdown = (index: number) => {
     setOpenDropdownIndex(openDropdownIndex === index ? null : index);
   };
-
+const {textSize} = useTextSize();
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* Navbar */}
@@ -91,6 +92,7 @@ const PrimeLayout: React.FC = () => {
                         className={`flex items-center px-3 py-3 ${
                           isActive && "bg-orange-900 text-white"
                         }  hover:bg-orange-800 text-[15px] text-white cursor-pointer gap-1`}
+                          style={{ fontSize: `${textSize - 1}px` }}
                       >
                         {item.name}
                         {item.dropdown && (

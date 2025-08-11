@@ -5,7 +5,6 @@ import bgCM from "../../assets/all/bgf.png";
 import SlideInFromBottom from "../animation/SlideInFromBottom";
 import SlideInFromRight from "../animation/SlideInFromRight";
 import Slider from "react-slick";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function MessageSection() {
   const data = [
@@ -32,17 +31,17 @@ export default function MessageSection() {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
   ];
-const CustomPrevArrow = ({ className, onClick }: any) => (
-  <div className={`${className} z-10 left-2`} onClick={onClick}>
-    <ChevronLeft size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
-  </div>
-);
+// const CustomPrevArrow = ({ className, onClick }: any) => (
+//   <div className={`${className} z-10 left-2`} onClick={onClick}>
+//     <ChevronLeft size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
+//   </div>
+// );
 
-const CustomNextArrow = ({ className, onClick }: any) => (
-  <div className={`${className} z-10 right-2`} onClick={onClick}>
-    <ChevronRight size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
-  </div>
-);
+// const CustomNextArrow = ({ className, onClick }: any) => (
+//   <div className={`${className} z-10 right-2`} onClick={onClick}>
+//     <ChevronRight size={24} className="text-orange-600 bg-gray-300 h-10 w-10 rounded-full" />
+//   </div>
+// );
   const settings = {
     dots: true,
     infinite: true,
@@ -52,8 +51,8 @@ const CustomNextArrow = ({ className, onClick }: any) => (
     autoplay: true,
     autoplaySpeed: 7000,
     arrows: true,
-     nextArrow: <CustomNextArrow/>,
-    prevArrow: <CustomPrevArrow />
+    //  nextArrow: <CustomNextArrow/>,
+    // prevArrow: <CustomPrevArrow />
   };
 
   const Card = ({

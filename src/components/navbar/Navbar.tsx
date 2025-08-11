@@ -4,51 +4,52 @@ import odishaGov from "../../assets/logos/Seal_of_Odisha.svg";
 import SlideInFromLeft from "../animation/SlideInFromLeft";
 import SlideInFromRight from "../animation/SlideInFromRight";
 import { paths } from "../../route/path";
+import { useTextSize } from "../../variables/textSizeContext";
 
 export default function Header() {
+  const { increase, decrease, reset } = useTextSize();
+  const { textSize } = useTextSize();
   return (
     <header className=" top-0 z-50">
       <div className="bg-orange-800 text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div>
-            <span >ଓଡିଶା ସରକାର</span>
-              <span className="mx-4">|</span>
+            <span>ଓଡିଶା ସରକାର</span>
+            <span className="mx-4">|</span>
             <span>Government of Odisha</span>
           </div>
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 ">
             <div className="flex space-x-2">
-              <Link to="#" className="text-sm hover:text-gray-300">
+              <div
+                onClick={decrease}
+                className="text-sm cursor-pointer hover:text-gray-300"
+              >
                 A-
-              </Link>
-              <Link to="#" className="text-sm hover:text-gray-300">
+              </div>
+              <button onClick={reset} className="text-sm cursor-pointer hover:text-gray-300">
                 A
-              </Link>
-              <Link to="#" className="text-sm hover:text-gray-300">
+              </button>
+              <button
+                onClick={increase}
+                className="text-sm cursor-pointer hover:text-gray-300"
+              >
                 A+
-              </Link>
+              </button>
             </div>
             <div className="flex space-x-2 items-center">
               <span>|</span>
               <Link to="#" className="text-sm hover:text-gray-300">
                 ଓଡିଆ
               </Link>
-              
+
               <span>|</span>
-              <Link to="https://grievance-ms-frontend.onrender.com" target="_blank" className="text-sm hover:text-gray-300">
+              <Link
+                to="https://grievance-ms-frontend.onrender.com"
+                target="_blank"
+                className="text-sm hover:text-gray-300"
+              >
                 Grievance Portal
               </Link>
-              {/* <span>|</span> */}
-              {/* <Link
-                to="https://rtiodisha.gov.in/pa/T1RJLzIzLzgzLzE5"
-                className="text-sm hover:text-gray-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RTI
-              </Link>
-              <span>|</span> */}
-              
-              
             </div>
             <div className="flex space-x-4">
               <a
@@ -101,7 +102,7 @@ export default function Header() {
                   className="mr-4 w-20 h-20"
                 />
                 <div className="hidden sm:block md:block">
-                  <h3 className="text-lg font-bold">
+                  <h3 className="text-lg font-bold " style={{ fontSize: `${textSize + 2}px` }}>
                     ଓଡ଼ିଶା କୃଷି ପ୍ରୋତ୍ସାହନ ଏବଂ ପୁଞ୍ଜି ଲଗାଣ ନିଗମ ଲିଃ <br />
                     The Agricultural Promotion and Investment <br />
                     Corporation of Odisha Limited (APICOL)
@@ -118,7 +119,7 @@ export default function Header() {
                 className="mr-4 w-20 h-20"
               />
               <div className="hidden md:block">
-                <h3 className="text-lg font-bold">
+                <h3 className="text-lg font-bold" style={{ fontSize: `${textSize + 2}px` }}>
                   କୃଷି ଓ କୃଷକ ସଶକ୍ତିକରଣ ବିଭାଗ, ଓଡିଶା ସରକାର <br />
                   Department of Agriculture and Farmers' Empowerment <br />
                   Government Of Odisha

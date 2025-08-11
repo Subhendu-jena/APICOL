@@ -1,10 +1,8 @@
 import React from "react";
-import prem from '../../assets/chiefs/subhanranshu_Mishra_md.jpeg'
-import rohit from '../../assets/images/boardOfDirectors/Sri-Rohit-Kumar-Lenka.png'
-import biswa from '../../assets/images/boardOfDirectors/Sri-Biswa-Mohan-Ray.png'
-import nidhi from '../../assets/images/boardOfDirectors/Sri-Nidhi-Kumar-Rautray.png'
-import saroj from '../../assets/images/boardOfDirectors/Dr.-Saroj-Kumar-Swain.png'
-import niranjan from '../../assets/images/boardOfDirectors/CMA-Niranjan-Mishra.png'
+import arabinda from "../../assets/all/arabinda.png";
+import subhanranshu from "../../assets/chiefs/subhanranshu_Mishra_md.jpeg";
+import Shubham from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
+import noImage from '../../assets/no_user.png'
 interface Director {
   name: string;
   title: string;
@@ -13,41 +11,70 @@ interface Director {
 }
 
 const directors: Director[] = [
-  {
-    name: "Sh. Shubhranshu Mishra",
-    title: "Managing Director, APICOL",
-    imageUrl: prem,
-    description: "Oversees board operations and strategy.",
+ {
+    name: "Dr. Arabinda Kumar Padhee",
+    title: "Chairman, IAS Principal Secretary to Govt., DA&FE",
+    imageUrl: arabinda,
   },
   {
-    name: "Sri Rohit Kumar Lenka",
-    title: "IFS,(RR-2007), Director of Horticulture,Odisha, Bhubaneswar & Director, APICOL",
-    imageUrl: rohit,
-    description: "Leads the executive team and daily operations.",
+    name: "Sri Shubhranshu Mishra",
+    title: "OAS (SAG) , Managing Director, APICOL ,  Additional Secretary to Govt., DA&FE, Govt. of Odisha",
+    imageUrl: subhanranshu,
   },
   {
-    name: "Sri Biswa Mohan Ray",
-    title: "OAS(SB)Special Secretary to Govt.F&ARD Department ., BBSR & Director, APICOL",
-    imageUrl: biswa,
-    description: "Manages financial planning and reporting.",
+    name: "Bhupendra Sing Poonia",
+    title: "Director, IAS Managing Director, IPICOL",
+    imageUrl: noImage,
   },
   {
-    name: "Sri Nidhi Kumar Rautray",
-    title: "Special Secretary to Govt. Finance Dept., Odisha, Bhubaneswar & Director APICOL",
-    imageUrl: nidhi,
-    description: "Leads technical vision and infrastructure.",
+    name: "Shri Vijay Amruta Kulange",
+    title: "Director , IAS, Director AH & VS, Odisha",
+    imageUrl: noImage,
   },
   {
-    name: "Dr. Saroj Kumar Swain",
-    title: "Director, CIFA, Kaushalyagang, Bhubaneswar & Director APICOL",
-    imageUrl: saroj,
-    description: "Leads technical vision and infrastructure.",
+    name: "Sri Subham Saxena",
+    title: "Director, IAS, DA & FP, Odisha, Bhubaneswar",
+    imageUrl: Shubham,
   },
   {
-    name: "CMA Niranjan Mishra",
-    title: "Independent Director",
-    imageUrl: niranjan,
-    description: "Leads technical vision and infrastructure.",
+    name: "Director Horticulture, Odisha, Bhubaneswar",
+    title: "Director",
+    imageUrl: noImage,
+  },
+  {
+    name: "Sri Krushna Chandra Satpathy",
+    title: "Director , OFS Addl. Secy. to Govt., Finance Department",
+    imageUrl: noImage,
+  },
+  {
+    name: "Sri Susanta Kumar Singh",
+    title: "Director , OAS(SAG), Additional Secretary to Govt., P.E. Department, Govt. of Odisha",
+    imageUrl: noImage,
+  },
+  {
+    name: "Sri Purna Chandra Dolayi",
+    title: "Director , OAS Addl. Secretary to Govt. F& ARD Department",
+    imageUrl: noImage,
+  },
+  {
+    name: "Sri Pramod Kumar Sahoo",
+    title: "Director, CIFA, Bhubaneswar",
+    imageUrl: noImage,
+  },
+  {
+    name: "Prof. Niranjan Panda",
+    title: "Director , Dean (Research), OUAT, Bhubaneswar",
+    imageUrl: noImage,
+  },
+  {
+    name: "Independent Director",
+    title: "Independent Director (VACANT)",
+    imageUrl: noImage,
+  },
+  {
+    name: "Independent Director",
+    title: "Independent Director (VACANT)",
+    imageUrl: noImage,
   },
 ];
 

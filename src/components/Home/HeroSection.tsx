@@ -117,40 +117,6 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 z-0">
         <HeroSlider />
       </div>
-
-      {/* Overlay cards at bottom-right (slightly moved up) */}
-{/* <div className="absolute bottom-20 right-6 z-10 hidden md:grid grid-cols-2 gap-6">
-        <SlideInFromBottom>
-          <div className="flex items-center bg-white/20 backdrop-blur-md rounded-full shadow-lg p-5 pr-8 w-fit slide-in-right">
-            <img
-              src={arabinda}
-              alt="Dr Arabinda Kumar Padhee"
-              className="w-24 h-24 rounded-full object-cover mr-6"
-            />
-            <div>
-              <p className="text-white font-bold text-lg">
-                Dr Arabinda Kumar Padhee, IAS
-              </p>
-              <p className="text-white text-base">Hon’ble Secretary</p>
-            </div>
-          </div>
-        </SlideInFromBottom>
-        <SlideInFromBottom delay={1}>
-          <div className="flex items-center bg-white/20 backdrop-blur-md rounded-full shadow-lg p-5 pr-8 w-fit slide-in-right">
-            <img
-              src={prem}
-              alt="Prem Chandra Chaudhary"
-              className="w-24 h-24 rounded-full object-cover mr-6"
-            />
-            <div>
-              <p className="text-white font-bold text-lg">
-                Prem Chandra Chaudhary, IAS
-              </p>
-              <p className="text-white text-base">Hon’ble Director</p>
-            </div>
-          </div>
-        </SlideInFromBottom>
-      </div> */}
     </div>
   );
 };

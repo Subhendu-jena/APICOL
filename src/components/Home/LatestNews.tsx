@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTextSize } from '../../variables/textSizeContext';
 
 const LatestNews: React.FC = () => {
+  const { textSize } = useTextSize();
   return (
-    <div className="w-full bg-orange-600 flex items-center overflow-hidden">
+    <div className="w-full bg-orange-600 flex items-center overflow-hidden" style={{ fontSize: `${textSize}px` }}>
       {/* Fixed box for "Latest News" */}
       <div className="bg-black text-white text-center px-4 py-2 w-40 flex-shrink-0 text-sm z-5 font-semibold">
         Latest News

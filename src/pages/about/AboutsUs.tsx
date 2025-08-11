@@ -51,7 +51,7 @@ const AboutsUs: React.FC = () => {
       sectors: "16",
     },
     {
-      dept: "Inter Departmental",
+      dept: "Intersector",
       imageUrl: interDepartmental,
          bg:'bg-[#e45760]',
       icon: interIcon,
