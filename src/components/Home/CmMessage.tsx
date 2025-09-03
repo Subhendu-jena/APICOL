@@ -21,14 +21,14 @@ export default function MessageSection() {
     {
       designation: "Deputy Chief Minister",
       image: dCm2,
-      name: "Pravati Parida",
+      name: "Shrimati Pravati Parida",
       message:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
     {
       designation: "Deputy Chief Minister",
       image: dCm1,
-      name: "Kanak Vardhan Singh Deo",
+      name: "Shri Kanak Vardhan Singh Deo",
       message:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
     },
