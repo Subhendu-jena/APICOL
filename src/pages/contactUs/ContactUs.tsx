@@ -138,7 +138,7 @@ const ContactUs: React.FC = () => {
               <form onSubmit={handleSubmit} noValidate>
                 <div className="grid grid-cols-1 gap-6">
                   <div>
-                    <h1 className="text-3xl font-bold">Send us A Message</h1>
+                    <h1 className="text-3xl font-bold">Give us feedback</h1>
                   </div>
                   {/* Name */}
                   <div>

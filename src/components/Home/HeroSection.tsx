@@ -7,7 +7,7 @@ import sus from "../../assets/images/imageGallery/4.png";
 // import arabinda from "../../assets/all/arabinda.png";
 // import prem from "../../assets/all/prem.png";
 // import SlideInFromBottom from "../animation/SlideInFromBottom";
-import { ChevronRight,ChevronLeft } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 const HeroSection: React.FC = () => {
   const slides = [
     {
@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
     }, []);
 
     return (
-      <div className="relative w-full h-[570px] overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
@@ -90,8 +90,7 @@ const HeroSection: React.FC = () => {
           className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all duration-300 hover:scale-110"
           aria-label="Next slide"
         >
-                <ChevronRight />
-
+          <ChevronRight />
         </button>
 
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
@@ -112,8 +111,7 @@ const HeroSection: React.FC = () => {
     );
   }
   return (
-    <div className="relative w-full h-[570px]">
-      {/* HeroSlider as background */}
+    <div className="relative w-full h-[650px]">
       <div className="absolute inset-0 z-0">
         <HeroSlider />
       </div>

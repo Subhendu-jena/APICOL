@@ -106,11 +106,11 @@ const GalleryCard: React.FC<GalleryItem> = ({
   return (
     <>
       <div
-        className="relative  max-w-98   bg-white rounded-tl-[2rem] rounded-br-[2rem] shadow-lg   border border-red-200"
+        className="  max-w-98   bg-white rounded-tl-[2rem] rounded-br-[2rem] shadow-lg   border border-red-200"
         onClick={handleOutsideClick}
       >
         {/* Green shadow corner effect */}
-        <div className="absolute bottom-0 right-0 w-full h-full rounded-tl-[9rem] rounded-br-[2rem] bg-red-300 -z-10 translate-x-2 translate-y-2"></div>
+        <div className=" bottom-0 right-0 w-full h-full rounded-tl-[9rem] rounded-br-[2rem] bg-red-300 -z-10 translate-x-2 translate-y-2"></div>
         <div onClick={() => setPreview(true)}>
           <img
             src={posterImage ?? noImage}
@@ -139,18 +139,18 @@ const GalleryCard: React.FC<GalleryItem> = ({
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}
-            <button
-              onClick={() => setPreview(false)}
-              className="absolute top-20 right-4    text-white bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700 z-100"
-            >
-              ✕
-            </button>
 
             {/* Image Slider */}
             <Slider {...settings}>
               {images && images.length > 0 ? (
                 images.map((image, index) => (
                   <div key={index} className="w-full">
+            <button
+              onClick={() => setPreview(false)}
+              className="absolute  right-4    text-white bg-gray-800 rounded-full w-8 h-8 flex items-center justify-center hover:bg-gray-700 z-100"
+            >
+              ✕
+            </button>
                     <img
                       src={image}
                       alt={`Gallery image ${index + 1}`}
