@@ -1,7 +1,7 @@
 import cm from "../../assets/all/cm.jpeg";
 import dCm1 from "../../assets/chiefs/Dy_CM_KV_Singh_Deo.jpg";
 import dCm2 from "../../assets/chiefs/Dy_CM_Pravati_Parida.jpg";
-import bgCM from "../../assets/all/bgf.png";
+import bgCM from "../../assets/all/bg.png";
 import arabinda from "../../assets/all/arabinda.png";
 
 import SlideInFromBottom from "../animation/SlideInFromBottom";
@@ -76,7 +76,7 @@ export default function MessageSection() {
     message: string;
   }) => (
     <div className="container bg-transparent mx-auto px-4">
-      <SlideInFromBottom className="text-3xl md:text-4xl font-bold text-center mb-6 animate-fade-in">
+      <SlideInFromBottom className="text-3xl text-white md:text-4xl font-bold text-center mb-6 animate-fade-in">
         Message From Hon'ble {designation} of Odisha
       </SlideInFromBottom>
 
@@ -94,16 +94,16 @@ export default function MessageSection() {
                 {/* </SlideInFromLeft> */}
               </div>
             </div>
-            <div className="w-full md:w-4/5">
+            <div className="w-full md:w-4/5 ">
               <SlideInFromRight className="w-full ">
                 <div className="mb-6">
                   <i className="fas fa-quote-left text-3xl text-orange-600 mb-4"></i>
                 </div>
-                <p className="text-gray-700 mb-8 text-lg leading-relaxed italic text-justify">
+                <p className="text-white mb-8 text-lg leading-relaxed italic text-justify">
                   "{message}"
                 </p>
                 <div className="border-l-4 border-orange-600 pl-6">
-                  <h2 className="text-2xl font-bold text-gray-800 mb-1">
+                  <h2 className="text-2xl font-bold text-white mb-1">
                     {name}
                   </h2>
                   <h3 className="text-lg text-orange-600 font-semibold">
