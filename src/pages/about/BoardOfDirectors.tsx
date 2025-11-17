@@ -11,72 +11,63 @@ interface Director {
 }
 
 const directors: Director[] = [
- {
+  {
     name: "Dr. Arabinda Kumar Padhee",
-    title: "Chairman, IAS Principal Secretary to Govt., DA&FE",
+    title: "IAS, Principal Secretary, Department of Agriculture & Farmers Empowerment, Odisha & Chairman, APICOL",
     imageUrl: arabinda,
   },
   {
     name: "Sri Shubhranshu Mishra",
-    title: "OAS (SAG) , Managing Director, APICOL ,  Additional Secretary to Govt., DA&FE, Govt. of Odisha",
+    title: "OAS, Additional Secretary to Government, Directorate of Agriculture & Food Production, Bhubaneswar & Managing Director, APICOL",
     imageUrl: subhanranshu,
   },
   {
-    name: "Bhupendra Sing Poonia",
-    title: "Director, IAS Managing Director, IPICOL",
-    imageUrl: noImage,
-  },
-  {
-    name: "Shri Vijay Amruta Kulange",
-    title: "Director , IAS, Director AH & VS, Odisha",
+    name: "Sri Bhupendra Singh Poonia",
+    title: "IAS, Managing Director, APICOL, Bhubaneswar & Director, APICOL",
     imageUrl: noImage,
   },
   {
     name: "Sri Subham Saxena",
-    title: "Director, IAS, DA & FP, Odisha, Bhubaneswar",
+    title: "IAS, Director of Agriculture & Food Production, Odisha & Director, APICOL",
     imageUrl: Shubham,
   },
   {
-    name: "Director Horticulture, Odisha, Bhubaneswar",
-    title: "Director",
+    name: "Sri Vijay Kumar Kulange",
+    title: "IAS, Director, AH & VS & Director, APICOL",
     imageUrl: noImage,
   },
   {
-    name: "Sri Krushna Chandra Satpathy",
-    title: "Director , OFS Addl. Secy. to Govt., Finance Department",
+    name: "Sri Kalunge Gorakh Waman",
+    title: "IFS, Director of Horticulture, Odisha & Director, APICOL",
     imageUrl: noImage,
   },
   {
     name: "Sri Susanta Kumar Singh",
-    title: "Director , OAS(SAG), Additional Secretary to Govt., P.E. Department, Govt. of Odisha",
+    title: "OAS (SAG), Additional Secretary to Government, P.E. Department, Odisha, Bhubaneswar & Director, APICOL",
     imageUrl: noImage,
   },
   {
-    name: "Sri Purna Chandra Dolayi",
-    title: "Director , OAS Addl. Secretary to Govt. F& ARD Department",
+    name: "Sri Krushna Chandra Satapathy",
+    title: "OAS (SAG), Additional Secretary to Government, Finance Department, Government of Odisha & Director, APICOL",
     imageUrl: noImage,
   },
   {
-    name: "Sri Pramod Kumar Sahoo",
-    title: "Director, CIFA, Bhubaneswar",
+    name: "Sri Purna Chandra Dalai",
+    title: "OAS (SAG), Additional Secretary to Government, F & ARD Department, Government of Odisha & Director, APICOL",
     imageUrl: noImage,
   },
   {
     name: "Prof. Niranjan Panda",
-    title: "Director , Dean (Research), OUAT, Bhubaneswar",
+    title: "Dean (Research), OUAT, Bhubaneswar & Director, APICOL",
     imageUrl: noImage,
   },
   {
-    name: "Independent Director",
-    title: "Independent Director (VACANT)",
-    imageUrl: noImage,
-  },
-  {
-    name: "Independent Director",
-    title: "Independent Director (VACANT)",
+    name: "Dr. Pramod Kumar Sahoo",
+    title: "Director, CIFA, Kausalyaganga, Bhubaneswar & Director, APICOL",
     imageUrl: noImage,
   },
 ];
+
 
 const BoardOfDirectors: React.FC = () => {
   return (
