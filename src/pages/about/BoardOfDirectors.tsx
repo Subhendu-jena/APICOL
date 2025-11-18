@@ -1,7 +1,7 @@
 import React from "react";
-import arabinda from "../../assets/all/arabinda.png";
-import subhanranshu from "../../assets/chiefs/subhanranshu_Mishra_md.jpeg";
-import Shubham from "../../assets/chiefs/Sh. Shubham Saxena, Director, Agriculture and Food Production, Odisha.png";
+import arabinda from "../../assets/chiefs/ArabindaKumarPadhee.jpg";
+import subhanranshu from "../../assets/chiefs/shubhranshuMishra1.jpg";
+import Shubham from "../../assets/chiefs/subhamSaxena.jpg";
 import noImage from '../../assets/no_user.png'
 interface Director {
   name: string;
